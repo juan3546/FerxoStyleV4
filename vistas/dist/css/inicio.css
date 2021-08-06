@@ -1,0 +1,215 @@
+.parallax{
+    
+    min-height: 100vh;
+    background: url("../../img/plantilla/banner.jpg");
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botonH{
+    border-radius: 40px !important;
+}
+.linea{
+    width: 70px !important;
+    height: 5px;
+    background: cadetblue;
+}
+.precio{
+    font-size: 1.2rem;
+}
+/*
+.tarjeta:hover{
+    box-shadow: 0 0 8px 3px #ccc;
+}
+*/
+.tarjeta{
+    height: 268px;
+}
+.tarjeta .text-danger{
+    color: #4898c3 !important;
+}
+.card-img-top{
+    height: 40vh;
+    width: 25%;
+    object-fit: fill;
+}
+
+.owl-prev{
+    left: -30px;
+}
+
+.owl-next{
+    right: -30px;
+}
+
+.owl-prev, .owl-next{
+    position: absolute;
+    top: 90px;
+}
+
+.owl-prev span, .owl-next span{
+    font-size: 80px;
+    color: black;
+}
+
+.owl-theme, .owl-nav[class*="owl-"]:hover {
+    background: transparent;
+}
+
+.tarjeta:focus, .tarjeta:hover{
+    top: -2;
+    -webkit-box-shadow: 0 2px 40px 0 rgba(0 ,0, 0, 0.2);
+    box-shadow: 0 2px 40px o rgb(0, 0, 0, 0.2);
+}
+
+.tarjeta:focus img, .tarjeta:hover img{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#verde{
+    background: radial-gradient(#fff, #beffaa);
+}
+#ModeloPersonalizado{
+    font-size: 40px;
+    line-height: 60px;
+}
+.comillas{
+    font-size: 34px;
+    color: #f4e801;
+}
+.imagenComentarios{
+    border-radius: 50%;
+    width: 60px !important;
+}
+.likes{
+    font-size: 1.5rem;
+}
+.tarjetass{
+    border: none;
+    outline: none;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: transform .3s;
+    border-bottom-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+.tarjetass:hover{
+    transform: translateY(-15px);
+    transition: transform .3s;
+   
+}
+.text1{
+    font-size: 13px;
+    color: #cbcbcb;
+}
+.info{
+    line-height: 17px;
+}
+.shoe{
+    background: #4EA5D4;
+    font-weight: bold;
+}
+.shoe:hover{
+    opacity: .8;
+}
+.cursor{
+    cursor: pointer;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.likee{
+    color: blue;
+}
+.likee:hover{
+    cursor: pointer;
+}
+.likee2{
+    color: red;
+}
+.likee2:hover{
+    cursor: pointer;
+}
+#imagen-verde{
+    
+    background: url("../../img/plantilla/playera1.png"); 
+    
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: 45%;
+}
+
+.section-header{
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.testimonial-view{
+    max-width: 900px;
+    padding: 0 15px 50px !important;
+    margin: 0 auto 70px auto;
+    border-radius: 3px;
+}
+
+.block{
+    background: #fff;
+    color: #333;
+    padding: 60px 15px 15px !important;
+    margin: 50px 50px !important;
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.15);
+}
+.block .row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-items: normal;
+}
+.user{
+    margin-bottom: 30px !important;
+    text-align: center;
+}
+.image{
+    position: relative;
+    margin: 0 15px 30px 15px !important;
+}
+.image img{
+    height: 170px;
+    width: 170px;
+    border: 7px solid #ffdfb8;
+    border-radius: 170px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.user-name{
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+}
+.content{
+    text-align: center;
+    font-size: 18px;
+}
+.carousel-control-prev{
+    left: -50px;
+}
+.carousel-control-next{
+    right: -50px;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 40px;
+    height: 40px;
+    color: black;
+}

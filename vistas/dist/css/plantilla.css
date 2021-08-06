@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif !important;
+}
+.titulo{
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: right;
+}
+.titulo2{
+    text-align: right;
+}
+.botonH{
+    border-radius: 15px;
+}
+.tajetas:hover{
+    transform: translate(10px);
+}
+@media (min-width: 768px) {
+    .titulo{
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-align: right !important;
+    }
+  }
+  
+  /* escritorio normales */
+  @media (min-width: 992px) {
+    .titulo{
+        font-weight: bold;
+        font-size: 2rem;
+        text-align: right !important;
+    }
+  }
+  
+  /* pantallas grandes */
+  @media (min-width: 1200px) {
+    .titulo{
+        font-weight: bold;
+        font-size: 3rem;
+    }
+  }

@@ -1,0 +1,188 @@
+:root{
+    --dark: #161910;
+    --dark-x: #1e2126;
+    --ligth: #ffffff;
+}
+
+
+.bg-ligth {
+    background-color: var(--ligth) !important;
+ /*   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1); */
+}
+
+.margen {
+   /* margin-top: 200px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+  /*  color: var(--ligth); */
+}
+
+.bg-ligth-x {
+    background-color: var(--ligth) !important;
+   /* color: var(--ligth) !important; */
+}
+/*
+.imgSubir{
+    color: var(--ligth) !important;
+}
+*/
+.form-control, .btn{
+    min-height: 3.125rem;
+    line-height: initial;
+   
+}
+
+.img-1{
+    background-size: cover;
+    background-position: center;
+}
+
+.margintop{
+    margin-top: 100px !important;
+}
+
+
+
+.btn-outline-primary{
+    border-color: #51adde !important;
+    color: #51adde  !important;
+    
+}
+
+.btn-outline-primary:hover{
+    background-color: #51adde !important;
+    color: var(--ligth) !important;
+}
+
+/* imagenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+.row, figure, h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+
+[class*="col-"],
+[class^="col-"] {
+    padding: 5px;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    min-width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+}
+
+.button-container button {
+    padding: 7px 18px;
+    border: none;
+    border-radius: 3px;
+    background: #1976d2;
+    color: #fff;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+}
+
+.button-container button:hover {
+    background: #2780da;
+}
+
+/* ->Estilos generales */
+
+
+
+/* ->Body */
+
+/* Imágenes */
+
+ figure {
+    position: relative;
+}
+
+ figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 44px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+}
+
+figure figcaption:hover {
+    opacity: 1;
+}
+
+/* ->Imágenes */
+
+/* Selector de imágenes */
+
+.add-new-photo {
+    display: flex;
+    border: 4px dashed #81b01a;
+    height: 100%;
+    min-height: 240px;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #81b01a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+}
+
+.add-new-photo.first:hover {
+    background: rgba(255, 255, 255, 0.17);
+}
+
+#add-photo-container input {
+    display: none;
+}
+
+/* ->Selector de imágenes */
