@@ -139,10 +139,9 @@
     cursor: pointer;
 }
 #imagen-verde{
-    
     background-position: center ;
     background-repeat: no-repeat;
-    background-size: 100%;
+    
 }
 
 .section-header{
@@ -150,6 +149,7 @@
     padding-bottom: 10px;
     text-align: center;
     font-weight: bold;
+    height: 50% !important;
 }
 
 .testimonial-view{
