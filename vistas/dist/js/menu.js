@@ -14,7 +14,7 @@ $(document).on("click",".icono-menu", function(){
 */
 window.addEventListener('scroll',function(){
 
-    var header = document.querySelector('.navbar');
+    var header = document.querySelector('.scrol');
     header.classList.toggle ('sticky', window.scrollY > 0 );
 
 

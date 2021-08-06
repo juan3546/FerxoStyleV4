@@ -140,11 +140,9 @@
 }
 #imagen-verde{
     
-    background: url("../../img/plantilla/playera1.png"); 
-    
     background-position: center ;
     background-repeat: no-repeat;
-    background-size: 45%;
+    background-size: 100%;
 }
 
 .section-header{

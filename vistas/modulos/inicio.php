@@ -157,7 +157,7 @@
 <section id="verde" class="mt-5 px-4 ">
  <div class="row container-fluid mb-2 ">
    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 " id="imagen-verde">
-      <!-- <img class="m-auto" src="vistas/img/plantilla/playera1.png" alt="" id="imagen-verde" width="50%"> -->
+      <img class="m-auto" src="vistas/img/plantilla/playera1.png" alt="" id="imagen-verde" width="50%"> 
    </div>
    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-5">
     <p class="text-center mt-4">Disponible exclusivamente en FerxoStyle</p>
