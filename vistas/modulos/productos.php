@@ -4,109 +4,76 @@ $servidor =  Ruta::ctrRutaServidor();
 $ruta = $rutas[0];
 ?>
  <!-- PRODUCTS -->
+ <!-- Acordeon para filtrado -->
+ <section class="container-fluid" id="acordeonFiltrado">
+ <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Filtrado
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-4 text-center">
+              <h4>Categorias</h4>
+              <ul>
+                <li>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                     Playeras
+                    </label>
+                  </div>
+                </li>
+                <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                     Personalizados
+                    </label>
+                  </div>
+                </li>
+                <li>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                     Bufandas
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-4 text-center">
+            <h4>Genero</h4>
+              <ul class="text-center">
+                <li>Hombre</li>
+                <li>Muejer</li>
+                <li>Niños</li>
+              </ul>
+            </div>
+            <div class="col-4 text-center">
+            <h4 class="text-center">Avanzados</h4>
+              <ul class="text-center">
+                <li>Nuevos</li>
+                <li>Ofertas</li>
+                <li>Proximamente</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ </section>
+<!-- fin del acordeon para filtrado -->
 
   <section class="section products sectionProducto">
     <div class="products-layout container">
-      <div class="col-1-of-4">
-        <div>
-          <div class="block-title">
-            <h3>Categorías</h3>
-          </div>
 
-          <ul class="block-content">
-              <?php
-                $item = null;
-                $valor = null;
-                $filtro = null;
-                if(isset($rutas[2]) && preg_match('/^[a-zA-Z0-9]+$/', $rutas[2])){
-                  if(isset($rutas[1])){
-                      $filtro = $rutas[2];
-                  }
-                }
-
-
-                $categorias = Controladorcategorias::ctrMostrarCategorias($item, $valor);
-                foreach ($categorias as $key => $value) {
-                    echo '<li>
-                            <a href="'.$url.$rutas[0].'/1/'.$value["nombre"].'">
-                            <label for="">
-                                <span>'.$value["nombre"].'</span>
-                                <!-- small>(10)</small -->
-                            </label>
-                            </a>
-                        </li>';
-                }
-              ?>
-            
-              
-
-
-
-          </ul>
-        </div>
-
-        <div>
-          <div class="block-title">
-            <h3>Genero</h3>
-          </div>
-
-          <ul class="block-content">
-            <li>
-              <a href="<?php echo $url?>/articulos-para-mujeres/1">
-              <label for="">
-                <span>Mujer</span>
-              </label>
-              </a>
-            </li>
-
-            <li>
-            <a href="<?php echo $url ?>/articulos-para-hombre/1">
-              <label for="">
-                <span>Hombre</span>
-              </label>
-              </a>
-            </li>
-
-            <li>
-            <a href="<?php echo $url?>/articulos-para-ninios/1">
-              <label for="">
-                <span>Niños</span>
-              </label>
-            </a>
-            </li>
-
-
-
-          </ul>
-        </div>
-
-        <div>
-          <div class="block-title">
-            <h3>Avanzado</h3>
-          </div>
-
-          <ul class="block-content">
-            <li>
-              <a href="<?php echo $url?>/articulos-nuevos/1">
-              <label for="">
-                <span>Nuevo</span>
-              </label>
-              </a>
-            </li>
-
-            <li>
-              <a href="<?php echo $url?>articulos-en-oferta/1">
-              <label for="">
-                <span>Oferta</span>
-              </label>
-              </a>
-            </li>
-
-
-          </ul>
-        </div>
-
-      </div>
       <div class="col-3-of-4">
 
 
