@@ -16,24 +16,24 @@
 <section id="categorias" class="container mt-5 mb-5">
   <div class="row ">
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
-      <div class="card tarjetass bg-dark text-white">
-        <img src="vistas/img/plantilla/hombres.jpg" class="card-img" alt="...">
+      <div class="card categoriass  text-white">
+        <img src="vistas/img/plantilla/hombres.jpg" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
          <h3 class="card-title">Hombres</h3>
         </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
-    <div class="card tarjetass bg-dark text-white">
-        <img src="vistas/img/plantilla/ninios.jpg" class="card-img" alt="...">
+    <div class="card categoriass  text-white">
+        <img src="vistas/img/plantilla/ninios.jpg" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
          <h3 class="card-title">Niños</h3>
         </div>
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
-    <div class="card tarjetass bg-dark text-white">
-        <img src="vistas/img/plantilla/mujeres.jpg" class="card-img" alt="...">
+    <div class="card categoriass text-white">
+        <img src="vistas/img/plantilla/mujeres.jpg" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
          <h3 class="card-title">Mujeres</h3>
         </div>
