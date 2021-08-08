@@ -1,10 +1,46 @@
 $(document).on("click", ".btnWhatsApp", function(){
-    window.open("https://api.whatsapp.com/send?phone=4451196663");
+    var datos = new FormData();
+	datos.append("MostrarConfigRedes", "");
+
+	 $.ajax({
+	    url:"ajax/config.ajax.php",
+	    method:"POST",
+	    data: datos,
+	    cache: false,
+	    contentType: false,
+	    processData: false,
+	    dataType: "json",
+	    success:function(respuesta){
+            window.open("https://api.whatsapp.com/send?phone="+respuesta["whatsapp"]);
+
+
+
+	    }
+
+	});
+ 
 
 });
 
 $(document).on("click", ".btnInstagram", function(){
-    window.open("https://instagram.com/ferxo_style?utm_medium=copy_link");
+    var datos = new FormData();
+	datos.append("MostrarConfigRedes", "");
+
+	 $.ajax({
+	    url:"ajax/config.ajax.php",
+	    method:"POST",
+	    data: datos,
+	    cache: false,
+	    contentType: false,
+	    processData: false,
+	    dataType: "json",
+	    success:function(respuesta){
+
+            window.open(respuesta["instagram"]);
+	    }
+
+	});
+    
 });
 
 $(".fotoCorreo").change(function(){

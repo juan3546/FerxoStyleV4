@@ -15,6 +15,11 @@ class ControladorCorreo{
             preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ:.\s ]+$/', $_POST["detallePersonalizados"])){
                  //Create an instance; passing `true` enables exceptions
                  $mail = new PHPMailer(true);
+
+                 $item = "id";
+                 $valor = "1";
+         
+                 $configRedes = ControladorConfiguracion::ctrMostrarConfigRedes($item, $valor);
     
                  try {
                      //Server settings
@@ -22,14 +27,14 @@ class ControladorCorreo{
                      $mail->isSMTP();                                            //Send using SMTP
                      $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                      $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                     $mail->Username   = 'angel.alvarez.guzman0@gmail.com';                     //SMTP username
-                     $mail->Password   = 'Angel123*';                               //SMTP password
+                     $mail->Username   = $configRedes["email"];                     //SMTP username
+                     $mail->Password   = $configRedes["passwordEmail"];                               //SMTP password
                      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                      $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                  
                      //Recipients
                      $mail->setFrom($_POST["correoPersonalizados"], $_POST["nombrePersonalizados"]);
-                     $mail->addAddress( 'angel.alvarez.guzman0@gmail.com','Innovasoft' );     //Add a recipient
+                     $mail->addAddress( $configRedes["email"],'Ferxo Style' );     //Add a recipient
          
                     
                      if(isset($_FILES["images"]["tmp_name"]) && $_FILES["images"]["tmp_name"][0] !== ""){
@@ -134,6 +139,10 @@ class ControladorCorreo{
             preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ:.\s ]+$/', $_POST["detallePersonalizados"])){
                  //Create an instance; passing `true` enables exceptions
                  $mail = new PHPMailer(true);
+                 $item = "id";
+                 $valor = "1";
+         
+                 $configRedes = ControladorConfiguracion::ctrMostrarConfigRedes($item, $valor);
     
                  try {
                      //Server settings
@@ -141,14 +150,14 @@ class ControladorCorreo{
                      $mail->isSMTP();                                            //Send using SMTP
                      $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                      $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                     $mail->Username   = 'angel.alvarez.guzman0@gmail.com';                     //SMTP username
-                     $mail->Password   = 'Angel123*';                               //SMTP password
+                     $mail->Username   = $configRedes["email"];                     //SMTP username
+                     $mail->Password   = $configRedes["passwordEmail"];                               //SMTP password
                      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                      $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                  
                      //Recipients
                      $mail->setFrom($_POST["correoPersonalizados"], utf8_decode($_POST["nombrePersonalizados"]));
-                     $mail->addAddress( 'angel.alvarez.guzman0@gmail.com','Innovasoft' );     //Add a recipient
+                     $mail->addAddress( $configRedes["email"],'Ferxo Style' );     //Add a recipient
          
                     
                      if(isset($_FILES["images"]["tmp_name"]) && $_FILES["images"]["tmp_name"][0] !== ""){

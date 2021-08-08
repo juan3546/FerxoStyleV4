@@ -80,7 +80,7 @@ p{
 
 header{
     position: fixed;
-    top: 0;
+
     left: 0;
     width: 100%;
     padding: 40px 100px;
@@ -146,7 +146,10 @@ header ul li a:hover + ul, header .submenu:hover{
 */
 /* media query para el menu */
 @media only screen and (max-width: 1015px){
-
+    
+    header{
+        top: 0;
+    }
     header , .sticky{
         
         padding: 20px 50px;

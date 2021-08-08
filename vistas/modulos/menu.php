@@ -3,7 +3,7 @@
 $servidor =  Ruta::ctrRutaServidor();
 
 ?>
-<header class="scrol fixed-top">
+<header class="scrol">
   <a href="#" class="logo" ><img src="<?php echo $url ?>vistas/img/plantilla/logo.png" width="100px"></a>
   <div class="toggle" onClick="toggleMune();"></div>
     <ul class="menu-items">

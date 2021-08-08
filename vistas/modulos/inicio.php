@@ -1,11 +1,22 @@
+<?php
+  $servidor =  Ruta::ctrRutaServidor();
+  $configInicio = ControladorConfiguracion::ctrMostrarConfigInicio($item = null, $valor = null);
+  $tituloPrimero = substr($configInicio[0]["tituloSlogan"], 0, 22);
+  $tituloSegundo = substr($configInicio[0]["tituloSlogan"], 23);
+  $sloganPrimero = substr($configInicio[0]["slogan"], 0, 66);
+  $sloganSegundo = substr($configInicio[0]["slogan"], 67);
+
+
+?> 
  <!-- seccion de la imagen del banner  -->
 <section id="=ImagenYTextoBanner" >
   <div class="card parallax" >
   <div class="card-img-overlay mt-5 d-flex">
       <div class="container-fuid mx-5 mt-5  ms-auto">
-      <h2 class="card-title titulo">¡Dale un nuevo estilo <br> a tu entrenamiento!</h2>
-    <p class="card-text titulo2">El éxito no siempre se trata de grandeza, se trata de <br> coherencia.</p>
-    <p class="card-text titulo2"> El trabajo duro y constante logra el éxito. vendrá la grandeza.</p>
+      <h2 class="card-title titulo"><?php echo $tituloPrimero;  ?> <br> <?php echo $tituloSegundo; ?></h2>
+    <p class="card-text titulo2"><?php echo $sloganPrimero; ?></p>
+    <p class="card-text titulo2"><?php echo $sloganSegundo; ?></p>
+
     <p><button class="btn btn-warning text-white botonH">Explorar Ahora<i class="fas fa-arrow-right text-white mx-2"></i></button></p>
       </div>
   </div>
@@ -17,7 +28,7 @@
   <div class="row ">
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
       <div class="card categoriass tarjetass text-white">
-        <img src="vistas/img/plantilla/hombres.jpg" class="card-img categoriass" alt="...">
+        <img src="<?php echo $servidor.$configInicio[0]["imgHombre"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
          <h3 class="card-title">Hombres</h3>
         </div>
@@ -25,7 +36,7 @@
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
     <div class="card categoriass tarjetass text-white">
-        <img src="vistas/img/plantilla/ninios.jpg" class="card-img categoriass" alt="...">
+        <img src="<?php echo $servidor.$configInicio[0]["imgMujer"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
          <h3 class="card-title">Niños</h3>
         </div>
@@ -33,7 +44,7 @@
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
     <div class="card categoriass tarjetass text-white">
-        <img src="vistas/img/plantilla/mujeres.jpg" class="card-img categoriass" alt="...">
+        <img src="<?php echo $servidor.$configInicio[0]["imgInfante"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
          <h3 class="card-title">Mujeres</h3>
         </div>
@@ -46,110 +57,64 @@
   <h2 class="text-center nuevos">Nuevos Productos</h2>
   <div class="linea text-center align-content-center justify-content-center m-auto mt-2"></div>
  </div>
+ <?php
+  $item = "estado";
+  $valor = "Nuevo";
+
+  $iniciar = 0;
+  $articulo_por_pagina = 4;
+      
+
+  $respuesta = ControladorInicio::ctrMostrarProductosLim($item, $valor, $iniciar,$articulo_por_pagina);
+ ?>
  <div class="row container-fluid">
  <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">
    <div class="owl-carousel owl-theme mb-4">
-   <div class="item">
-   <div class="col">
-      <div class="card tarjetass mt-3">
-        <div class="product-1 align-items-center p-2 text-center"> 
-          <img src="vistas/img/plantilla/Modelo2.png" class="rounded" alt="" width="100%">
-          <h5 class="mt-2">Modelo 1</h5>
-          <div class="cost mt-3 text-dark">
-            <span>$69.52</span>
-          </div>
-        </div>
-        <!-- button -->
-        <div class="p-3 shoe text-center text-white mt-3 cursor">
-         <span class="text-uppercase botonCarrito">Agregar a pedido</span>
-        </div>
-      </div>
-    </div>
-   </div>
-  <div class="item">
-  <div class="col">
-      <div class="card tarjetass mt-3">
-        <div class="product-1 align-items-center p-2 text-center"> 
-          <img src="vistas/img/plantilla/Modelo3.png" class="rounded" alt="" width="100%">
-          <h5 class="mt-2">Modelo 1</h5>
-          <div class="cost mt-3 text-dark">
-            <span>$69.52</span>
-             <div class="star mt-3 align-items-center">
-               <span class="mx-4 "><i class="fas fa-thumbs-up mx-2 likes likee"></i>0</span>
-               <span class="mx-4 "><i class="fas fa-thumbs-down mx-2 likes likee2"></i>0</span>
-             </div>
-          </div>
-        </div>
-        <!-- button -->
-        <div class="p-3 shoe text-center text-white mt-3 cursor">
-         <span class="text-uppercase botonCarrito">Agregar a pedido</span>
-        </div>
-      </div>
-    </div>
-    </div>
-  <div class="item">
-  <div class="col">
-      <div class="card tarjetass mt-3">
-        <div class="product-1 align-items-center p-2 text-center"> 
-          <img src="vistas/img/plantilla/Modelo4.png" class="rounded" alt="" width="100%">
-          <h5 class="mt-2">Modelo 1</h5>
-          <div class="cost mt-3 text-dark">
-            <span>$69.52</span>
-             <div class="star mt-3 align-items-center">
-               <span class="mx-4 "><i class="fas fa-thumbs-up mx-2 likes likee"></i>0</span>
-               <span class="mx-4 "><i class="fas fa-thumbs-down mx-2 likes likee2"></i>0</span>
-             </div>
-          </div>
-        </div>
-        <!-- button -->
-        <div class="p-3 shoe text-center text-white mt-3 cursor">
-         <span class="text-uppercase botonCarrito">Agregar a pedido</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="item">
-  <div class="col">
-      <div class="card tarjetass mt-3">
-        <div class="product-1 align-items-center p-2 text-center"> 
-          <img src="vistas/img/plantilla/Modelo5.png" class="rounded" alt="" width="100%">
-          <h5 class="mt-2">Modelo 1</h5>
-          <div class="cost mt-3 text-dark">
-            <span>$69.52</span>
-             <div class="star mt-3 align-items-center">
-               <span class="mx-4 "><i class="fas fa-thumbs-up mx-2 likes likee"></i>0</span>
-               <span class="mx-4 "><i class="fas fa-thumbs-down mx-2 likes likee2"></i>0</span>
-             </div>
-          </div>
-        </div>
-        <!-- button -->
-        <div class="p-3 shoe text-center text-white mt-3 cursor">
-         <span class="text-uppercase botonCarrito">Agregar a pedido</span>
-        </div>
-      </div>
-    </div>
-    </div>
-  <div class="item">
-  <div class="col">
-      <div class="card tarjetass mt-3">
-        <div class="product-1 align-items-center p-2 text-center"> 
-          <img src="vistas/img/plantilla/Modelo2.png" class="rounded" alt="" width="100%">
-          <h5 class="mt-2">Modelo 1</h5>
-          <div class="cost mt-3 text-dark">
-            <span>$69.52</span>
-             <div class="star mt-3 align-items-center">
-               <span class="mx-4 "><i class="fas fa-thumbs-up mx-2 likes likee"></i>0</span>
-               <span class="mx-4 "><i class="fas fa-thumbs-down mx-2 likes likee2"></i>0</span>
-             </div>
-          </div>
-        </div>
-        <!-- button -->
-        <div class="p-3 shoe text-center text-white mt-3 cursor">
-         <span class="text-uppercase botonCarrito">Agregar a pedido</span>
-        </div>
-      </div>
-    </div>
-    </div>
+     <?php 
+      foreach ($respuesta as $key => $value) {
+          echo '<div class="item">
+                    <div class="col">
+                      <div class="card tarjetass mt-3">
+                        <div class="product-1 align-items-center p-2 text-center"> 
+                          <img src="'.$servidor.$value["foto"].'" class="rounded" alt="" width="100%">
+                          <h5 class="mt-2">'.$value["nombre"].'</h5>
+                          <div class="cost mt-3 text-dark">';
+                          if($value["precioOferta"] != null){
+                            echo '<span>$'.$value["precioOferta"].'</span>';
+                          }else{
+                            echo '<span>$'.$value["precio"].'</span>';
+                        }
+                    echo '</div>
+                    </div>
+                    <!-- button -->
+                  <div class="p-3 shoe text-center text-white mt-3 cursor">
+                    <span class="text-uppercase botonCarrito">Agregar a pedido</span>
+                  </div>
+                </div>
+              </div>
+            </div>';
+      }
+     ?>
+   
+   
+      
+        
+          
+          
+          
+            
+          
+        
+        
+        
+         
+        
+      
+    
+   
+
+
+
    </div>
  </div>
  </div>
@@ -157,13 +122,13 @@
 <section id="verde" class="mt-5 px-4 ">
  <div class="row container-fluid mb-2 ">
    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex " id="imagen-verde">
-      <img class="mx-auto my-auto" src="vistas/img/plantilla/playera1.png" alt="" id="imagen-verde" width="50%" height="70%"> 
+      <img class="mx-auto my-auto" src="<?php echo $servidor.$configInicio[0]["imgPers"]; ?>" alt="" id="imagen-verde" width="50%" height="70%"> 
    </div>
    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-5">
-    <p class="text-center mt-4">Disponible exclusivamente en FerxoStyle</p>
-     <h4 class="text-left mt-3" id="ModeloPersonalizado">Modelos <br> Personalizados</h4> 
-    <p class="pl-5 p-4 mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium eligendi sed facilis mollitia maxime cumque rem sint labore, aperiam aut ex recusandae, neque temporibus, totam minima perferendis iusto. Quod?
-      llendus minus optio voluptatum labore expedita magnam alias.
+    <p class="text-center mt-4"><?php echo $configInicio[0]["tituloPers"]; ?></p>
+     <h4 class="text-left mt-3" id="ModeloPersonalizado"><?php echo $configInicio[0]["subTituloPers"]; ?></h4> 
+    <p class="pl-5 p-4 mt-3">
+      <?php echo $configInicio[0]["textoPers"]; ?>
     </p>
     <button class="btn btn-warning botonH px-3 mb-5">Explorar <i class="fas fa-arrow-circle-right mx-2"></i></button>
    </div>
