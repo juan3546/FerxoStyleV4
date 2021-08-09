@@ -13,8 +13,15 @@ $servidor =  Ruta::ctrRutaServidor();
         <li class="nav-item">
           <a class="nav-link active text-dark mx-2" aria-current="page" href="#">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark mx-2" href="#">Productos</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="articulos-para-hombre">Hombres</a></li>
+            <li><a class="dropdown-item" href="articulos-para-mujeres">Mujeres</a></li>
+            <li><a class="dropdown-item" href="articulos-para-ninios">Niños</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark mx-2" href="#">Diseños Personalizados</a>

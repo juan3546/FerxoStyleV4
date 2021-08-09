@@ -6,6 +6,6 @@ $ruta = $rutas[0];
  <!-- PRODUCTS -->
  <!-- Acordeon para filtrado -->
  <section class="container-fluid" id="acordeonFiltrado">
-  
+ 
  </section>
 <!-- fin del acordeon para filtrado -->

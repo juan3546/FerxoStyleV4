@@ -37,6 +37,8 @@ $url =  Ruta::ctrRuta();
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/productos.css">
     <!-- Estilos de pie -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/pie.css">
+    <!-- Estilos articulos para hombre -->
+    <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/articulos-para-hombre.css">
     <!-- Estilos de iconos -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/icons.css">
     <!-- Estilos de grid -->
