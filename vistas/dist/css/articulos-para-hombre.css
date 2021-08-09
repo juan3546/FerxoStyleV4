@@ -9,3 +9,6 @@
 .tarjetasss{
     border-radius: 25px;
 }
+.efecto:hover{
+    background-color: #86B324;
+}
