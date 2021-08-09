@@ -1,3 +1,11 @@
 #menufiltrado{
     margin-top: 7%;
 }
+#hombres-container{
+    border-color: #86B324 !important;
+    background-color: rgba(134, 179, 36, 0.8);
+    border-radius: 25px;
+}
+.tarjetasss{
+    border-radius: 25px;
+}
