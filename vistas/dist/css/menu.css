@@ -7,3 +7,6 @@ nav ul li a{
 .efectoMenu{
     transition: 0.5s;
 }
+.menuHamburguesa{
+    font-size: 2rem;
+}
