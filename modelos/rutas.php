@@ -2,8 +2,8 @@
 
 class Ruta{
     public function ctrRuta(){
-       // return "http://localhost/FerxoStyleV4/";
-        return "http://localhost/FerxoStyleV4/FerxoStyleV4/";
+        return "http://localhost/FerxoStyleV4/";
+        //return "http://localhost/FerxoStyleV4/FerxoStyleV4/";
        // return "https://ferxostyle.com.mx/";
     }
 

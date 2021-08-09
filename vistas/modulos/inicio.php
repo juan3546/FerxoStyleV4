@@ -5,8 +5,6 @@
   $tituloSegundo = substr($configInicio[0]["tituloSlogan"], 23);
   $sloganPrimero = substr($configInicio[0]["slogan"], 0, 66);
   $sloganSegundo = substr($configInicio[0]["slogan"], 67);
-
-
 ?> 
  <!-- seccion de la imagen del banner  -->
 <section id="=ImagenYTextoBanner" >

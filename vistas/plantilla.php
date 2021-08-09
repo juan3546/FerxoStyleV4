@@ -47,6 +47,7 @@ $url =  Ruta::ctrRuta();
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/libs/bootstrap/css/bootstrap.min.css" >
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/libs/OwlCarousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/libs/OwlCarousel/css/owl.theme.default.css">
+    
 
     <!-- PLUGINS DE JS -->
     <script src="<?php echo $url; ?>vistas/libs/jquery/jquery.min.js"></script>
@@ -128,6 +129,7 @@ $url =  Ruta::ctrRuta();
     <script src="<?php echo $url; ?>vistas/dist/js/login.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/menu.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/plantilla.js"></script>
+    <script src="<?php echo $url; ?>vistas/dist/js/productos.js"></script>
     <script src="<?php echo $url; ?>vistas/js/correo.js"></script>
 
     

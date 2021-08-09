@@ -1,18 +1,31 @@
 <?php
-
 $servidor =  Ruta::ctrRutaServidor();
 
 ?>
-<header class="scrol">
-  <a href="#" class="logo" ><img src="<?php echo $url ?>vistas/img/plantilla/logo.png" width="100px"></a>
-  <div class="toggle" onClick="toggleMune();"></div>
-    <ul class="menu-items">
-      <li><a href="<?php echo $url; ?>inicio">Inicio</a></li>
-      <li><a href="<?php echo $url; ?>productos/1">Productos</a></li>
-      <li><a href="<?php echo $url; ?>personalizados">Pedidos Personalizados</a></li>
-      <li><a href="<?php echo $url; ?>cotizacion">Cotización</a></li>
-      <!-- li><a href="<?php /* echo $url; */ ?>login">Iniciar sesión</a></li -->
-      <!-- li><a href="<?php echo $url; ?>carrito"><img src="<?php /* echo $url */ ?>vistas/img/plantilla/cart.png" width="20px" height="20px"></a></li -->
-    </ul>
-    
-</header>
+<nav class="navbar navbar-expand-lg fixed-top efectoMenu">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-3 mt-2 " href="#"><img src="vistas/img/plantilla/logo.png" alt="" width="100px"> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active text-dark mx-2" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark mx-2" href="#">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark mx-2" href="#">Diseños Personalizados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark mx-2" href="#" >Cotizaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark mx-2" href="#">Iniciar Sesion</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
