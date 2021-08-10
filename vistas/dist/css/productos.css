@@ -1,21 +1,25 @@
 #acordeonFiltrado{
-  margin-top: 9%;
+  margin-top: 7%;
 }
-
 .filtrado{
   margin-top: 152px;
-
 }
-
 .btnFiltro{
   border-color: #69a637 !important;
 	background:#69a637 !important;
 	color:white !important;
 }
-
 @media only screen and (max-width: 1015px){
   .filtrado{
     margin-top: 128px;
-  
   }
+}
+#carrito-icon{
+  transition: all 300ms ease-in-out;
+  position: absolute;
+  bottom: 5.5rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  right: 10 !important;
+
 }

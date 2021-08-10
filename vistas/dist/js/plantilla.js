@@ -33,4 +33,10 @@ $(".owl-carousel").owlCarousel({
 $('.carousel').carousel({
     interval: 2000
   });
-  
+  $(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
