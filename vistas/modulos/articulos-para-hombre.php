@@ -43,7 +43,29 @@ $ruta = $rutas[0];
 <!-- fin de filtrado -->
  </section>
  <section class="container-fluid" id="Productos">
-  
+ <div class="container" style="margin-top:50px;">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card-sl">
+                    <div class="card-image">
+                        <img
+                            src="vistas/img/plantilla/modelo2.png" />
+                    </div>
+
+                    <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
+                    <div class="card-heading">
+                        Modelo 1
+                    </div>
+                    <div class="card-text">
+                     Jersey disponible en colores amarillo, rojo, azul y tallas ch, M, G y Xl
+                    </div>
+                    <div class="card-text">
+                        $700
+                    </div>
+                    <a href="#" class="card-button"> Purchase</a>
+                </div>
+            </div>
+        </div>  
  </section>
 
  

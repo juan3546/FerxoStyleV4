@@ -12,8 +12,8 @@
   <div class="card-img-overlay mt-5 d-flex">
       <div class="container-fuid mx-5 mt-5  ms-auto">
       <h2 class="card-title titulo"><?php echo $tituloPrimero;  ?> <br> <?php echo $tituloSegundo; ?></h2>
-    <p class="card-text titulo2"><?php echo $sloganPrimero; ?></p>
-    <p class="card-text titulo2"><?php echo $sloganSegundo; ?></p>
+    <p class=" titulo2"><?php echo $sloganPrimero; ?></p>
+    <p class=" titulo2"><?php echo $sloganSegundo; ?></p>
 
     <p><button class="btn btn-warning text-white botonH">Explorar Ahora<i class="fas fa-arrow-right text-white mx-2"></i></button></p>
       </div>
