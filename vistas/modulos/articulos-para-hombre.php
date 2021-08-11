@@ -76,7 +76,7 @@ $ruta = $rutas[0];
         <div class="card-text">
             Jersey disponible en colores amarillo, rojo, azul y tallas ch, M, G y Xl
         </div>
-        <div class="card-text">
+        <div class="card-text text-center text-danger">
             $700
         </div>
           <a href="#" class="card-button"> Apartar</a>
