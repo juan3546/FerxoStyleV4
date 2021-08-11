@@ -42,30 +42,104 @@ $ruta = $rutas[0];
 </div>
 <!-- fin de filtrado -->
  </section>
+ <!-- apartado donde se muestran las tarjetas con los productos -->
  <section class="container-fluid" id="Productos">
- <div class="container" style="margin-top:50px;">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card-sl">
-                    <div class="card-image">
-                        <img
-                            src="vistas/img/plantilla/modelo2.png" />
-                    </div>
-
-                    <a class="card-action" href="#"><i class="fa fa-heart"></i></a>
-                    <div class="card-heading">
-                        Modelo 1
-                    </div>
-                    <div class="card-text">
-                     Jersey disponible en colores amarillo, rojo, azul y tallas ch, M, G y Xl
-                    </div>
-                    <div class="card-text">
-                        $700
-                    </div>
-                    <a href="#" class="card-button"> Purchase</a>
-                </div>
-            </div>
-        </div>  
+ <div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+      <div class="card-sl h-100">
+        <div class="card-image">
+          <img src="vistas/img/plantilla/modelo2.png" />
+        </div>
+           <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
+        <div class="card-heading">
+            Modelo 1
+        </div>
+        <div class="card-text">
+            Jersey disponible en colores amarillo, rojo, azul y tallas ch, M, G y Xl
+        </div>
+        <div class="card-text">
+            $700
+        </div>
+          <a href="#" class="card-button"> Apartar</a>
+       </div>
+     </div>
+  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+  <div class="card-sl h-100">
+        <div class="card-image">
+          <img src="vistas/img/plantilla/modelo3.png" />
+        </div>
+           <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
+        <div class="card-heading">
+            Modelo 1
+        </div>
+        <div class="card-text">
+            Jersey disponible en colores amarillo, rojo, azul y tallas ch, M, G y Xl
+        </div>
+        <div class="card-text">
+            $700
+        </div>
+          <a href="#" class="card-button"> Apartar</a>
+       </div>
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+  <div class="card-sl h-100">
+        <div class="card-image">
+          <img src="vistas/img/plantilla/modelo4.png" />
+        </div>
+           <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
+        <div class="card-heading">
+            Modelo 1
+        </div>
+        <div class="card-text">
+            Jersey disponible en colores amarillo, rojo, azul y tallas ch, M, G y Xl
+        </div>
+        <div class="card-text">
+            $700
+        </div>
+          <a href="#" class="card-button"> Apartar</a>
+       </div>
+  </div>
+  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+  <div class="card-sl h-100">
+        <div class="card-image">
+          <img src="vistas/img/plantilla/modelo5.png" />
+        </div>
+           <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
+        <div class="card-heading">
+            Modelo 1
+        </div>
+        <div class="card-text">
+            Jersey disponible en colores amarillo, rojo, azul y tallas ch, M, G y Xl
+        </div>
+        <div class="card-text">
+            $700
+        </div>
+          <a href="#" class="card-button"> Apartar</a>
+       </div>
+  </div>
+</div>
+ </section>
+ <!-- fin del apartado de productos -->
+ <!-- Apartado de paginacion -->
+ <section class="container-fluid d-flex mt-5" id="paginacion">
+ <nav aria-label="Page navigation example" class="mx-auto">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
  </section>
 
  
