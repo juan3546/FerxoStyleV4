@@ -49,13 +49,41 @@ class ControladorProductos{
 	MOSTRAR TOTAL DE PRODUCTOS
 	=============================================*/
 
-	static public function ctrObtenerTotalProductos($item, $valor){
+	static public function ctrObtenerTotalProductos($item, $valor, $item2, $valor2){
 
 		$tabla = "productos";
 
-		$respuesta = ModeloProducto::mdlObtenerTotalProductos($tabla, $item, $valor);
+		$respuesta = ModeloProducto::mdlObtenerTotalProductos($tabla, $item, $valor, $item2, $valor2);
 
 
+		return $respuesta;
+	}
+
+	/*=============================================
+	MOSTRAR TOTAL DE PRODUCTOS
+	=============================================*/
+
+	static public function ctrObtenerTotalArticulos($item, $valor){
+
+		$tabla = "productos";
+
+		$respuesta = ModeloProducto::mdlObtenerTotalArticulos($tabla, $item, $valor);
+
+
+		return $respuesta;
+	}
+
+	/*=============================================
+	MOSTRAR TOTAL DE PRODUCTOS por categoria
+	=============================================*/
+
+	static public function ctrObtenerTotalProductosConCategorias($item, $valor, $item2, $valor2){
+
+		$tabla1 = "productos";
+		$tabla2 = "categorias";
+
+		$respuesta = ModeloProducto::mdlMostrarProductosCategoria($tabla1, $tabla2, $item, $valor, $item2, $valor2);
+		
 		return $respuesta;
 	}
 
@@ -64,11 +92,24 @@ class ControladorProductos{
 	MOSTRAR PRODUCTOS POR NUEVOS Y OFERTAS CON LIMIT
 	=============================================*/
 
-	static public function ctrMostrarProductosLim($item, $valor, $inicio, $fin){
+	static public function ctrMostrarProductosLim($item, $valor, $inicio, $fin, $item2, $valor2){
 
 		$tabla = "productos";
 
-		$respuesta = ModeloProducto::mdlMostrarProductosLim($tabla, $item, $valor, $inicio, $fin);
+		$respuesta = ModeloProducto::mdlMostrarProductosLim($tabla, $item, $valor, $inicio, $fin, $item2, $valor2);
+		
+		return $respuesta;
+	}
+
+	/*=============================================
+	MOSTRAR PRODUCTOS POR NUEVOS Y OFERTAS CON LIMIT
+	=============================================*/
+
+	static public function ctrMostrarArticulosLim($item, $valor, $inicio, $fin){
+
+		$tabla = "productos";
+
+		$respuesta = ModeloProducto::mdlMostrarArticulosLim($tabla, $item, $valor, $inicio, $fin);
 		
 		return $respuesta;
 	}
@@ -77,12 +118,12 @@ class ControladorProductos{
 	MOSTRAR PRODUCTOS POR Categoria CON LIMIT
 	=============================================*/
 
-	static public function ctrMostrarProductosCategoriaLim($item, $valor, $inicio, $fin){
+	static public function ctrMostrarProductosCategoriaLim($item, $valor, $inicio, $fin, $item2, $valor2){
 
 		$tabla1 = "productos";
 		$tabla2 = "categorias";
 
-		$respuesta = ModeloProducto::mdlMostrarProductosCategoriasLim($tabla1, $tabla2, $item, $valor, $inicio, $fin);
+		$respuesta = ModeloProducto::mdlMostrarProductosCategoriasLim($tabla1, $tabla2, $item, $valor, $inicio, $fin, $item2, $valor2);
 		
 		return $respuesta;
 	}

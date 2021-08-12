@@ -88,14 +88,15 @@ class ModeloProducto{
 	MOSTRAR TOTAL DE PRODUCTOS
 	=============================================*/
 
-	static public function mdlObtenerTotalProductos($tabla, $item, $valor){
+	static public function mdlObtenerTotalProductos($tabla, $item, $valor, $item2, $valor2){
 	
         if($item != null){
 
-		    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+		    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item AND $item2 = :$item2");
 
  
 	    	$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+			$stmt -> bindParam(":".$item2, $valor2, PDO::PARAM_STR);
 
 		    $stmt -> execute();
 
@@ -122,17 +123,42 @@ class ModeloProducto{
     }
 
     /*=============================================
+	MOSTRAR TOTAL DE PRODUCTOS
+	=============================================*/
+
+	static public function mdlObtenerTotalArticulos($tabla, $item, $valor){
+	
+
+
+		    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+
+ 
+	    	$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+		    $stmt -> execute();
+
+		    $totalProductos = $stmt -> rowCount();
+
+
+		    return $totalProductos;
+
+
+		
+    }
+
+    /*=============================================
 	MOSTRAR PRODUCTOS POR NUEVOS Y OFERTAS CON LIMIT
 	=============================================*/
 
-	static public function mdlMostrarProductosLim($tabla, $item, $valor, $inicio, $fin){
+	static public function mdlMostrarProductosLim($tabla, $item, $valor, $inicio, $fin, $item2, $valor2){
 	
 
         if($item != null){
-		    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item LIMIT :inicio, :fin");
+		    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item AND $item2 = :$item2 LIMIT :inicio, :fin");
 
-			
+		
 		    $stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+			$stmt -> bindParam(":".$item2, $valor2, PDO::PARAM_STR);
 		    $stmt -> bindParam(":inicio", $inicio, PDO::PARAM_INT);
 		    $stmt -> bindParam(":fin", $fin, PDO::PARAM_INT);
 
@@ -164,16 +190,17 @@ class ModeloProducto{
 
 	}
 
-	/*=============================================
-	MOSTRAR PRODUCTOS POR CATEGORIAS CON LIMIT
+	    /*=============================================
+	MOSTRAR PRODUCTOS POR NUEVOS Y OFERTAS CON LIMIT
 	=============================================*/
 
-	static public function mdlMostrarProductosCategoriasLim($tabla, $tabla2, $item, $valor, $inicio, $fin){
+	static public function mdlMostrarArticulosLim($tabla, $item, $valor, $inicio, $fin){
 	
 
-		    $stmt = Conexion::conectar()->prepare("SELECT p.* FROM $tabla p JOIN $tabla2 c ON p.idCategoria = c.id  WHERE c.$item = :$item LIMIT :inicio, :fin");
 
-			
+		    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item LIMIT :inicio, :fin");
+
+		
 		    $stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 		    $stmt -> bindParam(":inicio", $inicio, PDO::PARAM_INT);
 		    $stmt -> bindParam(":fin", $fin, PDO::PARAM_INT);
@@ -190,6 +217,65 @@ class ModeloProducto{
 
 
 	}
+
+	/*=============================================
+	MOSTRAR PRODUCTOS POR CATEGORIAS CON LIMIT
+	=============================================*/
+
+	static public function mdlMostrarProductosCategoriasLim($tabla, $tabla2, $item, $valor, $inicio, $fin, $item2, $valor2){
+	
+
+		    $stmt = Conexion::conectar()->prepare("SELECT p.* FROM $tabla p JOIN $tabla2 c ON p.idCategoria = c.id  WHERE c.$item = :$item AND p.$item2 = :$item2 LIMIT :inicio, :fin");
+
+			
+		    $stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+			$stmt -> bindParam(":".$item2, $valor2, PDO::PARAM_STR);
+		    $stmt -> bindParam(":inicio", $inicio, PDO::PARAM_INT);
+		    $stmt -> bindParam(":fin", $fin, PDO::PARAM_INT);
+
+		    $stmt -> execute();
+
+		    return $stmt -> fetchAll();
+
+		
+
+		    $stmt -> close();
+
+		    $stmt = null;
+
+
+	}
+
+	/*=============================================
+	MOSTRAR total PRODUCTOS POR CATEGORIAS 
+	=============================================*/
+
+	static public function mdlMostrarProductosCategoria($tabla, $tabla2, $item, $valor, $item2, $valor2){
+	
+
+		$stmt = Conexion::conectar()->prepare("SELECT p.* FROM $tabla p JOIN $tabla2 c ON p.idCategoria = c.id  WHERE c.$item = :$item AND p.$item2 = :$item2");
+
+		
+		$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+		$stmt -> bindParam(":".$item2, $valor2, PDO::PARAM_STR);
+
+
+		$stmt -> execute();
+
+
+
+		$totalProductos = $stmt -> rowCount();
+
+		return $totalProductos;
+
+	
+
+		$stmt -> close();
+
+		$stmt = null;
+
+
+}
 
 	/*=============================================
 	MOSTRAR PRODUCTOS POR CATEGORIAS Y GENERO CON LIMIT
