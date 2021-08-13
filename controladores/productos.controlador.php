@@ -17,6 +17,22 @@ class ControladorProductos{
 	}
 
 	/*=============================================
+	MOSTRAR PRODUCTOS POR NOMBRE
+	=============================================*/
+
+	static public function ctrMostrarProductosXNombre($item, $valor, $item2, $valor2){
+
+
+		$tabla = "productos";
+
+
+		$respuesta = ModeloProducto::mdlMostrarProductosXNombre($tabla, $item, $valor, $item2, $valor2);
+
+
+		return $respuesta;
+	}
+
+	/*=============================================
 	MOSTRAR CATEGORIAS
 	=============================================*/
 

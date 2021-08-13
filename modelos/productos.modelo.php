@@ -2,7 +2,7 @@
 require_once "conexion.php";
 
 class ModeloProducto{
-        /*=============================================
+    /*=============================================
 	MOSTRAR PRODUCTOS
 	=============================================*/
 
@@ -28,6 +28,34 @@ class ModeloProducto{
 			return $stmt -> fetchAll();
 
 		}
+		
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
+    /*=============================================
+	MOSTRAR PRODUCTOS POR NOMBRE
+	=============================================*/
+
+	static public function mdlMostrarProductosXNombre($tabla, $item, $valor, $item2, $valor2){
+	
+
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item2 = '$valor2' AND $item LIKE '$valor%'");
+
+        //    $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = '$valor'");
+ 
+			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+			$stmt -> bindParam(":".$item2, $valor2, PDO::PARAM_STR);
+
+			$stmt -> execute();
+
+			return $stmt -> fetchAll();
+
+
 		
 
 		$stmt -> close();

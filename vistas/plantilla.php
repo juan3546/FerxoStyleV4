@@ -3,6 +3,7 @@ session_start();
 
 // mantener la ruta fija de la ecommerce
 $url =  Ruta::ctrRuta();
+$servidor =  Ruta::ctrRutaServidor();
 
 ?>
 <!DOCTYPE html>
@@ -127,11 +128,13 @@ $url =  Ruta::ctrRuta();
             }    
     }
  ?>
+    <input type="hidden" value="<?php echo $url; ?>" id="rutaOculta">
+    <input type="hidden" value="<?php echo $servidor; ?>" id="rutaOcultaServidor">
     <script src="<?php echo $url; ?>vistas/dist/js/inicio.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/login.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/menu.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/plantilla.js"></script>
-    <script src="<?php echo $url; ?>vistas/dist/js/productos.js"></script>
+    <script src="<?php echo $url; ?>vistas/js/productos.js"></script>
     <script src="<?php echo $url; ?>vistas/js/correo.js"></script>
 
     

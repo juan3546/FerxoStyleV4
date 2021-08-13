@@ -13,7 +13,7 @@ $ruta = $rutas[0];
                 Categorias
                 <i class="fas fa-bars"></i>
             </button>
-            <input type="text"class="form-control" placeholder="Buscar">
+            <input type="text"class="form-control" placeholder="Buscar" name="txtArticulosHombre" id="txtArticulosHombre">
         </div>
     </div>
 </div>
@@ -49,7 +49,7 @@ $ruta = $rutas[0];
  <!-- apartado donde se muestran las tarjetas con los productos -->
  <section class="container-fluid" id="Productos">
  <div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mostrarProductoHombre">
       <?php
           /*=============================================
 			      LLAMADO DE PAGINACIÓN
@@ -157,13 +157,13 @@ $ruta = $rutas[0];
         </div>
         <div class="card-text">
           <?php if ($value["precioOferta"] != null): ?>
-            <del>$<?php echo $value["precioOferta"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precio"]; ?>
+            <del>$<?php echo $value["precio"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precioOferta"]; ?>
           <?php else:  ?>
             $<?php echo $value["precio"]; ?>
           <?php endif  ?>  
 
         </div>
-          <a href="#" class="card-button"> Apartar</a>
+          <a href="#" class="card-button"> Solicitar pedido</a>
        </div>
      </div>
      <?php endforeach ?>

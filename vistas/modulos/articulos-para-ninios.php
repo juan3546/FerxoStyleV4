@@ -13,7 +13,7 @@ $ruta = $rutas[0];
                 Categorias
                 <i class="fas fa-bars"></i>
             </button>
-            <input type="text"class="form-control" placeholder="Buscar">
+            <input type="text"class="form-control" placeholder="Buscar" name="txtArticulosInfante" id="txtArticulosInfante">
         </div>
     </div>
 </div>
@@ -49,7 +49,7 @@ $ruta = $rutas[0];
  <!-- apartado donde se muestran las tarjetas con los productos -->
  <section class="container-fluid" id="Productos">
  <div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mostrarProductoInfante">
       <?php
           /*=============================================
 			      LLAMADO DE PAGINACIÓN
