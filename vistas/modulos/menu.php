@@ -4,7 +4,7 @@ $servidor =  Ruta::ctrRutaServidor();
 ?>
 <nav class="navbar navbar-expand-lg fixed-top efectoMenu">
   <div class="container-fluid">
-    <a class="navbar-brand mx-3 mt-2 " href="<?php echo $url; ?>inicio"><img src="vistas/img/plantilla/logo.png" alt="" width="100px"> </a>
+    <a class="navbar-brand mx-3 mt-2 " href="<?php echo $url; ?>inicio"><img src="<?php echo $url; ?>vistas/img/plantilla/logo.png" alt="" width="100px"> </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <i class="fas fa-bars menuHamburguesa"></i>
     </button>
