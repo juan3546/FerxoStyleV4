@@ -38,6 +38,8 @@ $servidor =  Ruta::ctrRutaServidor();
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/productos.css">
     <!-- Estilos de pie -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/pie.css">
+    <!-- Estilos detalle producto -->
+    <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/detalle-productos.css">
     <!-- Estilos articulos para hombre -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/articulos-para-hombre.css">
     <!-- Estilos de iconos -->

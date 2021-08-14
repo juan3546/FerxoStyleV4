@@ -102,9 +102,9 @@ $ruta = $rutas[0];
           
 
           if ($totalProductos == 0){
-            echo '<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            echo '<div class="col-12">
                     <br> 
-                    <div class="alert alert-warning col-12" role="alert">Producto no disponible</div>
+                    <div class="alert alert-warning" role="alert">Producto no disponible</div>
                   </div>';
           }
             

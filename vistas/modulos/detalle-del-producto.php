@@ -3,96 +3,59 @@ $url =  Ruta::ctrRuta();
 $servidor =  Ruta::ctrRutaServidor();
 $ruta = $rutas[0];
 ?>
-<div class="container-peque margen-top-detalle single-product">
-    <?php
-        if(isset($rutas[1])){
-           
-            $item = "id";
-            $valor = $rutas[1];
-        $respuestaProduc = ControladorProductos::ctrMostrarProductos($item, $valor);
-        }else{
-            /* Error */
-        }
-        
-    ?>
-    <div class="row">
-        <div class="col-2">
-            <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" width="100%">
-        </div>
-        <div class="col-2">
-            <p><a href="<?php echo $url; ?>inicio">Inicio</a> / <?php echo $respuestaProduc[0]["nombre"] ?></p>
-            <h2><?php echo $respuestaProduc[0]["nombre"] ?></h2>
-            <?php
-                if($respuestaProduc[0]["precioOferta"] == null ){
-                    echo '<h4>$'.$respuestaProduc[0]["precio"].'</h4>';
-                }else{
-                    echo '<strike><h4>$'.$respuestaProduc[0]["precio"].'</h4></strike>';
-                    echo '<h4>$'.$respuestaProduc[0]["precio"].'</h4>';
-                }
-            ?>
-            <select name="" id="">
-                <option value="">Tallas disponibles</option>
-                <option value="">13</option>
-                <option value="">14</option>
-            </select>
-            <!-- input type="number" name="" id="" value="1" -->
-            <!-- a href="" class="btn">Agregar a carrito</a -->
-            <?php
-                if($respuestaProduc[0]["descripcion"] != null){
-                    echo '<h3>Detalle del producto <i class="fa fa-indent icon-detail-product"></i></h3>
-                        <br>
-                        <p>'.$respuestaProduc[0]["descripcion"].'</p>';
-                }
-            ?>
-            
-            
-
-            
-        </div>
-    </div>
+<section class="container-fluid detallePpp">
+ <div class="row  mt-5">
+  <div class="col-6 d-flex ">
+    <img src="vistas/img/plantilla/modelo2.png" alt="" width="55%" height="80%" class="m-auto my-auto">
+  </div>
+  <div class="col-6">
+  <p><a href="https://ferxostyle.com.mx/inicio">Inicio</a> / Modelo 1</p>
+   <h2>Modelo 1</h2>
+   <h4 class="precioDetalle">$400</h4>
+   <select name="tallas" id="tallas" class="form-control-lg">
+       <option value="0">Tallas Disponibles</option>
+       <option value="1">M</option>
+       <option value="2">G</option>
+       <option value="3">XL</option>
+   </select>
+   <p class="mt-3"><h4>Despricion del Producto <br></h4><br>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae nesciunt odio, magni deleniti, minima saepe maxime beatae quidem ipsum nobis laborum aut nulla alias commodi hic. Inventore, rem dolor.
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, delectus! Quaerat facere, itaque excepturi eligendi fuga commodi modi. Tempora autem nobis pariatur dolore consequuntur sunt, earum soluta repudiandae est voluptates.</p>
+  </div>
+ </div>
+</section>
+<!-- apartado para los comentarios, articulos relacionados -->
+<section class="container-fluid mt-5">
+ <div class="row">
+ <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Comentarios</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Relacionados</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Ofertas</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <h2>Comnetarios</h2>
+  </div>
+  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+  <h2>Relacionados</h2>
+  </div>
+  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+  <h2>Ofertas</h2>
+  </div>
 </div>
-
-<!---- Nuevos productos ----->
-<div class="container-peque">
-    <h2 class="titulo">Nuevos Productos</h2>
-    <div class="row">
-    <?php
-            $item = "estado";
-            $valor = "Nuevo";
-
-            $iniciar = 0;
-            $articulo_por_pagina = 4;
-                
-
-            $respuesta = ControladorInicio::ctrMostrarProductosLim($item, $valor, $iniciar,$articulo_por_pagina);
-
-
-            $ruta = "https://admin.ferxostyle.com.mx/";
-
-
-            foreach ($respuesta as $key => $value) {
-                echo '<div class="product productoNuevoDtp"> 
-                        <a href="'.$url.'detalle-del-producto/'.$value["id"].'">
-                        <div class="img-container">
-                            <img src="'.$servidor.$value["foto"].'" alt="" />
-                            <!-- div class="addCart">
-                                <-- i class="fas fa-shopping-cart"></i>
-                            </div -->
-                        </div>
-                        <div class="bottom">
-                        <a href="'.$url.'detalle-del-producto/'.$value["id"].'">'.$value["nombre"].'</a>
-                        <div class="price">';
-                        if($value["precioOferta"] != null){
-                            echo '<span>$'.$value["precioOferta"].'</span>';
-                        }else{
-                            echo '<span>$'.$value["precio"].'</span>';
-                        }
-                        echo '</div>
-                        </div>
-                        </a>
-                        </div>';
-            }
-                        
-        ?>
-    </div>
-</div>
+ </div>
+</section>
+<!-- fin apartado para los comentarios, articulos relacionados -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
