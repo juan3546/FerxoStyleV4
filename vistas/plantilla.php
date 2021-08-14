@@ -46,6 +46,8 @@ $servidor =  Ruta::ctrRutaServidor();
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/icons.css">
     <!-- Estilos de grid -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/grid.css">
+    <!-- Estilos de comentarios -->
+    <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/comentarios.css">
     <!-- Estilos bootstrap -->
     <!-- link rel="stylesheet" href="vistas/libs/bootstrap/css/bootstrap.min.css" -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/libs/bootstrap/css/bootstrap.min.css" >

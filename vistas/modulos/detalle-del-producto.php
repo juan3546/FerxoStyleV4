@@ -29,7 +29,7 @@ $ruta = $rutas[0];
  <div class="row coment">
  <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Comentarios</button>
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Comentarios (4)</button>
   </li>
   <li class="nav-item" role="presentation">
     <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Relacionados</button>
@@ -40,6 +40,22 @@ $ruta = $rutas[0];
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <!-- Propuesta Ángel Álvarez Guzmán -->
+    <div class="card p-3 mt-2">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="user d-flex flex-row align-items-center">
+          <img src="<?php echo $servidor; ?>vistas/img/usuarios/default/1.jpg" width="30" class="user-img rounded-circle me-2"> 
+            <span>
+              <small class="fw-bolder text-primary">Ángel Álvarez</small> 
+              <small class="fw-bolder">Un producto de buena calidad</small>
+            </span> 
+        </div> 
+        <small>13/07/2021</small>
+      </div>
+
+    </div>
+
+
   <div class="card mt-2">
   <div class="card-header" style="display: inline-block;">
     <div class="container">
