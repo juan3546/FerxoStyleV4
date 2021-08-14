@@ -5,7 +5,7 @@ $ruta = $rutas[0];
 ?>
 <section class="container-fluid detallePpp">
  <div class="row  mt-5">
-  <div class="col-6 d-flex ">
+  <div class="col-6 d-flex imgDetalle">
     <img src="vistas/img/plantilla/modelo2.png" alt="" width="55%" height="80%" class="m-auto my-auto">
   </div>
   <div class="col-6">
@@ -26,7 +26,7 @@ $ruta = $rutas[0];
 </section>
 <!-- apartado para los comentarios, articulos relacionados -->
 <section class="container-fluid mt-5">
- <div class="row">
+ <div class="row coment">
  <ul class="nav nav-tabs" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Comentarios</button>
@@ -40,7 +40,63 @@ $ruta = $rutas[0];
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <h2>Comnetarios</h2>
+  <div class="card mt-2">
+  <div class="card-header" style="display: inline-block;">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+        <h5 class="text-left">Juan Jose</h5>
+        </div>
+        <div class="col-6 justify-content-end align-content-end text-right">
+        <h5 class=""><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h5>
+        </div>
+      </div>
+</div>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Excelente servicio, ampliamente recomndado su trabajo.</p>
+    </blockquote>
+  </div>
+</div>
+<div class="card mt-2">
+  <div class="card-header" style="display: inline-block;">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+        <h5 class="text-left">Juan Jose</h5>
+        </div>
+        <div class="col-6 justify-content-end align-content-end text-right">
+        <h5 class=""><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h5>
+        </div>
+      </div>
+</div>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Excelente servicio, ampliamente recomndado su trabajo.</p>
+    </blockquote>
+  </div>
+</div>
+<div class="card mt-2">
+  <div class="card-header" style="display: inline-block;">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+        <h5 class="text-left">Juan Jose</h5>
+        </div>
+        <div class="col-6">
+        <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h5>
+        </div>
+      </div>
+</div>
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Excelente servicio, ampliamente recomndado su trabajo.</p>
+    </blockquote>
+  </div>
+</div>
   </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
   <h2>Relacionados</h2>

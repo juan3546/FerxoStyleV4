@@ -6,10 +6,15 @@
     font-size: 22px;
     font-weight: bold;
 }
-
-
-
-
+.coment{
+    border-radius: 20px;
+}
+.imgDetalle{
+    border-radius: 20px;
+}
+.fa-star{
+    color: yellow !important;
+}
 /* media query para menor que 375px */
 @media only screen and (max-width: 375px){
 
