@@ -12,4 +12,4 @@ class Ruta{
     //return "http://localhost/ferxostyle/FerxoStyle/";
     //return "http://localhost/ferxostyle/";
     }
-}
+} 
