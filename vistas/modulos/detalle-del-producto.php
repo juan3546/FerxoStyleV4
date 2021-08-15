@@ -40,78 +40,67 @@ $ruta = $rutas[0];
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-    <!-- Propuesta Ángel Álvarez Guzmán -->
-    <div class="card p-3 mt-2">
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="user d-flex flex-row align-items-center">
-          <img src="<?php echo $servidor; ?>vistas/img/usuarios/default/1.jpg" width="30" class="user-img rounded-circle me-2"> 
-            <span>
-              <small class="fw-bolder text-primary">Ángel Álvarez</small> 
-              <small class="fw-bolder">Un producto de buena calidad</small>
-            </span> 
-        </div> 
-        <small>13/07/2021</small>
-      </div>
-
+  <div class="container mt-3 d-flex justify-content-center">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-12">
+            <div class="card p-3 mb-2">
+                <div class="d-flex flex-row"> <img src="https://i.imgur.com/dwiGgJr.jpg" height="40" width="40" class="rounded-circle">
+                    <div class="d-flex flex-column ms-2">
+                        <h6 class="mb-1 text-primary">Emma</h6>
+                        <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus nibh, efficitur in bibendum id, pellentesque quis nibh. Ut dictum facilisis dui, non faucibus dolor sit amet lorem auctor vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque risus mauris</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <div class="d-flex flex-row"> <span class="text-muted fw-normal fs-10">May 22,2020 12:10 PM</span> </div>
+                </div>
+            </div>
+            <div class="card p-3 mb-2">
+                <div class="d-flex flex-row"> <img src="https://i.imgur.com/hczKIze.jpg" height="40" width="40" class="rounded-circle">
+                    <div class="d-flex flex-column ms-2">
+                        <h6 class="mb-1 text-primary">Morne Micheal</h6>
+                        <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus nibh, efficitur in bibendum id, pellentesque quis nibh. Ut dictum facilisis dui, non faucibus dolor sit amet lorem auctor vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque risus mauris</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row gap-3 align-items-center">
+                        <div class="d-flex align-items-center"> <i class="fa fa-heart-o"></i> <span class="ms-1 fs-10">Like</span> </div>
+                        <div class="d-flex align-items-center"> <i class="fa fa-comment-o"></i> <span class="ms-1 fs-10">Comments</span> </div>
+                    </div>
+                    <div class="d-flex flex-row"> <span class="text-muted fw-normal fs-10">May 21,2020 1:10 PM</span> </div>
+                </div>
+            </div>
+            <div class="card p-3 mb-2">
+                <div class="d-flex flex-row"> <img src="https://i.imgur.com/C4egmYM.jpg" height="40" width="40" class="rounded-circle">
+                    <div class="d-flex flex-column ms-2">
+                        <h6 class="mb-1 text-primary">Tommy Hifig</h6>
+                        <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus nibh, efficitur in bibendum id, pellentesque quis nibh. Ut dictum facilisis dui, non faucibus dolor sit amet lorem auctor vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque risus mauris</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row gap-3 align-items-center">
+                        <div class="d-flex align-items-center"> <i class="fa fa-heart-o"></i> <span class="ms-1 fs-10">Like</span> </div>
+                        <div class="d-flex align-items-center"> <i class="fa fa-comment-o"></i> <span class="ms-1 fs-10">Comments</span> </div>
+                    </div>
+                    <div class="d-flex flex-row"> <span class="text-muted fw-normal fs-10">May 12,2020 12:10 PM</span> </div>
+                </div>
+            </div>
+            <div class="card p-3 mb-2">
+                <div class="d-flex flex-row"> <img src="https://i.imgur.com/dwiGgJr.jpg" height="40" width="40" class="rounded-circle">
+                    <div class="d-flex flex-column ms-2">
+                        <h6 class="mb-1 text-primary">Emma</h6>
+                        <p class="comment-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lectus nibh, efficitur in bibendum id, pellentesque quis nibh. Ut dictum facilisis dui, non faucibus dolor sit amet lorem auctor vitae. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque risus mauris</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row gap-3 align-items-center">
+                        <div class="d-flex align-items-center"> <i class="fa fa-heart-o"></i> <span class="ms-1 fs-10">Like</span> </div>
+                        <div class="d-flex align-items-center"> <i class="fa fa-comment-o"></i> <span class="ms-1 fs-10">Comments</span> </div>
+                    </div>
+                    <div class="d-flex flex-row"> <span class="text-muted fw-normal fs-10">May 22,2020 12:10 PM</span> </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-  <div class="card mt-2">
-  <div class="card-header" style="display: inline-block;">
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-        <h5 class="text-left">Juan Jose</h5>
-        </div>
-        <div class="col-6 justify-content-end align-content-end text-right">
-        <h5 class=""><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h5>
-        </div>
-      </div>
-</div>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p>Excelente servicio, ampliamente recomndado su trabajo.</p>
-    </blockquote>
-  </div>
-</div>
-<div class="card mt-2">
-  <div class="card-header" style="display: inline-block;">
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-        <h5 class="text-left">Juan Jose</h5>
-        </div>
-        <div class="col-6 justify-content-end align-content-end text-right">
-        <h5 class=""><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h5>
-        </div>
-      </div>
-</div>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p>Excelente servicio, ampliamente recomndado su trabajo.</p>
-    </blockquote>
-  </div>
-</div>
-<div class="card mt-2">
-  <div class="card-header" style="display: inline-block;">
-    <div class="container">
-      <div class="row">
-        <div class="col-6">
-        <h5 class="text-left">Juan Jose</h5>
-        </div>
-        <div class="col-6">
-        <h5><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h5>
-        </div>
-      </div>
-</div>
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p>Excelente servicio, ampliamente recomndado su trabajo.</p>
-    </blockquote>
-  </div>
 </div>
   </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
