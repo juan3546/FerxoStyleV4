@@ -1,6 +1,5 @@
 <?php
 $servidor =  Ruta::ctrRutaServidor();
-
 ?>
 <nav class="navbar navbar-expand-lg fixed-top efectoMenu">
   <div class="container-fluid">

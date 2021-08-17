@@ -89,7 +89,7 @@ $servidor =  Ruta::ctrRutaServidor();
                 $ruta = $rutas[0];
                 
                 if($rutas[0] == "productos" || $rutas[0] == "Perzonalizados"){
-                    include "modulos/menu.php"; 
+                    include "modulos/menuIni.php"; 
                     include "modulos/productos.php";
                     include "modulos/pie.php"; 
                 }else if($rutas[0] == "inicio" || $rutas[0] == "salir" || $rutas[0] == "detalle-del-producto" || $rutas[0] == "carrito"  || $rutas[0] == "articulos-para-hombre" || $rutas[0] == "articulos-para-mujeres" || $rutas[0] == "articulos-para-ninios" || $rutas[0] == "articulos-personalizados" || $rutas[0] == "articulos-en-oferta" || $rutas[0] == "articulos-nuevos" || $rutas[0] == "cotizacion" || $rutas[0] == "personalizados"){
