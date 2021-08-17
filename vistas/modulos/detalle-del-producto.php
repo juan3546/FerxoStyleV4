@@ -77,15 +77,21 @@ if(isset($rutas[1])){
   <div class="container mt-3 d-flex justify-content-center">
     <div class="row d-flex justify-content-center">
         <div class="col-md-12">
-        <div class="card p-3 mb-2">
-          <div class="container">
+          <div class="container-fluid">
             <div class="row col-12">
-              <textarea name="" id="comentarioArea" cols="15" rows="5" placeholder="Agrega tu comentario"></textarea> 
-              <button class="btn btn-primary">Agregar Comentario</button>
+              <div class="row">
+                <div class="col-8">
+                <textarea name="" id="comentarioArea" cols="15" rows="5" placeholder="Agrega tu comentario" class="form-control"></textarea> 
+                </div>
+                <div class="col-4 justify-content-end align-content-end">
+                <button class="btn btn-primary"><i class="fas fa-plus"></i></button>
+                </div>
+              </div>
+              
+              
             </div>
           </div>
-            </div>
-            <div class="card p-3 mb-2">
+            <div class="card p-3 mb-2 mt-3">
                 <div class="d-flex flex-row"> <img src="https://i.imgur.com/dwiGgJr.jpg" height="40" width="40" class="rounded-circle">
                     <div class="d-flex flex-column ms-2">
                         <h6 class="mb-1 text-primary">Emma</h6>
