@@ -2,32 +2,55 @@
 $url =  Ruta::ctrRuta();
 $servidor =  Ruta::ctrRutaServidor();
 $ruta = $rutas[0];
+
+if(isset($rutas[1])){
+           
+  $item = "id";
+  $valor = $rutas[1];
+  $respuestaProduc = ControladorProductos::ctrMostrarProductos($item, $valor);
+}else{
+  /* Error */
+}
+
 ?>
 <section class="container-fluid detallePpp">
  <div class="row  mt-5">
   <div class="col-6 d-flex imgDetalle">
-    <img src="vistas/img/plantilla/modelo2.png" alt="" width="55%" height="80%" class="m-auto my-auto">
+    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="55%" height="80%" class="m-auto my-auto">
   </div>
   <div class="col-6">
-  <p><a href="https://ferxostyle.com.mx/inicio">Inicio</a> / Modelo 1</p>
-   <h2>Modelo 1</h2>
-   <h4 class="precioDetalle">$400</h4>
+  <p><a href="https://ferxostyle.com.mx/inicio">Inicio</a> / <?php echo $respuestaProduc[0]["nombre"];  ?> </p>
+   <h2><?php echo $respuestaProduc[0]["nombre"];  ?></h2>
+   <?php
+      if($respuestaProduc[0]["precioOferta"] == null ){
+          echo '<h4 class="precioDetalle">$'.$respuestaProduc[0]["precio"].'</h4>';
+      }else{
+          echo '<del><h4 class="precioDetalle">$'.$respuestaProduc[0]["precio"].'</h4></del>';
+          echo '<h4 class="precioDetalle">$'.$respuestaProduc[0]["precioOferta"].'</h4>';
+      }
+    ?>
+
    <select name="tallas" id="tallas" class="form-control-lg">
        <option value="0">Tallas Disponibles</option>
        <option value="1">M</option>
        <option value="2">G</option>
        <option value="3">XL</option>
    </select>
-   <p class="mt-3"><h4>Despricion del Producto <br></h4><br>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus repudiandae nesciunt odio, magni deleniti, minima saepe maxime beatae quidem ipsum nobis laborum aut nulla alias commodi hic. Inventore, rem dolor.
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, delectus! Quaerat facere, itaque excepturi eligendi fuga commodi modi. Tempora autem nobis pariatur dolore consequuntur sunt, earum soluta repudiandae est voluptates.</p>
+   
+   <?php
+      if($respuestaProduc[0]["descripcion"] != null){
+          echo '<p class="mt-3"><h4>Despricion del Producto <br></h4><br>';
+          echo $respuestaProduc[0]["descripcion"];
+      }
+    ?>
+  </p>
 
     <div class="row">
     <div class="col-6">
-       <button class="btn btn-primary">Solicitar Pedido</button>
+       <button class="btn btn-primary" producto=<?php echo $respuestaProduc[0]["id"]; ?> >Solicitar Pedido</button>
     </div>
     <div class="col-6">
-        .<button class="btn btn-primary"> <i class="fas fa-cart-plus"></i> Agregar a Carrito</button>
+        .<button class="btn btn-primary" producto=<?php echo $respuestaProduc[0]["id"]; ?> > <i class="fas fa-cart-plus"></i> Agregar a Carrito</button>
     </div>
  </div>
   </div>

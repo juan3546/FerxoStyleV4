@@ -193,3 +193,11 @@ $(document).on("keyup", "#txtArticulosInfante", function(){
     }
 
 });
+
+
+/* enviar llave prmaria a detalle*/
+$(document).on("click", ".cursor", function(){
+    var rutaOculta = $("#rutaOculta").val();
+    var producto = $(this).attr("producto");
+    window.location = rutaOculta+"detalle-del-producto/"+producto;
+});

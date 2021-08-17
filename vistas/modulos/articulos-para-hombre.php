@@ -143,7 +143,7 @@ $ruta = $rutas[0];
       ?>
 
    
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 cursor" producto=<?php echo $value["id"]; ?>>
       <div class="card-sl h-100">
         <div class="card-image">
           <img src="<?php echo $servidor.$value["foto"]; ?>" />

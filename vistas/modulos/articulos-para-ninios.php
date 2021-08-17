@@ -143,7 +143,7 @@ $ruta = $rutas[0];
       ?>
 
    
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 cursor" producto=<?php echo $value["id"]; ?>>
       <div class="card-sl h-100">
         <div class="card-image">
           <img src="<?php echo $servidor.$value["foto"]; ?>" />
@@ -157,7 +157,7 @@ $ruta = $rutas[0];
         </div>
         <div class="card-text">
           <?php if ($value["precioOferta"] != null): ?>
-            <del>$<?php echo $value["precioOferta"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precio"]; ?>
+            <del>$<?php echo $value["precio"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precioOferta"]; ?>
           <?php else:  ?>
             $<?php echo $value["precio"]; ?>
           <?php endif  ?>  
