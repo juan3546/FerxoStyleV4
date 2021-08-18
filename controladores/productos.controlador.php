@@ -159,4 +159,50 @@ class ControladorProductos{
 		return $respuesta;
 	}
 
+	/*=============================================
+	MOSTRAR PRODUCTOS RELACIONADOS
+	=============================================*/
+
+
+	static public function ctrMostrarProductosRelacionados(){
+
+		$tabla = "productos";
+
+
+		$respuesta = ModeloProducto::mdlMostrarProductosRelacionados($tabla);
+		
+		return $respuesta;
+	}
+
+
+	/*=============================================
+	MOSTRAR PRODUCTOS CON OFERTA
+	=============================================*/
+
+
+	static public function ctrMostrarProductosConOferta(){
+
+		$tabla = "productos";
+
+
+		$respuesta = ModeloProducto::mdlMostrarProductosConOferta($tabla);
+		
+		return $respuesta;
+	}
+
+	/*=============================================
+	MOSTRAR TALALS DE LOS PRODUCTOS
+	=============================================*/
+
+
+	static public function ctrMostrarTallas($item, $valor){
+
+		$tabla = "tallas";
+
+
+		$respuesta = ModeloProducto::mdlMostrarProductos($tabla, $item, $valor);
+		
+		return $respuesta;
+	}
+
 }

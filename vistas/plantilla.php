@@ -140,7 +140,7 @@ $servidor =  Ruta::ctrRutaServidor();
     <script src="<?php echo $url; ?>vistas/dist/js/plantilla.js"></script>
     <script src="<?php echo $url; ?>vistas/js/productos.js"></script>
     <script src="<?php echo $url; ?>vistas/js/correo.js"></script>
-
+    <script src="<?php echo $url; ?>vistas/js/comentarios.js"></script>
     
 </body>
 </html>

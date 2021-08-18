@@ -331,6 +331,48 @@ class ModeloProducto{
 		$stmt = null;
 
 
-}
+	}
+
+	/*=============================================
+	MOSTRAR PRODUCTOS ALEATORIOS
+	=============================================*/
+
+	static public function mdlMostrarProductosRelacionados($tabla){
+	
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ORDER BY rand() LIMIT 3");
+
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
+	/*=============================================
+	MOSTRAR PRODUCTOS CON OFERTA
+	=============================================*/
+
+	static public function mdlMostrarProductosConOferta($tabla){
+	
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE estado = 'Oferta' ORDER BY rand() LIMIT 3");
+
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
 
 }
