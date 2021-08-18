@@ -115,6 +115,8 @@ $num = count($numComentarios);
             foreach ($comentarios as $key => $value):
               if($value["foto"] == ""){
                   $foto = $value["foto"];
+              }else{
+                $foto = "vistas/img/usuarios/default/1.jpg";
               }
 
               $comen = htmlspecialchars( $value["comentario"]);
