@@ -65,6 +65,7 @@
       
 
   $respuesta = ControladorInicio::ctrMostrarProductosLim($item, $valor, $iniciar,$articulo_por_pagina);
+  var_dump($respuesta);
  ?>
  <div class="row container-fluid">
  <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">
@@ -73,58 +74,32 @@
       foreach ($respuesta as $key => $value) {
           echo '<div class="item">
                     <div class="col">
-                    <div class="card-sl h-100">
-                    <div class="card-image">
-                      <img src="<?php echo $servidor.$value["foto"]; ?>" />
-                    </div>
-                       <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
-                    <div class="card-heading">
-                        <?php echo $value["nombre"]; ?>
-                    </div>
+                      <div class="card-sl h-100">
+                        <div class="card-image">
+                           <img src="'. $servidor.$value["foto"].'" />
+                        </div>
+                          <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
+                       <div class="card-heading">
+                          '.$value["nombre"].'
+                      </div>
                     <div class="card-text">
-                    <?php echo $value["descripcion"]; ?>
+                    '.$value["descripcion"].'
                     </div>
-                    <div class="card-text">
-                      <?php if ($value["precioOferta"] != null): ?>
-                        <del>$<?php echo $value["precio"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precioOferta"]; ?>
-                      <?php else:  ?>
-                        $<?php echo $value["precio"]; ?>
-                      <?php endif  ?>  
-            
-                    </div>
+                    <div class="card-text">';
+                      if ($value["precioOferta"] != null):
+                       echo '<del>$'.$value["precio"].' </del> &nbsp;&nbsp; $'.$value["precioOferta"];
+                       else: 
+                        echo $value["precio"];
+                       endif;
+                 echo  ' </div>
                       <a href="#" class="card-button"> Solicitar pedido</a>
                    </div>
               </div>
             </div>';
       }
      ?>
-    
    </div>
-   <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
-   <div class="card-sl h-100">
-        <div class="card-image">
-          <img src="<?php echo $servidor.$value["foto"]; ?>" />
-        </div>
-           <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
-        <div class="card-heading">
-            <?php echo $value["nombre"]; ?>
-        </div>
-        <div class="card-text">
-        <?php echo $value["descripcion"]; ?>
-        </div>
-        <div class="card-text">
-          <?php if ($value["precioOferta"] != null): ?>
-            <del>$<?php echo $value["precio"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precioOferta"]; ?>
-          <?php else:  ?>
-            $<?php echo $value["precio"]; ?>
-          <?php endif  ?>  
-
-        </div>
-          <a href="#" class="card-button"> Solicitar pedido</a>
-       </div>
-     
-<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+   
  </div>
  </div>
 </section>
