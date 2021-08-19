@@ -101,7 +101,7 @@ $servidor =  Ruta::ctrRutaServidor();
                     include "modulos/login.php"; 
                 }
             }else{
-                include "modulos/menu.php"; 
+                include "modulos/menuIni.php"; 
                 include "modulos/inicio.php";
                 include "modulos/pie.php"; 
             }

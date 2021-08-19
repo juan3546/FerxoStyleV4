@@ -5,7 +5,7 @@
   $tituloSegundo = substr($configInicio[0]["tituloSlogan"], 23);
   $sloganPrimero = substr($configInicio[0]["slogan"], 0, 66);
   $sloganSegundo = substr($configInicio[0]["slogan"], 67);
-?> 
+?>  
  <!-- seccion de la imagen del banner  -->
 <section id="=ImagenYTextoBanner" >
   <div class="card parallax" >
@@ -19,6 +19,7 @@
       </div>
   </div>
 </div>
+
 </section>
 <!--fin seccion de la imagen del banner  -->
 <!-- seccion que muestra las categorias de los productos hombre, mujer y niños -->
@@ -72,29 +73,58 @@
       foreach ($respuesta as $key => $value) {
           echo '<div class="item">
                     <div class="col">
-                      <div class="card tarjetass mt-3">
-                        <div class="product-1 align-items-center p-2 text-center"> 
-                          <img src="'.$servidor.$value["foto"].'" class="rounded" alt="" width="100%">
-                          <h5 class="mt-2">'.$value["nombre"].'</h5>
-                          <div class="cost mt-3 text-dark">';
-                          if($value["precioOferta"] != null){
-                            echo '<span>$'.$value["precioOferta"].'</span>';
-                          }else{
-                            echo '<span>$'.$value["precio"].'</span>';
-                        }
-                    echo '</div>
+                    <div class="card-sl h-100">
+                    <div class="card-image">
+                      <img src="<?php echo $servidor.$value["foto"]; ?>" />
                     </div>
-                    <!-- button -->
-                  <div class="p-3 shoe text-center text-white mt-3 cursor">
-                    <span class="text-uppercase botonCarrito">Agregar a pedido</span>
-                  </div>
-                </div>
+                       <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
+                    <div class="card-heading">
+                        <?php echo $value["nombre"]; ?>
+                    </div>
+                    <div class="card-text">
+                    <?php echo $value["descripcion"]; ?>
+                    </div>
+                    <div class="card-text">
+                      <?php if ($value["precioOferta"] != null): ?>
+                        <del>$<?php echo $value["precio"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precioOferta"]; ?>
+                      <?php else:  ?>
+                        $<?php echo $value["precio"]; ?>
+                      <?php endif  ?>  
+            
+                    </div>
+                      <a href="#" class="card-button"> Solicitar pedido</a>
+                   </div>
               </div>
             </div>';
       }
      ?>
     
    </div>
+   <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+   <div class="card-sl h-100">
+        <div class="card-image">
+          <img src="<?php echo $servidor.$value["foto"]; ?>" />
+        </div>
+           <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
+        <div class="card-heading">
+            <?php echo $value["nombre"]; ?>
+        </div>
+        <div class="card-text">
+        <?php echo $value["descripcion"]; ?>
+        </div>
+        <div class="card-text">
+          <?php if ($value["precioOferta"] != null): ?>
+            <del>$<?php echo $value["precio"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precioOferta"]; ?>
+          <?php else:  ?>
+            $<?php echo $value["precio"]; ?>
+          <?php endif  ?>  
+
+        </div>
+          <a href="#" class="card-button"> Solicitar pedido</a>
+       </div>
+     
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
  </div>
  </div>
 </section>

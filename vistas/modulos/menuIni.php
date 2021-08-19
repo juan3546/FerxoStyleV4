@@ -29,7 +29,16 @@ $servidor =  Ruta::ctrRutaServidor();
           <a class="nav-link text-dark mx-2" href="<?php echo $url; ?>cotizacion" >Cotizaciones</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark mx-2" href="<?php echo $url; ?>login">Iniciar Sesion</a>
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
     </div>
