@@ -65,7 +65,6 @@
       
 
   $respuesta = ControladorInicio::ctrMostrarProductosLim($item, $valor, $iniciar,$articulo_por_pagina);
-  var_dump($respuesta);
  ?>
  <div class="row container-fluid">
  <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">

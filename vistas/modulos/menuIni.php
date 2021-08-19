@@ -33,10 +33,9 @@ $servidor =  Ruta::ctrRutaServidor();
           <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
            Juan Jose
           </button>
-            <ul class="dropdown-menu mx-auto">
-              <li class="mb-1"><a href="#">Perfil</a></li>
-              <li><a href="#">Cerrar Cesion</a></li>
-              
+            <ul class="dropdown-menu text-center">
+              <li><a href="#" class="">Perfil</a></li>
+              <li><a href="#" class="text-center">Cerrar Cesion</a></li>
             </ul>
 </div>
         </li>
