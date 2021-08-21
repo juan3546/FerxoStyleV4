@@ -87,47 +87,84 @@
 </div>
   </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-   <!-- cards para mostrar articulos relacionados -->
-   <div class="container-fluid bg-trasparent my-4 p-3" style="position: relative;">
-        <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-      <?php 
-        $ProducAleatorios = ControladorProductos::ctrMostrarProductosRelacionados();
-        $descrip = "";
-        foreach ($ProducAleatorios as $key => $value):
+     <!-- Main content -->
+     <section class="content">
 
-          if($value["descripcion"] != null){
-            $descrip = $value["descripcion"];
-          }
-      ?>
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
-      <div class="card-sl h-100">
-        <div class="card-image">
-          <img src="<?php echo $servidor.$value["foto"]; ?>" />
-        </div>
-           <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
-        <div class="card-heading">
-            <h4><?php echo $value["nombre"]; ?></h4>
-        </div>
-        <div class="card-text">
-         <?php echo $descrip; ?> 
-        </div>
-        <div class="card-text">
-        <?php if ($value["precioOferta"] != null): ?>
-            <del>$<?php echo $value["precio"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precioOferta"]; ?>
-          <?php else:  ?>
-            $<?php echo $value["precio"]; ?>
-          <?php endif  ?>  
+<!-- Default box -->
+<div class="card">
+  <div class="card-body">
+      <div class="table-responsive">
+        <table class="table  table-bordered table-striped   tablas " >
+          <thead>
+            <tr>
+            <th style="width:10px">#</th>
+            <th>Nombre</th>
+            <th>Usuario</th>
+            <th>Foto</th>
+            <th>Perfil</th>
+            <th>Estado</th>
+            <th>Último login</th>
+            <th>Acciones</th>
 
-        </div>
-          <a href="#" class="card-button"> Solicitar pedido</a>
-       </div>
-     </div>
-     <?php endforeach; ?>
+            </tr>
+          </thead>
+          <tbody>
+
+  <tr>
+    <td>Una</td>
+    <td>dos</td>
+    <td>'.$value["usuario"].'</td>';
+
+    if($value["foto"] != ""){
+
+      echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="40px"></td>';
+
+    }else{
+
+      echo '<td><img src="vistas/img/usuarios/default/1.jpg" class="img-thumbnail" width="40px"></td>';
+
+    }
+
+    echo '<td>'.$value["perfil"].'</td>';
+
+    if($value["estado"] != 0){
+
+      echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
+
+    }else{
+
+      echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
+
+    }             
+
+    echo '<td>'.$value["ultimo_login"].'</td>
+    <td>
+
+      <div class="btn-group">
+          
+        <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuarios"><i class="fas fa-pen"></i></button>
+
+        <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fa fa-times"></i></button>
+
+      </div>  
+
+    </td>
+
+  </tr>
+}
 
 
-        </div>
-    </div>
-   <!-- fin cards para mostrar articulos relacionados -->
+?> 
+          </tbody>
+        </table>
+      </div>
+  </div>
+
+</div>
+<!-- /.card -->
+
+</section>
+<!-- /.content -->
   </div>
   <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
   
