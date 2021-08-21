@@ -48,10 +48,12 @@ class ControladorPerfil{
 				    /*=============================================
 					PRIMERO PREGUNTAMOS SI EXISTE OTRA IMAGEN EN LA BD
 					=============================================*/
-                    var_dump($_POST["fotoActual"]);
+                    $abspath=$_SERVER['DOCUMENT_ROOT'];
+                    $fotoActual = $abspath.'/'.'ferxostyle/FerxoStyle/'.$_POST["fotoActual"];
+                    
 					if(!empty($_POST["fotoActual"])){
 
-						unlink($_POST["fotoActual"]);
+						unlink($fotoActual);
 
 					}else{
 
@@ -72,11 +74,12 @@ class ControladorPerfil{
 						$aleatorio = mt_rand(100,999);
 
 						$ruta = "vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
-                        $rutaServidor = $servidor."vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
+                        $rutaServidor = $fotoActual = $abspath.'/'.'ferxostyle/FerxoStyle/'."vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
 
 						$origen = imagecreatefromjpeg($_FILES["editarFoto"]["tmp_name"]);						
 
 						$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+                      
 
 						imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
 
@@ -174,6 +177,7 @@ class ControladorPerfil{
 				
 
 					</script>';
+                    
                     
 
 				}	
