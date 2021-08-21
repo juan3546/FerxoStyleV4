@@ -34,7 +34,7 @@ $servidor =  Ruta::ctrRutaServidor();
            Juan Jose
           </button>
             <ul class="dropdown-menu text-center">
-              <li><a href="#" class="">Perfil</a></li>
+              <li><a href="<?php echo $url; ?>perfil">Perfil</a></li>
               <li><a href="#" class="text-center">Cerrar Cesion</a></li>
             </ul>
 </div>

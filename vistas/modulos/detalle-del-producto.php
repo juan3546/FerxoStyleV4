@@ -98,8 +98,6 @@ $num = count($numComentarios);
                 <button class="btn btn-primary" id="btnComentario"><i class="fas fa-plus"></i></button>
                 </div>
               </div>
-              
-              
             </div>
           </div>
           <div class="mostComentario"></div>

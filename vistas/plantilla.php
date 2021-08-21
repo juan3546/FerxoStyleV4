@@ -42,6 +42,8 @@ $servidor =  Ruta::ctrRutaServidor();
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/detalle-productos.css">
     <!-- Estilos articulos para hombre -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/articulos-para-hombre.css">
+    <!-- Estilos perfil -->
+    <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/perfil.css">
     <!-- Estilos de iconos -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/icons.css">
     <!-- Estilos de grid -->
@@ -92,8 +94,7 @@ $servidor =  Ruta::ctrRutaServidor();
                     include "modulos/menuIni.php"; 
                     include "modulos/productos.php";
                     include "modulos/pie.php"; 
-                }else if($rutas[0] == "inicio" || $rutas[0] == "salir" || $rutas[0] == "detalle-del-producto" || $rutas[0] == "carrito"  || $rutas[0] == "articulos-para-hombre" || $rutas[0] == "articulos-para-mujeres" || $rutas[0] == "articulos-para-ninios" || $rutas[0] == "articulos-personalizados" || $rutas[0] == "articulos-en-oferta" || $rutas[0] == "articulos-nuevos" || $rutas[0] == "cotizacion" || $rutas[0] == "personalizados"){
-                    
+                }else if($rutas[0] == "inicio" || $rutas[0] == "salir" || $rutas[0] == "detalle-del-producto" || $rutas[0] == "carrito"  || $rutas[0] == "articulos-para-hombre" || $rutas[0] == "articulos-para-mujeres" || $rutas[0] == "articulos-para-ninios" || $rutas[0] == "articulos-personalizados" || $rutas[0] == "articulos-en-oferta" || $rutas[0] == "articulos-nuevos" || $rutas[0] == "cotizacion" || $rutas[0] == "personalizados"|| $rutas[0] == "perfil"){
                     include "modulos/menuIni.php"; 
                     include "modulos/".$rutas[0].".php";
                     include "modulos/pie.php"; 
