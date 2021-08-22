@@ -209,9 +209,9 @@
  </div> -->
  <div class="container">
         <div class="section-title">
-            <h2>Testimonials</h2>
+            <h2>Testimonios Clientes</h2>
             <span class="section-separator"></span>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Con tu opinion nos haces crecer y mejorar dia con dia.</p>
         </div>
     </div>
     <div class="testimonials-carousel-wrap">
@@ -222,7 +222,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="21.jpg"></div>
+                            <div class="testi-avatar"><img src="vistas/img/plantilla/user-1.png"></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                                 <div class="listing-rating">
@@ -232,11 +232,11 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>Excelente servicio son muy amables y tienen unos diseños muy bonitos. Recomendados ampliamente</p>
                                 <a href="#" class="text-link"></a>
                                 <div class="testimonials-avatar">
-                                    <h3>John Doe</h3>
-                                    <h4>Owner</h4>
+                                    <h3>Juan Jose Guzman</h3>
+                                    <h4>Cliente</h4>
                                 </div>
                             </div>
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
@@ -246,7 +246,7 @@
                     <!--second--->
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="3.jpg"></div>
+                            <div class="testi-avatar"><img src="vistas/img/plantilla/user-2.png"></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                                 <div class="listing-rating">
@@ -256,11 +256,11 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>Muy bonitos diseños y excelente servicio.</p>
                                 <a href="#" class="text-link"></a>
                                 <div class="testimonials-avatar">
-                                    <h3>Doe Boe</h3>
-                                    <h4>Director</h4>
+                                    <h3>Cristhina Guzman</h3>
+                                    <h4>Cliente</h4>
                                 </div>
                             </div>
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
@@ -270,7 +270,7 @@
 
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="4.jpg"></div>
+                            <div class="testi-avatar"><img src="vistas/img/plantilla/user-3.png"></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                                 <div class="listing-rating">
@@ -280,11 +280,11 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>Excelente servicio a domicilio y muy rapido hacer un pedido con ellos. Recomendados ampliamente</p>
                                 <a href="#" class="text-link"></a>
                                 <div class="testimonials-avatar">
-                                    <h3>Boe Doe</h3>
-                                    <h4>Developer</h4>
+                                    <h3>Tannia Angelica</h3>
+                                    <h4>Cliente</h4>
                                 </div>
                             </div>
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
@@ -294,7 +294,7 @@
                     <!--fourth-->
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="6.jpg"></div>
+                            <div class="testi-avatar"><img src="vistas/img/plantilla/user-1.png"></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                                 <div class="listing-rating">
@@ -304,11 +304,11 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>Les amnde hacer varios diseños personalizos y muy bien logrados la verdad, cuidaron todos los detalles por muy pequeños que eran, volveria a hacerles un pedido.</p>
                                 <a href="#" class="text-link"></a>
                                 <div class="testimonials-avatar">
-                                    <h3>Doe John</h3>
-                                    <h4>Designer</h4>
+                                    <h3>Salvador Emmanuel</h3>
+                                    <h4>Cliente</h4>
                                 </div>
                             </div>
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
@@ -323,3 +323,6 @@
         <div class="tc-pagination"></div>
     </div>
 </section>
+<br>
+<br>
+<br>
