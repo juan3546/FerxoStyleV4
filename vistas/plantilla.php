@@ -56,8 +56,9 @@ $servidor =  Ruta::ctrRutaServidor();
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/libs/bootstrap/css/bootstrap.min.css" >
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/libs/OwlCarousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/libs/OwlCarousel/css/owl.theme.default.css">
-      
-
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- PLUGINS DE JS -->
     <script src="<?php echo $url; ?>vistas/libs/jquery/jquery.min.js"></script>
     <!-- script src="<?php echo $url; ?>vistas/libs/bootstrap/js/popper.min.js"></script -->
@@ -135,7 +136,8 @@ $servidor =  Ruta::ctrRutaServidor();
  ?>
     <input type="hidden" value="<?php echo $url; ?>" id="rutaOculta">
     <input type="hidden" value="<?php echo $servidor; ?>" id="rutaOcultaServidor">
-    <script src="<?php echo $url; ?>vistas/dist/js/inicio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="<?php echo $url; ?>vistas/js/inicio.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/login.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/menu.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/plantilla.js"></script>
@@ -143,6 +145,7 @@ $servidor =  Ruta::ctrRutaServidor();
     <script src="<?php echo $url; ?>vistas/js/correo.js"></script>
     <script src="<?php echo $url; ?>vistas/js/comentarios.js"></script>
     <script src="<?php echo $url; ?>vistas/js/perfil.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0-alpha.37/swiper-bundle.min.js"></script>
     
 </body>
 </html>
