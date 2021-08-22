@@ -72,26 +72,35 @@
       foreach ($respuesta as $key => $value) {
           echo '<div class="item">
                     <div class="col">
-                      <div class="card-sl h-100">
-                        <div class="card-image">
-                           <img src="'. $servidor.$value["foto"].'" />
-                        </div>
-                          <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
-                       <div class="card-heading">
-                          '.$value["nombre"].'
-                      </div>
-                    <div class="card-text">
-                    '.$value["descripcion"].'
-                    </div>
-                    <div class="card-text">';
-                      if ($value["precioOferta"] != null):
-                       echo '<del>$'.$value["precio"].' </del> &nbsp;&nbsp; $'.$value["precioOferta"];
-                       else: 
-                        echo $value["precio"];
-                       endif;
-                 echo  ' </div>
-                      <a href="#" class="card-button"> Solicitar pedido</a>
+                    <div class="card card2">
+                    <div class="img-container">
+                       <div class="d-flex justify-content-between align-items-center p-2 first"> 
+                  <span class="percent">Nuevo</span> 
+                  <span class="wishlist">
+                  <i class="fa fa-heart"></i>
+                  </span> </div> 
+                  <img src="'. $servidor.$value["foto"].'" class="img-fluid">
                    </div>
+                     <div class="product-detail-container">
+                       <div class="d-flex justify-content-between align-items-center">
+                         <h6 class="mb-0">'.$value["nombre"].'</h6> 
+                  <span class="text-danger font-weight-bold">';
+                    if ($value["precioOferta"] != null):
+                    echo '<del>$'.$value["precio"].' </del> &nbsp;&nbsp; $'.$value["precioOferta"];
+                         else: 
+                           echo $value["precio"];
+                          endif;
+                  
+                 echo '</span>
+                                      </div>
+                                      <div class="d-flex justify-content-between align-items-center mt-2">
+                                          <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div>
+                                          <div class="size"> <label class="radio"> <input type="radio" name="size1" value="small"> <span>S</span> </label> <label class="radio"> <input type="radio" name="size1" value="Medium" checked> <span>M</span> </label> <label class="radio"> <input type="radio" name="size1" value="Large"> <span>L</span> </label> </div>
+                                      </div>
+                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white">Agregar a carrito</button> </div>
+                                  </div>
+                              </div>
+                  
               </div>
             </div>';
       }
