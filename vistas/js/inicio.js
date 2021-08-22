@@ -97,7 +97,7 @@ function initParadoxWay() {
         var j2 = new Swiper(".testimonials-carousel .swiper-container", {
             preloadImages: false,
             slidesPerView: 1,
-            spaceBetween: 20,
+            spaceBetween: 10,
             loop: true,
             grabCursor: true,
             mousewheel: false,
