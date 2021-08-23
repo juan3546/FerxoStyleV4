@@ -65,7 +65,6 @@ $servidor =  Ruta::ctrRutaServidor();
  
     <!-- PLUGINS DE JS -->
     <script src="<?php echo $url; ?>vistas/libs/jquery/jquery.min.js"></script>
-    <!-- script src="<?php echo $url; ?>vistas/libs/bootstrap/js/popper.min.js"></script -->
     <script src="<?php echo $url; ?>vistas/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo $url; ?>vistas/libs/bootstrap/js/bootstrap.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" ></script>
     <script src="<?php echo $url; ?>vistas/libs/fontawesome/js/fontawesome.js"></script>
@@ -73,6 +72,7 @@ $servidor =  Ruta::ctrRutaServidor();
     <script src="<?php echo $url; ?>vistas/libs/fontawesome/js/solid.js"></script>
     <script src="<?php echo $url; ?>vistas/libs/sweetalert2/sweetalert2.all.js"></script>
     <script src="<?php echo $url; ?>vistas/libs/OwlCarousel/js/owl.carousel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0-alpha.37/swiper-bundle.min.js"></script>
 </head>
 <body>
 
@@ -140,8 +140,7 @@ $servidor =  Ruta::ctrRutaServidor();
  ?>
     <input type="hidden" value="<?php echo $url; ?>" id="rutaOculta">
     <input type="hidden" value="<?php echo $servidor; ?>" id="rutaOcultaServidor">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+  
     <script src="<?php echo $url; ?>vistas/js/inicio.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/login.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/menu.js"></script>
@@ -150,7 +149,7 @@ $servidor =  Ruta::ctrRutaServidor();
     <script src="<?php echo $url; ?>vistas/js/correo.js"></script>
     <script src="<?php echo $url; ?>vistas/js/comentarios.js"></script>
     <script src="<?php echo $url; ?>vistas/js/perfil.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0-alpha.37/swiper-bundle.min.js"></script>
+    
     
 </body>
 </html>
