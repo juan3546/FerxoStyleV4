@@ -201,3 +201,40 @@ $(document).on("click", ".cursor", function(){
     var producto = $(this).attr("producto");
     window.location = rutaOculta+"detalle-del-producto/"+producto;
 });
+
+
+/* REVISAR SI HAN INICIADO SESION */
+
+$(document).on("click", ".card-action", function(){
+    var rutaOculta = $("#rutaOculta").val();
+    var usu = $(this).attr("id");
+    /*
+    var datos = new FormData();
+    datos.append("revisarSession", "");
+     $.ajax({
+        url: rutaOculta+"ajax/productos.ajax.php",
+        method:"POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success:function(respuesta){
+            */
+            if(usu != "ok"){
+                Swal.fire({
+                    title: 'Debes de iniciar sesión',
+                    showClass: {
+                      popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                      popup: 'animate__animated animate__fadeOutUp'
+                    }
+                  });
+            }
+/*
+        }
+
+    });
+    */
+});

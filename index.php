@@ -10,6 +10,7 @@ require_once "controladores/enviarCorreo.controlador.php";
 require_once "controladores/configuracion.controlador.php";
 require_once "controladores/comentario.controlador.php";
 require_once "controladores/perfil.controlador.php";
+require_once "controladores/pedidos.controlador.php";
 
 
 // se requiere utilizar los modelos
@@ -21,6 +22,7 @@ require_once "modelos/rutas.php";
 require_once "modelos/configuracion.modelo.php";
 require_once "modelos/comentario.modelo.php";
 require_once "modelos/perfil.modelo.php";
+require_once "modelos/pedidos.modelo.php";
 
 
 // PLUGINS

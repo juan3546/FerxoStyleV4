@@ -12,4 +12,10 @@ class Ruta{
     //return "http://localhost/ferxostyle/FerxoStyle/";
     return "http://localhost/ferxostyle/";
     }
+
+    public function ctrRutaProyecto(){
+        //    return "admin.ferxostyle";
+        //return "/ferxostyle/FerxoStyle/";
+        return "/ferxostyle/";
+        }
 }

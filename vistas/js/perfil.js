@@ -46,3 +46,12 @@ $(".foto").change(function(){
 
   	}
 });
+
+$(document).on("click", ".btnViewPedidoPdf", function(){
+    var pedido = $(this).attr("pedido");
+	var pdf = $(this).attr("pdf");
+    var rutaOculta = $("#rutaOculta").val();
+
+  
+    $("#mostrarPerfilpdf").attr("data", rutaOculta+"ajax/pedidos.pdf.php?pedido="+pedido+"&pdf="+pdf);
+  });

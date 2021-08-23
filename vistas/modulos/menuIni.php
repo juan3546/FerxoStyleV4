@@ -31,11 +31,11 @@ $servidor =  Ruta::ctrRutaServidor();
         <li class="nav-item">
         <div class="btn-group dropstart">
           <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-           Juan Jose
+           <?php echo $_SESSION["usuario"]; ?>
           </button>
             <ul class="dropdown-menu text-center">
               <li><a href="<?php echo $url; ?>perfil">Perfil</a></li>
-              <li><a href="#" class="text-center">Cerrar Cesion</a></li>
+              <li><a href="<?php echo $url; ?>salir" class="text-center">Cerrar Cesion</a></li>
             </ul>
 </div>
         </li>

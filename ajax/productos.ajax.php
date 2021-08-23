@@ -45,6 +45,16 @@ class AjaxProductos{
     
             echo json_encode($respuesta);
         }
+
+        // REVISAR SI HAN INICIADO SESION 
+        public function ajaxRevisarSession(){
+
+            
+
+            $respuesta = ControladorProductos::ctrRevisarSession();
+    
+            echo json_encode($respuesta);
+        }
     
 
 }
@@ -65,4 +75,9 @@ if(isset($_POST["MostrarProductoInfante"])){
     $ajaxProduct = new AjaxProductos();
     $ajaxProduct -> articulo = $_POST["producto"];
     $ajaxProduct -> ajaxMostarProductosXInfante();
+}
+
+if(isset($_POST["revisarSession"])){
+    $ajaxProduct = new AjaxProductos();
+    $ajaxProduct -> ajaxRevisarSession();
 }

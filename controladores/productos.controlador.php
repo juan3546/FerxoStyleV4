@@ -205,4 +205,21 @@ class ControladorProductos{
 		return $respuesta;
 	}
 
+
+	/*=============================================
+	REVISAR SI HAN INICIADO SESION 
+	=============================================*/
+
+
+	static public function ctrRevisarSession(){
+
+		$respuesta = "error";
+		var_dump($_SESSION["usuario"]);
+		if(isset($_SESSION["iniciarSesion"])){
+			$respuesta = "ok";
+		}
+		
+		return $respuesta;
+	}
+
 }

@@ -119,71 +119,55 @@
 <!-- Default box -->
 <div class="card">
   <div class="card-body">
-      <div class="table-responsive">
-        <table class="table  table-bordered table-striped   tablas " >
-          <thead>
-            <tr>
-            <th style="width:10px">#</th>
-            <th>Nombre</th>
-            <th>Usuario</th>
-            <th>Foto</th>
-            <th>Perfil</th>
-            <th>Estado</th>
-            <th>Último login</th>
-            <th>Acciones</th>
+  <div class="table-responsive">
+              <table class="table  table-bordered table-striped   tablas " >
+                <thead>
+                  <tr>
+                  <th style="width:10px">#</th>
+                  <th>No. pedido</th>
+                  <th>Fecha del pedido</th>
+                  <th>Total</th>
+                  <th>Estado</th>
+                  <th>Acciones</th>
 
-            </tr>
-          </thead>
-          <tbody>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php
 
-  <tr>
-    <td>Una</td>
-    <td>dos</td>
-    <td>'.$value["usuario"].'</td>';
+$item = "idCliente"; 
+$valor = $_SESSION["id"];
 
-    if($value["foto"] != ""){
+$pedidos = ControladorPedidos::ctrMostrarPedidos($item, $valor);
+foreach ($pedidos as $key => $value){
+ 
+  echo ' <tr>
+          <td>'.$key.'</td>
+          <td>'.$value["id"].'</td>
+          <td>'.$value["fechaPedido"].'</td>
+          <td> $'.$value["total"].'</td>
+          <td>'.$value["estado"].'</td>';
 
-      echo '<td><img src="'.$value["foto"].'" class="img-thumbnail" width="40px"></td>';
+          echo '
+          <td>
 
-    }else{
+            <div class="btn-group">
+                
+              <button class=" btn btn-warning text-white btnViewPedidoPdf" pedido="'.$value["id"].'" pdf="'.$_SESSION["id"].'" data-bs-toggle="modal" data-bs-target="#btnPerfilPdf"><i class="fas fa-eye"></i></button>
 
-      echo '<td><img src="vistas/img/usuarios/default/1.jpg" class="img-thumbnail" width="40px"></td>';
 
-    }
+            </div>  
 
-    echo '<td>'.$value["perfil"].'</td>';
+          </td>
 
-    if($value["estado"] != 0){
-
-      echo '<td><button class="btn btn-success btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="0">Activado</button></td>';
-
-    }else{
-
-      echo '<td><button class="btn btn-danger btn-xs btnActivar" idUsuario="'.$value["id"].'" estadoUsuario="1">Desactivado</button></td>';
-
-    }             
-
-    echo '<td>'.$value["ultimo_login"].'</td>
-    <td>
-
-      <div class="btn-group">
-          
-        <button class="btn btn-warning btnEditarUsuario" idUsuario="'.$value["id"].'" data-toggle="modal" data-target="#modalEditarUsuarios"><i class="fas fa-pen"></i></button>
-
-        <button class="btn btn-danger btnEliminarUsuario" idUsuario="'.$value["id"].'" fotoUsuario="'.$value["foto"].'" usuario="'.$value["usuario"].'"><i class="fa fa-times"></i></button>
-
-      </div>  
-
-    </td>
-
-  </tr>
+        </tr>';
 }
 
 
 ?> 
-          </tbody>
-        </table>
-      </div>
+                </tbody>
+              </table>
+            </div>
   </div>
 
 </div>
@@ -203,3 +187,22 @@
 <br>
 <br>
 <br>
+
+<!-- Modal para mostrar pdf-->
+<div class="modal fade" id="btnPerfilPdf" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <object class="PDFdoc" id="mostrarPerfilpdf"  name="mostrarPerfilpdf"  width="100%" height="500px" type="application/pdf" data="#"></object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

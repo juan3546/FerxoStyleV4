@@ -143,12 +143,13 @@ $ruta = $rutas[0];
       ?>
 
    
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 cursor" producto=<?php echo $value["id"]; ?>>
-      <div class="card-sl h-100">
-        <div class="card-image">
-          <img src="<?php echo $servidor.$value["foto"]; ?>" />
-        </div>
-           <a class="card-action" href="#"><i class="fas fa-cart-plus"></i></a>
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 " >
+        <div class="card-sl h-100">
+          <div class="card-image cursor" producto=<?php echo $value["id"]; ?>>
+            <img src="<?php echo $servidor.$value["foto"]; ?>" />
+          </div>
+
+           <a class="card-action" href="#" id="<?php echo $_SESSION["iniciarSesion"]; ?>" ><i class="fas fa-cart-plus"></i></a>
         <div class="card-heading">
             <?php echo $value["nombre"]; ?>
         </div>
@@ -163,7 +164,7 @@ $ruta = $rutas[0];
           <?php endif  ?>  
 
         </div>
-          <a href="#" class="card-button"> Solicitar pedido</a>
+          <a href="#" class="card-button cursor" producto=<?php echo $value["id"]; ?>> Solicitar pedido</a>
        </div>
      </div>
      <?php endforeach ?>

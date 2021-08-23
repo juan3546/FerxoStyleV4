@@ -22,6 +22,7 @@ class ControladorPerfil{
 
 	static public function ctrEditarCliente(){
         $servidor =  Ruta::ctrRutaServidor();
+		$proyecto =  Ruta::ctrRutaProyecto();
 		if(isset($_POST["editarUsuario"])){
 
 			if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["editarUsuario"])){
@@ -48,8 +49,8 @@ class ControladorPerfil{
 				    /*=============================================
 					PRIMERO PREGUNTAMOS SI EXISTE OTRA IMAGEN EN LA BD
 					=============================================*/
-                    $abspath=$_SERVER['DOCUMENT_ROOT'];
-                    $fotoActual = $abspath.'/'.'ferxostyle/FerxoStyle/'.$_POST["fotoActual"];
+                    $abspath = $_SERVER['DOCUMENT_ROOT'];
+                    $fotoActual = $abspath.$proyecto.$_POST["fotoActual"];
                     
 					if(!empty($_POST["fotoActual"])){
 
