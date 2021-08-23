@@ -64,6 +64,12 @@
       
 
   $respuesta = ControladorInicio::ctrMostrarProductosLim($item, $valor, $iniciar,$articulo_por_pagina);
+  if(isset($_SESSION["iniciarSesion"]))
+  {
+    $usuario = $_SESSION["iniciarSesion"];
+  }else {
+    $usuario = '';
+  }
  ?>
  <div class="row container-fluid">
  <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">
@@ -97,7 +103,7 @@
                                           <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div>
                                           <div class="size"> <label class="radio"> <input type="radio" name="size1" value="small"> <span>S</span> </label> <label class="radio"> <input type="radio" name="size1" value="Medium" checked> <span>M</span> </label> <label class="radio"> <input type="radio" name="size1" value="Large"> <span>L</span> </label> </div>
                                       </div>
-                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white">Agregar a carrito</button> </div>
+                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. '">Agregar a carrito</button> </div>
                                   </div>
                               </div>
                   

@@ -8,9 +8,8 @@ $(".foto").change(function(){
 	/*=============================================
   	VALIDAMOS EL FORMATO DE LA IMAGEN SEA JPG O PNG
   	=============================================*/
-
-  	if(imagen["type"] != "image/jpeg" && imagen["type"] != "image/png"){
-
+	
+  	if( /* imagen["type"] != "image/jpeg" && */  imagen["type"] != "image/png"){
   		$(".foto").val("");
 
   		 Swal.fire({

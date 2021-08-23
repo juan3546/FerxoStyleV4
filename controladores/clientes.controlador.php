@@ -31,8 +31,8 @@ class ControladorClientes{
 				$valor = $_POST["ingUsuario"];
 
 				$respuesta = ModeloClientes::MdlMostrarClientes($tabla, $item, $valor);
-
-				if($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $encriptar){
+			
+				if( (isset($respuesta["usuario"]) && isset($respuesta["password"])) && ($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] == $encriptar)){
 
 
 

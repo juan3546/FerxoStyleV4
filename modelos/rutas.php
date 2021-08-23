@@ -10,12 +10,12 @@ class Ruta{
     public function ctrRutaServidor(){
     //    return "https://admin.ferxostyle.com.mx/";
     //return "http://localhost/ferxostyle/FerxoStyle/";
-    return "http://localhost/ferxostyle/";
+    return "http://localhost/FerxoStyle/";
     }
 
     public function ctrRutaProyecto(){
         //    return "admin.ferxostyle";
         //return "/ferxostyle/FerxoStyle/";
-        return "/ferxostyle/";
+        return "/Ferxostyle/";
         }
 }

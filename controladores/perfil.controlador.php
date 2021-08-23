@@ -66,6 +66,27 @@ class ControladorPerfil{
 					DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
 					=============================================*/
 
+					if($_FILES["editarFoto"]["type"] == "image/jpg"){
+
+						/*=============================================
+						GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+						=============================================*/
+
+						$aleatorio = mt_rand(100,999);
+
+						$ruta = "vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".png";
+                        $rutaServidor =  $abspath.$proyecto."vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".png";
+
+						$origen = imagecreatefrompng($_FILES["editarFoto"]["tmp_name"]);						
+
+						$destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+						imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+						imagepng($destino, $rutaServidor);
+
+					}
+
 					if($_FILES["editarFoto"]["type"] == "image/jpeg"){
 
 						/*=============================================
@@ -75,7 +96,7 @@ class ControladorPerfil{
 						$aleatorio = mt_rand(100,999);
 
 						$ruta = "vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
-                        $rutaServidor = $fotoActual = $abspath.'/'.'ferxostyle/FerxoStyle/'."vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
+                        $rutaServidor =  $abspath.$proyecto."vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
 
 						$origen = imagecreatefromjpeg($_FILES["editarFoto"]["tmp_name"]);						
 
@@ -97,7 +118,7 @@ class ControladorPerfil{
 						$aleatorio = mt_rand(100,999);
 
 						$ruta = "vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".png";
-                        $rutaServidor = $servidor."vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".jpg";
+                        $rutaServidor =  $abspath.$proyecto."vistas/img/clientes/".$_POST["editarUsuario"]."/".$aleatorio.".png";
 
 						$origen = imagecreatefrompng($_FILES["editarFoto"]["tmp_name"]);						
 
@@ -108,6 +129,8 @@ class ControladorPerfil{
 						imagepng($destino, $rutaServidor);
 
 					}
+
+
 
 				}
 

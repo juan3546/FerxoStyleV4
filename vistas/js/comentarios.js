@@ -35,7 +35,7 @@ $(document).on("click", "#btnComentario", function(){
                         footer: ''
                     });   
                 }else{
-                    location.reload();
+                    //location.reload();
 
                     /*
                     $("#txtComentario").val(" ");

@@ -10,7 +10,6 @@ class ModeloComentarios{
     static public function mdlIngresarcomentarios($tabla, $datos)
     {
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id, idProducto, idCliente, comentario, fecha) VALUES ( NULL, :idProducto, :idCliente, :comentario, now())");
-		
 		$idCliente = 1;
 		$stmt->bindParam(":idProducto", $datos["producto"], PDO::PARAM_STR);
 		$stmt->bindParam(":idCliente", $idCliente /* $_SESSION["id"] */, PDO::PARAM_STR);

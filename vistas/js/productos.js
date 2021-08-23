@@ -205,7 +205,7 @@ $(document).on("click", ".cursor", function(){
 
 /* REVISAR SI HAN INICIADO SESION */
 
-$(document).on("click", ".card-action", function(){
+$(document).on("click", ".botonCarrito", function(){
     var rutaOculta = $("#rutaOculta").val();
     var usu = $(this).attr("id");
     /*
