@@ -58,9 +58,9 @@ $(document).on("keyup", "#txtArticulosHombre", function(ev){
                         
                         //MOSTRAR LAS TALLAS DEL ARTICULO
 
-                        //tallas(respuesta[i]["id"]);
+                        tallas(respuesta[i]["id"]);
                         //codigoHtml += '<span>'+i+'</span>';
-                        
+                        /*
                         var datosTalla = new FormData();
 
                         datosTalla.append("tallas", "");
@@ -91,6 +91,7 @@ $(document).on("keyup", "#txtArticulosHombre", function(ev){
                             }
                     
                         });
+                        */
 
                         //codigoHtml += '<span>15</span> </label> ';
                         
@@ -258,15 +259,18 @@ function tallas(articulo){
         contentType: false,
         processData: false,
         dataType: "json",
-        success:function(respuesta){
-            var codigoHtml = '';
-            for (let i = 0; i < respuesta.length; i++) {
-                //codigoHtml += '<input type="radio" name="size1" value="small"> '; 
-                codigoHtml += '';
-                codigoHtml += '';
-                codigoHtml += '<span>'+respuesta[i]["talla"]+'</span>';
-                codigoHtml += '';
+        success:function(respuestaTalla){
+            var codigoHtmlTalla = '';
+            $(".size").html("");
+            for (let i = 0; i < respuestaTalla.length; i++) {
+                
+                codigoHtmlTalla += '<label class="radio">';
+                codigoHtmlTalla += '<input type="radio" name="size1" value="small"> ';
+                codigoHtmlTalla += '<span>'+respuestaTalla[i]["talla"]+'</span>';
+                codigoHtmlTalla += '</label> ';
+                
             }
+            $(".size").append(codigoHtmlTalla);
 
 
         }
