@@ -2,6 +2,10 @@
 require_once "../controladores/productos.controlador.php";
 require_once "../modelos/productos.modelo.php";
 
+require_once "../controladores/tallas.controlador.php";
+require_once "../modelos/tallas.modelo.php";
+
+
 class AjaxProductos{
     public $articulo;
     // Mostrar todos los Productos Por Nombre de Hombres
@@ -55,6 +59,17 @@ class AjaxProductos{
     
             echo json_encode($respuesta);
         }
+
+    // Mostrar Tallas
+    public function ajaxMostarTallas(){
+        $item = "idProducto";
+		$valor = $this->articulo;
+
+
+		$respuesta = ControladorTallas::ctrMostrarTallas($item, $valor);
+
+		echo json_encode($respuesta);
+    }
     
 
 }
@@ -80,4 +95,10 @@ if(isset($_POST["MostrarProductoInfante"])){
 if(isset($_POST["revisarSession"])){
     $ajaxProduct = new AjaxProductos();
     $ajaxProduct -> ajaxRevisarSession();
+}
+
+if(isset($_POST["tallas"])){
+    $ajaxProduct = new AjaxProductos();
+    $ajaxProduct -> articulo = $_POST["articulo"];
+    $ajaxProduct -> ajaxMostarTallas();
 }

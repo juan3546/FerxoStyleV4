@@ -388,7 +388,21 @@ section{
 }
 .percent {
     padding: 5px;
-    background-color: red;
+    background-color: #346b8a;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    height: 35px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.ofert {
+    padding: 5px;
+    background-color: #efe302;
     border-radius: 5px;
     color: #fff;
     font-size: 14px;

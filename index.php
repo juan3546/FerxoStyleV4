@@ -11,6 +11,7 @@ require_once "controladores/configuracion.controlador.php";
 require_once "controladores/comentario.controlador.php";
 require_once "controladores/perfil.controlador.php";
 require_once "controladores/pedidos.controlador.php";
+require_once "controladores/tallas.controlador.php";
 
 
 // se requiere utilizar los modelos
@@ -23,6 +24,7 @@ require_once "modelos/configuracion.modelo.php";
 require_once "modelos/comentario.modelo.php";
 require_once "modelos/perfil.modelo.php";
 require_once "modelos/pedidos.modelo.php";
+require_once "modelos/tallas.modelo.php";
 
 
 // PLUGINS

@@ -104,7 +104,7 @@ $ruta = $rutas[0];
           if ($totalProductos == 0){
             echo '<div class="col-12">
                     <br> 
-                    <div class="alert alert-warning col-12" role="alert">Producto no disponible</div>
+                    <div class="alert alert-warning " role="alert">Producto no disponible</div>
                   </div>';
           }
             
@@ -138,7 +138,8 @@ $ruta = $rutas[0];
           $paginas = ceil($paginas);
 
           foreach ($productosXPagina as $key => $value):
-        
+            
+
             
       ?>
  
@@ -147,10 +148,17 @@ $ruta = $rutas[0];
       <div class="card card2">
                     <div class="img-container">
                        <div class="d-flex justify-content-between align-items-center p-2 first"> 
-                  <span class="percent">Nuevo</span> 
-                  <span class="wishlist">
+                         <?php
+                          if($value["estado"] == "Nuevo"): 
+                            echo '<span class="percent">Nuevo</span>';
+                            elseif($value["estado"] == "Oferta"):
+                              echo '<span class="ofert">Oferta</span>';
+                            endif;
+                         ?>
+                  
+                  <!-- span class="wishlist">
                   <i class="fa fa-heart"></i>
-                  </span> </div> 
+                  </span --> </div> 
                   <img src="<?php echo $servidor.$value["foto"]?>" class="img-fluid">
                    </div>
                      <div class="product-detail-container">
@@ -168,8 +176,21 @@ $ruta = $rutas[0];
                  </span>
                                       </div>
                                       <div class="d-flex justify-content-between align-items-center mt-2">
-                                          <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div>
-                                          <div class="size"> <label class="radio"> <input type="radio" name="size1" value="small"> <span>S</span> </label> <label class="radio"> <input type="radio" name="size1" value="Medium" checked> <span>M</span> </label> <label class="radio"> <input type="radio" name="size1" value="Large"> <span>L</span> </label> </div>
+                                          <!-- div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div -->
+                                          <div class="size"> 
+                                            <?php
+                                              $item = "idProducto";
+                                              $valor = $value["id"];
+                                              $tallas = ControladorTallas::ctrMostrarTallas($item, $valor);
+                                              foreach ($tallas as $key => $values):
+                                            ?>
+                                            <label class="radio">
+                                             <input type="radio" name="size1" value="small"> 
+                                             <span><?php echo $values["talla"]; ?></span> 
+                                            </label> 
+                                            
+                                            <?php endforeach; ?>
+                                          </div>
                                       </div>
                                       <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. '">Agregar a carrito</button> </div>
                                   </div>
