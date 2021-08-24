@@ -49,7 +49,7 @@ $ruta = $rutas[0];
  <!-- apartado donde se muestran las tarjetas con los productos -->
  <section class="container-fluid" id="Productos">
  <div class="container-fluid">
-    <div class="row row-cols-1 row-cols-md-3 g-4 mostrarProductoHombre">
+    <div class="row row-cols-1 row-cols-md-12 g-4 mostrarProductoHombre">
       <?php
           /*=============================================
 			      LLAMADO DE PAGINACIÓN
@@ -130,7 +130,7 @@ $ruta = $rutas[0];
           }else{
             $item = 'genero';
             $valor = 'Hombre';
-            $productosXPagina = ControladorProductos::ctrMostrarArticulosLim($item, $valor, $base, $tope);;
+            $productosXPagina = ControladorProductos::ctrMostrarArticulosLim($item, $valor, $base, $tope);
           }
 
           /* calculo de paginas */
@@ -141,31 +141,39 @@ $ruta = $rutas[0];
         
             
       ?>
-
+ 
    
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 " >
-        <div class="card-sl h-100">
-          <div class="card-image cursor" producto=<?php echo $value["id"]; ?>>
-            <img src="<?php echo $servidor.$value["foto"]; ?>" />
-          </div>
-
-           <a class="card-action" href="#" id="<?php echo $_SESSION["iniciarSesion"]; ?>" ><i class="fas fa-cart-plus"></i></a>
-        <div class="card-heading">
-            <?php echo $value["nombre"]; ?>
-        </div>
-        <div class="card-text">
-        <?php echo $value["descripcion"]; ?>
-        </div>
-        <div class="card-text">
-          <?php if ($value["precioOferta"] != null): ?>
-            <del>$<?php echo $value["precio"]; ?> </del> &nbsp;&nbsp; $<?php echo $value["precioOferta"]; ?>
-          <?php else:  ?>
-            $<?php echo $value["precio"]; ?>
-          <?php endif  ?>  
-
-        </div>
-          <a href="#" class="card-button cursor" producto=<?php echo $value["id"]; ?>> Solicitar pedido</a>
-       </div>
+      <div class="card card2">
+                    <div class="img-container">
+                       <div class="d-flex justify-content-between align-items-center p-2 first"> 
+                  <span class="percent">Nuevo</span> 
+                  <span class="wishlist">
+                  <i class="fa fa-heart"></i>
+                  </span> </div> 
+                  <img src="<?php echo $servidor.$value["foto"]?>" class="img-fluid">
+                   </div>
+                     <div class="product-detail-container">
+                       <div class="d-flex justify-content-between align-items-center">
+                         <h6 class="mb-0"><?php echo $value["nombre"]?></h6> 
+                  <span class="text-danger font-weight-bold">
+                  <?php
+                    if ($value["precioOferta"] != null):
+                    echo '<del>$'.$value["precio"].' </del> &nbsp;&nbsp; $'.$value["precioOferta"];
+                         else: 
+                           echo $value["precio"];
+                          endif;
+                          ?>
+                  
+                 </span>
+                                      </div>
+                                      <div class="d-flex justify-content-between align-items-center mt-2">
+                                          <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div>
+                                          <div class="size"> <label class="radio"> <input type="radio" name="size1" value="small"> <span>S</span> </label> <label class="radio"> <input type="radio" name="size1" value="Medium" checked> <span>M</span> </label> <label class="radio"> <input type="radio" name="size1" value="Large"> <span>L</span> </label> </div>
+                                      </div>
+                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. '">Agregar a carrito</button> </div>
+                                  </div>
+                              </div>
      </div>
      <?php endforeach ?>
 
