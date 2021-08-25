@@ -52,4 +52,17 @@ class ControladorComentario
 
 		return $respuesta;
 	}
+
+    /*=============================================
+	MOSTRAR  COMENTARIOS INICIO
+	=============================================*/
+
+	static public function ctrMostrarComentarioInicio(){
+
+		$tabla = "comentarios";
+
+		$respuesta = ModeloComentarios::mdlMostrarComentariosInicio($tabla);
+
+		return $respuesta;
+	}
 }

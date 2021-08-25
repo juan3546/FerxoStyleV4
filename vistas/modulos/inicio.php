@@ -80,11 +80,17 @@
                     <div class="col">
                     <div class="card card2">
                     <div class="img-container">
-                       <div class="d-flex justify-content-between align-items-center p-2 first"> 
-                  <span class="percent">Nuevo</span> 
-                  <span class="wishlist">
+                       <div class="d-flex justify-content-between align-items-center p-2 first">';
+                       if($value["estado"] == "Nuevo"): 
+                         echo '<span class="percent">Nuevo</span>';
+                         elseif($value["estado"] == "Oferta"):
+                           echo '<span class="ofert">Oferta</span>';
+                         endif;
+                      
+                echo '
+                  <!-- span class="wishlist">
                   <i class="fa fa-heart"></i>
-                  </span> </div> 
+                  </span --> </div> 
                   <img src="'. $servidor.$value["foto"].'" class="img-fluid">
                    </div>
                      <div class="product-detail-container">
@@ -100,8 +106,21 @@
                  echo '</span>
                                       </div>
                                       <div class="d-flex justify-content-between align-items-center mt-2">
-                                          <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div>
-                                          <div class="size"> <label class="radio"> <input type="radio" name="size1" value="small"> <span>S</span> </label> <label class="radio"> <input type="radio" name="size1" value="Medium" checked> <span>M</span> </label> <label class="radio"> <input type="radio" name="size1" value="Large"> <span>L</span> </label> </div>
+                                          <!-- div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div -->
+                                          <div class="size">';
+                                  
+                                          $item = "idProducto";
+                                          $valor = $value["id"];
+                                          $tallas = ControladorTallas::ctrMostrarTallas($item, $valor);
+                                          foreach ($tallas as $key => $values):
+                                        
+                                        echo '<label class="radio">
+                                         <input type="radio" name="size1" value="small"> 
+                                         <span>'. $values["talla"].'</span> 
+                                        </label>';
+                                        
+                                         endforeach; 
+                                        echo  '</div>
                                       </div>
                                       <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. '">Agregar a carrito</button> </div>
                                   </div>
@@ -146,31 +165,47 @@
         <div class="testimonials-carousel">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
+                  <?php
+                     $comentarios = ControladorComentario::ctrMostrarComentarioInicio();
+                     
+                     foreach ($comentarios as $key => $value):
+                      $comen = htmlspecialchars( $value["comentario"]);
+                  ?>
                     <div class="swiper-slide">
                         <div class="testi-item">
-                            <div class="testi-avatar"><img src="vistas/img/plantilla/user-1.png"></div>
+                            <div class="testi-avatar">
+                              <?php 
+                                if($value["foto"] == ""){
+                                  echo '<img src="vistas/img/plantilla/user-1.png">';
+                                }else{
+                                  echo '<img src="'.$servidor.$value["foto"].'">';
+                                }
+                              ?>
+                              
+                            </div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
-                                <div class="listing-rating">
+                                <!-- div class="listing-rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                </div>
-                                <p>Excelente servicio son muy amables y tienen unos diseños muy bonitos. Recomendados ampliamente</p>
+                                </div -->
+                                <p><?php echo $comen;  ?></p>
                                 <a href="#" class="text-link"></a>
                                 <div class="testimonials-avatar">
-                                    <h3>Juan Jose Guzman</h3>
+                                    <h3><?php echo $value["usuario"];  ?></h3>
                                     <h4>Cliente</h4>
                                 </div>
                             </div>
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
                         </div>
                     </div>
+                    <?php endforeach; ?>
 
                     <!--second--->
-                    <div class="swiper-slide">
+                    <!-- div class="swiper-slide">
                         <div class="testi-item">
                             <div class="testi-avatar"><img src="vistas/img/plantilla/user-2.png"></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
@@ -191,10 +226,10 @@
                             </div>
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
                         </div>
-                    </div>
+                    </div -->
                     <!--third-->
 
-                    <div class="swiper-slide">
+                    <!-- div class="swiper-slide">
                         <div class="testi-item">
                             <div class="testi-avatar"><img src="vistas/img/plantilla/user-3.png"></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
@@ -215,10 +250,10 @@
                             </div>
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
                         </div>
-                    </div>
+                    </div -->
 
                     <!--fourth-->
-                    <div class="swiper-slide">
+                    <!-- div class="swiper-slide">
                         <div class="testi-item">
                             <div class="testi-avatar"><img src="vistas/img/plantilla/user-1.png"></div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
@@ -239,7 +274,7 @@
                             </div>
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
                         </div>
-                    </div>
+                    </div -->
                     <!--testi end-->
 
                 </div>

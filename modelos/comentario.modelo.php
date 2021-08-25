@@ -73,9 +73,33 @@ class ModeloComentarios{
 
 
 
-    $stmt -> close();
+    	$stmt -> close();
 
-    $stmt = null;
+    	$stmt = null;
 
-}
+	}
+
+	
+	/*=============================================
+	MOSTRAR COMENTARIOS INICIO 
+	=============================================*/
+
+	static public function mdlMostrarComentariosInicio($tabla){
+	
+
+
+		$stmt = Conexion::conectar()->prepare("SELECT c.comentario, c.fecha, cl.usuario, cl.foto FROM $tabla c JOIN clientes cl ON c.idCliente = cl.id ORDER BY rand()LIMIT 5");
+
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
 }   
