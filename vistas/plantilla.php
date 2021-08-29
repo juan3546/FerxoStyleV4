@@ -44,6 +44,8 @@ $servidor =  Ruta::ctrRutaServidor();
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/articulos-para-hombre.css">
     <!-- Estilos perfil -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/perfil.css">
+    <!-- Estilos del carrito -->
+    <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/carrito.css">
     <!-- Estilos de iconos -->
     <link rel="stylesheet" href="<?php echo $url; ?>vistas/dist/css/icons.css">
     <!-- Estilos de grid -->

@@ -192,7 +192,7 @@ $ruta = $rutas[0];
                                             <?php endforeach; ?>
                                           </div>
                                       </div>
-                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. '">Agregar a carrito</button> </div>
+                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. zz'">Agregar a carrito</button> </div>
                                   </div>
                               </div>
      </div>
