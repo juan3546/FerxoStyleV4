@@ -17,6 +17,7 @@ $valorComent = $valor2;
 $numComentarios = ControladorComentario::ctrMostrarComentario($itemComent, $valorComent);
 $num = count($numComentarios);
 
+
 ?>
 <section class="container-fluid detallePpp">
  <div class="row  mt-5">
@@ -36,7 +37,7 @@ $num = count($numComentarios);
     ?>
 
    <select name="tallas" id="tallas" class="form-control-lg">
-   <option value="#">Tallas Disponibles</option>
+   <option value="">Tallas Disponibles</option>
      <?php
         $item = "idProducto";
         $valor = $valor2;
@@ -61,7 +62,9 @@ $num = count($numComentarios);
        <button class="btn btn-primary" id="btnPedido" name="btnPedido" producto=<?php echo $respuestaProduc[0]["id"]; ?> >Solicitar Pedido</button>
     </div>
     <div class="col-6">
-        .<button class="btn btn-primary" id="btnCarrito" name="btnCarrito" producto=<?php echo $respuestaProduc[0]["id"]; ?> > <i class="fas fa-cart-plus"></i> Agregar a Carrito</button>
+        <button class="btn btn-primary" id="btnCarrito" name="btnCarrito" producto=<?php echo $respuestaProduc[0]["id"]; ?> modelo="<?php echo $respuestaProduc[0]["nombre"]; ?>" precio="<?php echo $respuestaProduc[0]["precio"]; ?>" oferta="<?php echo $respuestaProduc[0]["precioOferta"]; ?>" imagen="<?php echo  $servidor.$respuestaProduc[0]["foto"]; ?>" > 
+          <i class="fas fa-cart-plus"></i> Agregar a Carrito
+        </button>
     </div>
  </div>
   </div>

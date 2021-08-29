@@ -159,10 +159,10 @@ $ruta = $rutas[0];
                   <!-- span class="wishlist">
                   <i class="fa fa-heart"></i>
                   </span --> </div> 
-                  <img src="<?php echo $servidor.$value["foto"]?>" class="img-fluid">
+                  <img src="<?php echo $servidor.$value["foto"]?>" class="img-fluid detalle" producto="<?php echo $value["id"]?>">
                    </div>
                      <div class="product-detail-container">
-                       <div class="d-flex justify-content-between align-items-center">
+                       <div class="d-flex justify-content-between align-items-center detalle" producto="<?php echo $value["id"]?>">
                          <h6 class="mb-0"><?php echo $value["nombre"]?></h6> 
                   <span class="text-danger font-weight-bold">
                   <?php
@@ -181,18 +181,27 @@ $ruta = $rutas[0];
                                             <?php
                                               $item = "idProducto";
                                               $valor = $value["id"];
+                                              $usuario = "error";
+                                              if(isset($_SESSION["iniciarSesion"])){
+                                                $usuario = $_SESSION["iniciarSesion"];
+                                              }
+                                              
                                               $tallas = ControladorTallas::ctrMostrarTallas($item, $valor);
                                               foreach ($tallas as $key => $values):
                                             ?>
                                             <label class="radio">
-                                             <input type="radio" name="size1" value="small"> 
+                                             <input type="radio" class="talla" name="size1" value="<?php echo $values["talla"]; ?>"> 
                                              <span><?php echo $values["talla"]; ?></span> 
                                             </label> 
                                             
                                             <?php endforeach; ?>
                                           </div>
                                       </div>
-                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. zz'">Agregar a carrito</button> </div>
+                                      <div class="mt-3"> 
+                                        <button class="btn btn-block form-control botonCarrito text-white" id="<?php echo $usuario; ?>" producto="<?php echo $value["id"]; ?>" modelo="<?php echo $value["nombre"]; ?>" precio="<?php echo $value["precio"]; ?>" oferta="<?php echo $value["precioOferta"]; ?>" imagen="<?php echo $servidor.$value["foto"]; ?>">
+                                        Agregar a carrito
+                                        </button> 
+                                      </div>
                                   </div>
                               </div>
      </div>
