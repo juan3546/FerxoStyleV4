@@ -327,8 +327,8 @@ $(document).on("click", ".botonCarrito", function(){
 
 
 /* agregar al carrito */
-if(localStorage.getItem("listaCarrito") != null){
-    var listaCarrito = JSON.parse(localStorage.getItem("listaCarrito"));
+if(localStorage.getItem("listaProductos") != null){
+    var listaCarrito = JSON.parse(localStorage.getItem("listaProductos"));
 }
 
 $(document).on("click", ".botonCarrito", function(){
