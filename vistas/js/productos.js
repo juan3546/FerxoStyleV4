@@ -329,17 +329,19 @@ $(document).on("click", ".botonCarrito", function(){
 /* agregar al carrito */
 if(localStorage.getItem("listaProductos") != null){
     var listaCarrito = JSON.parse(localStorage.getItem("listaProductos"));
+    console.log("hola afuera", listaCarrito);
+}else{
+
 }
-
-$(document).on("click", ".botonCarrito", function(){
-
+$(".botonCarrito").click(function(){
+    console.log("hola dentro", listaCarrito);
     var idProducto = $(this).attr("producto");
     var producto = $(this).attr("modelo");
     var precio = $(this).attr("precio");
     var oferta = $(this).attr("oferta");
     var imagen = $(this).attr("imagen");
     var talla = $('input[name="size1"]:checked').val();
-    console.log(console.log(listaCarrito));
+    
 
     if(talla == undefined){
         Swal.fire({
