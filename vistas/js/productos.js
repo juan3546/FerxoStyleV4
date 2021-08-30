@@ -331,7 +331,7 @@ if(localStorage.getItem("listaProductos") != null){
     var listaCarrito = JSON.parse(localStorage.getItem("listaProductos"));
     console.log("hola afuera", listaCarrito);
 }else{
-
+    console.log("hola else", listaCarrito);
 }
 $(".botonCarrito").click(function(){
     console.log("hola dentro", listaCarrito);
@@ -341,7 +341,7 @@ $(".botonCarrito").click(function(){
     var oferta = $(this).attr("oferta");
     var imagen = $(this).attr("imagen");
     var talla = $('input[name="size1"]:checked').val();
-    
+    var agregarAlCarrito = false;
 
     if(talla == undefined){
         Swal.fire({
@@ -352,44 +352,50 @@ $(".botonCarrito").click(function(){
             timer: 1500
           });
     }else{
-    /* recuperar datos del localStorage */
-    if(localStorage.getItem("listaProductos") == null){
-        var listaCarrito = [];
-
-    }else{
-        var listaProductos = JSON.parse(localStorage.getItem("listaProductos"));
-        
-			for(var i = 0; i < listaProductos.length; i++){
-
-				if(listaProductos[i]["idProducto"] == idProducto){
-
-
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'error',
-                        title: 'El producto ya está agregado al carrito de compras',
-                        showConfirmButton: false,
-                        timer: 1500
-                      });
-
-					return;
-
-				}
-
-			}
-        listaCarrito.concat(localStorage.getItem("listaProductos"));
-    }   
-    /* se almacenan en localstorage los productos seleccionados al carrito */
-    listaCarrito.push({"idProducto": idProducto,
-                        "producto": producto,
-                        "talla": talla,
-                        "precio": precio,
-                        "oferta": oferta,
-                        "imagen": imagen,
-                        "cantidad": "1"
-                    });
-    localStorage.setItem("listaProductos", JSON.stringify(listaCarrito));
+        agregarAlCarrito = true;
     }
+    if(agregarAlCarrito){
+        if(localStorage.getItem("listaProductos") == null){
+            var listaCarrito = [];
+    
+        }else{
+            var listaProductos = JSON.parse(localStorage.getItem("listaProductos"));
+            
+                for(var i = 0; i < listaProductos.length; i++){
+    
+                    if(listaProductos[i]["idProducto"] == idProducto){
+    
+    
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: 'El producto ya está agregado al carrito de compras',
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
+    
+                        return;
+    
+                    }
+    
+                }
+        }
+        console.log("hola concat", listaCarrito);
+        /* recuperar datos del localStorage */
+        listaCarrito.concat(localStorage.getItem("listaProductos"));
+        /* se almacenan en localstorage los productos seleccionados al carrito */
+        listaCarrito.push({"idProducto": idProducto,
+                            "producto": producto,
+                            "talla": talla,
+                            "precio": precio,
+                            "oferta": oferta,
+                            "imagen": imagen,
+                            "cantidad": "1"
+                        });
+        localStorage.setItem("listaProductos", JSON.stringify(listaCarrito));
+    }  
+        
+
  
 
 });
