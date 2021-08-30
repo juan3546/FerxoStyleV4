@@ -8,53 +8,9 @@
                     <span class="pull-right">(<strong>1</strong>) Articulos</span>
                     <h5>Articulos en carrito</h5>
                 </div>
-                <div class="ibox-content">
-                    <div class="table-responsive">
-                        <table class="table shoping-cart-table">
-                            <tbody>
-                            <tr>
-                                <td width="90">
-                                    <div class="cart-product-imitation">
-                                        <img class="img-fluid"  src="<?php echo $url; ?>vistas/img/plantilla/Modelo2.png" alt="">
-                                    </div>
-                                </td>
-                                <td class="desc">
-                                    <h3>
-                                    <a href="#" class="text-navy">
-                                        Modelo 1
-                                    </a>
-                                    </h3>
-
-                                    <dl class="small m-b-none">
-                                        <dt>Tallas</dt>
-                                        <dd>CH, M, G</dd>
-                                    </dl>
-
-                                    <div class="m-t-sm">
-                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Eliminar Articulo</a>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    $180,00
-                                    <br>
-                                    <s class="small text-muted"><del>$230,00</del> </s>
-                                </td>
-                                <td width="65">
-                                    <input type="text" class="form-control" placeholder="1">
-                                </td>
-                                <td>
-                                    <h4>
-                                        $180,00
-                                    </h4>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                <div class="mostrarCarrito">
+                    
                 </div>
-
                 <div class="ibox-content">
                     <button class="btn btn-warning pull-right text-white"><i class="fa fa fa-shopping-cart"></i> Generar Pedido</button>
                     <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continuar Comprando</button>
