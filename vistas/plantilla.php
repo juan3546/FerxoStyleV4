@@ -151,6 +151,7 @@ $servidor =  Ruta::ctrRutaServidor();
     <script src="<?php echo $url; ?>vistas/js/correo.js"></script>
     <script src="<?php echo $url; ?>vistas/js/comentarios.js"></script>
     <script src="<?php echo $url; ?>vistas/js/perfil.js"></script>
+    <script src="<?php echo $url; ?>vistas/js/carrito.js"></script>
     
     
 </body>
