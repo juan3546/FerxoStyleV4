@@ -12,7 +12,7 @@
                     
                 </div>
                 <div class="ibox-content">
-                    <button class="btn btn-warning pull-right text-white"><i class="fa fa fa-shopping-cart"></i> Generar Pedido</button>
+                    <button class="btn btn-warning pull-right text-white generarPedido"><i class="fa fa fa-shopping-cart"></i> Generar Pedido</button>
                     <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continuar Comprando</button>
 
                 </div>
@@ -20,7 +20,7 @@
 
         </div>
         <div class="col-md-3">
-            <div class="ibox">
+            <div class="ibox totalCarrito">
                 <div class="ibox-title">
                     <h5>Resumen de la compra</h5>
                 </div>

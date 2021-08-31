@@ -17,5 +17,5 @@ class Ruta{
         //    return "admin.ferxostyle";
         //return "/ferxostyle/FerxoStyle/";
         return "/Ferxostyle/";
-        }
+    }
 }
