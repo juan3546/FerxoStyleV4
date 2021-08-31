@@ -163,6 +163,16 @@ $(".botonCarrito").click(function(){
         
 
        // $(this).find('input[type="size1"]').prop('checked','false');
+
+       const radioTalla = document.querySelectorAll("input[type='radio'][name='size1']");
+        
+       radioTalla.forEach(radioTalla =>{
+        if(radioTalla.checked === true){
+            radioTalla.checked = false;
+    
+           }
+       });
+
         
     }  
 
