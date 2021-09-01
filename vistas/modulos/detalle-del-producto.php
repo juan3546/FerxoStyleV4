@@ -2,27 +2,22 @@
 $url =  Ruta::ctrRuta();
 $servidor =  Ruta::ctrRutaServidor();
 $ruta = $rutas[0];
-
-if(isset($rutas[1])){
-           
+if(isset($rutas[1])){      
   $item = "id";
   $valor2 = $rutas[1];
   $respuestaProduc = ControladorProductos::ctrMostrarProductos($item, $valor2);
 }else{
   /* Error */
 }
-
 $itemComent = "idProducto";
 $valorComent = $valor2;
 $numComentarios = ControladorComentario::ctrMostrarComentario($itemComent, $valorComent);
 $num = count($numComentarios);
-
-
 ?>
 <section class="container-fluid detallePpp">
  <div class="row  mt-5">
   <div class="col-6 d-flex imgDetalle">
-    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="55%" height="80%" class="m-auto my-auto">
+    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="55%" height="80%" class="m-auto my-auto" id="imgg">
   </div>
   <div class="col-6">
   <p><a href="<?php echo $url; ?>inicio">Inicio</a> / <?php echo $respuestaProduc[0]["nombre"];  ?> </p>
@@ -36,7 +31,7 @@ $num = count($numComentarios);
       }
     ?>
 
-   <select name="tallas" id="tallas" class="form-control-lg">
+  <!--  <select name="tallas" id="tallas" class="form-control-lg">
    <option value="">Tallas Disponibles</option>
      <?php
         $item = "idProducto";
@@ -46,12 +41,24 @@ $num = count($numComentarios);
       ?>
        
        <option value="<?php echo $value["id"]; ?>"><?php echo $value["talla"]; ?></option>
-       <?php endforeach; ?>
-   </select>
+       <?php endforeach; ?> 
+   </select> -->
+   <label>Tallas:</label>
+   <?php
+        $item = "idProducto";
+        $valor = $valor2;
+        $respuestaTallas = ControladorProductos::ctrMostrarTallas($item, $valor);
+        foreach ($respuestaTallas as $key => $value):
+      ?>
+       <label class="radio">
+         <input type="radio" name="size1" value="small"> 
+            <span><?php echo $value["talla"] ?></span> 
+       </label>
+       <?php endforeach; ?> 
    
    <?php
       if($respuestaProduc[0]["descripcion"] != null){
-          echo '<p class="mt-3"><h4>Despricion del Producto <br></h4><br>';
+          echo '<p class="mt-3"><h4>Descripcion del Producto <br></h4><br>';
           echo $respuestaProduc[0]["descripcion"];
       }
     ?>
