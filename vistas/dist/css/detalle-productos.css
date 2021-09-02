@@ -52,5 +52,23 @@
     }
 }
 #imgg{
-    border-radius: 100px;
+    border-radius: 60px;
+}
+
+.img1 {
+    position:absolute; 
+    top:0px; 
+    left:0px; 
+    border:0px; 
+    overflow:hidden; 
+    display:block
+}
+.img2 {
+    position:absolute; 
+    top:0px; 
+    left:0px;
+    border:0px; 
+    overflow:hidden; 
+    display:none; 
+    clip: rect(0px, 200px, 200px, 0px);
 }

@@ -144,6 +144,7 @@ $servidor =  Ruta::ctrRutaServidor();
     <input type="hidden" value="<?php echo $servidor; ?>" id="rutaOcultaServidor">
   
     <script src="<?php echo $url; ?>vistas/js/inicio.js"></script>
+    <script src="<?php echo $url; ?>vistas/js/script.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/login.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/menu.js"></script>
     <script src="<?php echo $url; ?>vistas/dist/js/plantilla.js"></script>

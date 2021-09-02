@@ -17,7 +17,8 @@ $num = count($numComentarios);
 <section class="container-fluid detallePpp">
  <div class="row  mt-5">
   <div class="col-6 d-flex imgDetalle">
-    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="55%" height="80%" class="m-auto my-auto" id="imgg">
+    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="400" height="80%" class=" img1" id="imgg" name="nor">
+    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="800" height="80%" class=" img2" id="imgg" name="big">
   </div>
   <div class="col-6">
   <p><a href="<?php echo $url; ?>inicio">Inicio</a> / <?php echo $respuestaProduc[0]["nombre"];  ?> </p>
@@ -43,7 +44,7 @@ $num = count($numComentarios);
        <option value="<?php echo $value["id"]; ?>"><?php echo $value["talla"]; ?></option>
        <?php endforeach; ?> 
    </select> -->
-   <label>Tallas:</label>
+   <label class="my-3">Tallas:</label><br>
    <?php
         $item = "idProducto";
         $valor = $valor2;
