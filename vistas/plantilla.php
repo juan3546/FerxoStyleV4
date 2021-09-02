@@ -6,8 +6,8 @@ $url =  Ruta::ctrRuta();
 $servidor =  Ruta::ctrRutaServidor();
 
 ?>
-<!DOCTYPE html>
-<html lang="es">
+
+<html >
 <head>
     <link rel="icon" href="<?php echo $url; ?>vistas/img/plantilla/invo.ico">
     <meta charset="UTF-8">

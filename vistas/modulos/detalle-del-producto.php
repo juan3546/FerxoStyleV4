@@ -17,8 +17,8 @@ $num = count($numComentarios);
 <section class="container-fluid detallePpp">
  <div class="row  mt-5">
   <div class="col-6 d-flex imgDetalle">
-    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="400" height="80%" class=" img1" id="imgg" name="nor">
-    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="800" height="80%" class=" img2" id="imgg" name="big">
+    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="400" class=" img1 mx-5 my-5 mb-5" height="80%" id="imgg" name="nor">
+    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="800"   class=" img2" id="imgg" height="80%" name="big">
   </div>
   <div class="col-6">
   <p><a href="<?php echo $url; ?>inicio">Inicio</a> / <?php echo $respuestaProduc[0]["nombre"];  ?> </p>
