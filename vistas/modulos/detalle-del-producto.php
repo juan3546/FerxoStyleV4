@@ -18,7 +18,7 @@ $num = count($numComentarios);
  <div class="row  mt-5">
   <div class="col-6 d-flex imgDetalle">
     <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="400" class=" img1 mx-5"  id="imgg" name="nor">
-    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="800"   class=" img2" id="imgg"  name="big">
+    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="800"   class=" img2 mx-5" id="imgg"  name="big">
   </div>
   <div class="col-6">
   <p><a href="<?php echo $url; ?>inicio">Inicio</a> / <?php echo $respuestaProduc[0]["nombre"];  ?> </p>
