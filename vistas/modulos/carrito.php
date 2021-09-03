@@ -28,8 +28,8 @@
                     <span>
                         Total
                     </span>
-                    <h2 class="font-bold">
-                        $390,00
+                    <h2 class="font-bold totalPedido">
+                        
                     </h2>
 
                     <hr>

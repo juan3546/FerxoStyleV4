@@ -7,7 +7,7 @@ if(localStorage.getItem("listaProductos") != null){
     listaCarrito.forEach(functionForEach);
 
     function functionForEach(item, index){
-        console.log("item", item);
+        
         if(item.oferta != ""){
             precio = item.oferta;
         }else{
@@ -40,30 +40,30 @@ if(localStorage.getItem("listaProductos") != null){
                         '</div>'+
                     '</td>';
                     if(item.oferta != ""){
-                        html += '<td>'+
-                                '$'+item.oferta+'.00'+
+                        html += '<td class="precioCarrito">'+
+                                '$<span>'+item.oferta+'</span> .00'+
                                 '<br>'+
                                 '<s class="small text-muted"><del>$'+item.precio+'.00'+'</del> </s>'+
                                 '</td>';
                     }else{
                         html += '<td class="precioCarrito">'+
-                                '$'+item.precio+'.00'+
+                                '$ <span>'+item.precio+'</span> .00'+
                                 '<br>'
                                 '</td>';
                     }
                     html += '<td width="79">'+
-                                '<input type="number" class="form-control cantidadCarrito" placeholder="'+item.cantidad+'" value="'+item.cantidad+'">'+
+                                '<input type="number" class="form-control cantidadCarrito" precio="'+precio+'" idProducto='+item.idProducto+' placeholder="'+item.cantidad+'" value="'+item.cantidad+'">'+
                             '</td>';
                     if(item.oferta != ""){
-                        html += '<td>'+
+                        html += '<td class="subtotal'+item.idProducto+' subtotales">'+
                                     '<h4>'+
-                                        '$'+item.oferta+'.00'+
+                                        '$<span class="preciaProducto">'+item.oferta+'</span>.00'+
                                     '</h4>'+
                                 '</td>';
                     }else{
-                        html += '<td>'+
+                        html += '<td class="subtotal'+item.idProducto+' subtotales">'+
                                     '<h4>'+
-                                    '$'+item.precio+'.00'+
+                                    '$<span class="preciaProducto">'+item.precio+'</span>.00'+
                                     '</h4>'+
                                 '</td>';                    
                     }
@@ -295,7 +295,7 @@ $(document).on("click", "#btnCarrito", function(){
 /* quitar productos del carrito */
 $(document).on("click", ".quitarItemCarrtio", function(){
     
-    $(this).parent().parent().parent().remove()
+    $(this).parent().parent().parent().parent().remove()
 
     
     var idProducto = $(".mostrarCarrito .quitarItemCarrtio");
@@ -328,6 +328,7 @@ $(document).on("click", ".quitarItemCarrtio", function(){
             
         }
         localStorage.setItem("listaProductos", JSON.stringify(listaCarrito));
+        sumaTotal();
 
     }else{
         /* sino quedan productos se borra todo */
@@ -339,3 +340,87 @@ $(document).on("click", ".quitarItemCarrtio", function(){
         $(".generarPedido").hide();
     }
 });
+
+$(".cantidadCarrito").change(function(){
+
+    var cantidad = $(this).val();
+    var precio  = $(this).attr("precio");
+    var idProducto  = $(this).attr("idProducto");
+
+    $(".subtotal"+idProducto).html('<h4>$<span class="preciaProducto">'+(cantidad*precio)+'</span>.00</h4>');
+
+
+
+    
+    /* actualizar la cantidad en localStorage */
+
+    var idProducto = $(".mostrarCarrito .quitarItemCarrtio");
+    var imagen = $(".mostrarCarrito img");
+    var producto = $(".mostrarCarrito .productoCarrito");
+    var cantidad = $(".mostrarCarrito .cantidadCarrito");
+
+    listaCarrito = [];
+
+    for (let i = 0; i < idProducto.length; i++) {
+        var idProductoArray = $(idProducto[i]).attr("idProducto");
+        var precioArray = $(idProducto[i]).attr("precio");
+        var ofertaArray = $(idProducto[i]).attr("oferta");
+        var tallaArray = $(idProducto[i]).attr("talla");
+        var productoArray = $(producto[i]).html();
+        var cantidadArray = $(cantidad[i]).val();
+        var imagenArray = $(imagen[i]).attr("src");
+
+        listaCarrito.push({"idProducto": idProductoArray,
+                            "producto": productoArray,
+                            "talla": tallaArray,
+                            "precio": precioArray,
+                            "oferta": ofertaArray,
+                            "imagen": imagenArray,
+                            "cantidad": cantidadArray
+        });
+        
+    }
+    localStorage.setItem("listaProductos", JSON.stringify(listaCarrito));
+    sumaTotal();
+    
+});
+
+/* Actualizar subtotal */
+
+var precioCarritoCompra = $(".mostrarCarrito .precioCarrito span");
+var cantidadItem = $(".mostrarCarrito .cantidadCarrito");
+
+for (let i = 0; i < precioCarritoCompra.length; i++) {
+    var precioCarritoArray = $(precioCarritoCompra[i]).html();
+    var cantidadItemArray = $(cantidadItem[i]).val();
+    var idProductoArray = $(cantidadItem[i]).attr("idProducto");
+
+    $(".subtotal"+idProductoArray).html('<h4>$<span class="preciaProducto">'+(precioCarritoArray * cantidadItemArray)+'</span>.00</h4>');
+    sumaTotal();
+}
+
+
+/* Suma de todos los subtotales */
+function sumaTotal(){
+    var subtotales = $(".subtotales .preciaProducto");
+
+    var arraySumaSubtotales = [];
+
+    for (let i = 0; i < subtotales.length; i++) {
+
+        var sumatotalArray = $(subtotales[i]).html(); 
+        arraySumaSubtotales.push(Number(sumatotalArray));
+    }
+
+   
+
+    function sumaArrayTotales(total, numero){
+        
+        return total + numero;
+    }
+
+    var sumatotal = arraySumaSubtotales.reduce(sumaArrayTotales);
+
+    $(".totalPedido").html('$'+sumatotal+'.00');
+    
+}
