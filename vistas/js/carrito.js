@@ -32,7 +32,7 @@ if(localStorage.getItem("listaProductos") != null){
 
                         '<dl class="small m-b-none">'+
                             '<dt>Tallas</dt>'+
-                            '<dd>'+item.talla+'</dd>'+
+                            '<dd class="tallasItem">'+item.talla+'</dd>'+
                         '</dl>'+
 
                         '<div class="m-t-sm">'+
@@ -52,16 +52,16 @@ if(localStorage.getItem("listaProductos") != null){
                                 '</td>';
                     }
                     html += '<td width="79">'+
-                                '<input type="number" class="form-control cantidadCarrito" precio="'+precio+'" idProducto='+item.idProducto+' placeholder="'+item.cantidad+'" value="'+item.cantidad+'">'+
+                                '<input type="number" class="form-control cantidadCarrito" precio="'+precio+'" idProducto='+item.idProducto+' talla='+item.talla+' placeholder="'+item.cantidad+'" value="'+item.cantidad+'">'+
                             '</td>';
                     if(item.oferta != ""){
-                        html += '<td class="subtotal'+item.idProducto+' subtotales">'+
+                        html += '<td class="subtotal'+item.idProducto+item.talla+' subtotales">'+
                                     '<h4>'+
                                         '$<span class="preciaProducto">'+item.oferta+'</span>.00'+
                                     '</h4>'+
                                 '</td>';
                     }else{
-                        html += '<td class="subtotal'+item.idProducto+' subtotales">'+
+                        html += '<td class="subtotal'+item.idProducto+item.talla+' subtotales">'+
                                     '<h4>'+
                                     '$<span class="preciaProducto">'+item.precio+'</span>.00'+
                                     '</h4>'+
@@ -346,8 +346,9 @@ $(".cantidadCarrito").change(function(){
     var cantidad = $(this).val();
     var precio  = $(this).attr("precio");
     var idProducto  = $(this).attr("idProducto");
+    var talla  = $(this).attr("talla");
 
-    $(".subtotal"+idProducto).html('<h4>$<span class="preciaProducto">'+(cantidad*precio)+'</span>.00</h4>');
+    $(".subtotal"+idProducto+talla).html('<h4>$<span class="preciaProducto">'+(cantidad*precio)+'</span>.00</h4>');
 
 
 
@@ -388,14 +389,17 @@ $(".cantidadCarrito").change(function(){
 /* Actualizar subtotal */
 
 var precioCarritoCompra = $(".mostrarCarrito .precioCarrito span");
-var cantidadItem = $(".mostrarCarrito .cantidadCarrito");
+var cantidadItem = $(".mostrarCarrito .cantidadCarrito"); 
+
 
 for (let i = 0; i < precioCarritoCompra.length; i++) {
     var precioCarritoArray = $(precioCarritoCompra[i]).html();
     var cantidadItemArray = $(cantidadItem[i]).val();
     var idProductoArray = $(cantidadItem[i]).attr("idProducto");
+    var tallasItemArray = $(cantidadItem[i]).attr("talla");
 
-    $(".subtotal"+idProductoArray).html('<h4>$<span class="preciaProducto">'+(precioCarritoArray * cantidadItemArray)+'</span>.00</h4>');
+
+    $(".subtotal"+idProductoArray+tallasItemArray).html('<h4>$<span class="preciaProducto">'+(precioCarritoArray * cantidadItemArray)+'</span>.00</h4>');
     sumaTotal();
 }
 
