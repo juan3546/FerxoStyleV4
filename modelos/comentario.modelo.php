@@ -12,7 +12,7 @@ class ModeloComentarios{
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id, idProducto, idCliente, comentario, fecha) VALUES ( NULL, :idProducto, :idCliente, :comentario, now())");
 		$idCliente = 1;
 		$stmt->bindParam(":idProducto", $datos["producto"], PDO::PARAM_STR);
-		$stmt->bindParam(":idCliente", $idCliente /* $_SESSION["id"] */, PDO::PARAM_STR);
+		$stmt->bindParam(":idCliente", $datos["cliente"] /* $_SESSION["id"] */, PDO::PARAM_STR);
 		$stmt->bindParam(":comentario", $datos["comentario"], PDO::PARAM_STR);
 
 

@@ -3,7 +3,15 @@ $(document).on("click", "#btnComentario", function(){
     var producto = $("#btnPedido").attr("producto");
     var rutaOculta = $("#rutaOculta").val();
     var servidorOculta = $("#rutaOcultaServidor").val();
-
+    var cliente = $(this).attr("cl");
+    if(cliente == ""){
+        Swal.fire({
+            icon: 'error',
+            title: 'Debe iniciar sesión para comentar.',
+            text: '',
+            footer: ''
+        });  
+    }
     if(document.getElementById("txtComentario").value.trim()==""){
         Swal.fire({
             icon: 'error',
@@ -16,6 +24,7 @@ $(document).on("click", "#btnComentario", function(){
         datos.append("insertarComentario", "");
         datos.append("comentario", comentario);
         datos.append("producto", producto);
+        datos.append("cliente", cliente);
     
          $.ajax({
             url: rutaOculta+"ajax/comentario.ajax.php",
@@ -27,7 +36,7 @@ $(document).on("click", "#btnComentario", function(){
             dataType: "json",
             success:function(respuesta){
                 var codigoHtml = '';
-                if(respuesta == "ErrorSesion"){
+                if(respuesta == "ErrorSesion" || cliente == ""){
                     Swal.fire({
                         icon: 'error',
                         title: 'Debe iniciar sesión para comentar.',
@@ -35,7 +44,7 @@ $(document).on("click", "#btnComentario", function(){
                         footer: ''
                     });   
                 }else{
-                    //location.reload();
+                    location.reload();
 
                     /*
                     $("#txtComentario").val(" ");
@@ -59,7 +68,7 @@ $(document).on("click", "#btnComentario", function(){
                     $(".mostComentario").append(codigoHtml);
                     */
  
-                    console.log(respuesta);
+                    console.log("respuesta",respuesta);
                 }
                 
             }
