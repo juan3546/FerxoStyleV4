@@ -37,7 +37,7 @@ $servidor =  Ruta::ctrRutaServidor();
               <li><a href="<?php echo $url; ?>perfil">Perfil</a></li>
               <li><a href="<?php echo $url; ?>salir" class="text-center">Cerrar Cesion</a></li>
             </ul>
-</div>
+           </div>
         </li>
       </ul>
     </div>

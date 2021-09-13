@@ -15,12 +15,12 @@ $numComentarios = ControladorComentario::ctrMostrarComentario($itemComent, $valo
 $num = count($numComentarios);
 ?>
 <section class="container-fluid detallePpp">
- <div class="row  mt-5">
-  <div class="col-6 d-flex imgDetalle">
-    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="400" class=" img1 mx-5"  id="imgg" name="nor">
-    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="800"   class=" img2 mx-5" id="imgg"  name="big">
+ <div class="row  mt-5 d-flex">
+  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 m-auto">
+    <img src="<?php echo $servidor.$respuestaProduc[0]["foto"] ?>" alt="" width="70%" height="70%" class=""  id="imgg" name="nor">
+   
   </div>
-  <div class="col-6">
+  <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
   <p><a href="<?php echo $url; ?>inicio">Inicio</a> / <?php echo $respuestaProduc[0]["nombre"];  ?> </p>
    <h2><?php echo $respuestaProduc[0]["nombre"];  ?></h2>
    <?php

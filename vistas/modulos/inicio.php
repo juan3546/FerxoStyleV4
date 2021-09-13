@@ -50,6 +50,7 @@
     </div>
   </div>
 </section>
+<!-- inicio seccion se nuevos productos  -->
 <section id="NuevosProductos" class="container-fluid mt-5">
  <div class="row d-flex">
   <h2 class="text-center nuevos">Nuevos Productos</h2>

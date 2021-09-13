@@ -230,18 +230,20 @@ section{
 	outline: none;
 }
 .listing-carousel-button.listing-carousel-button-next{
-	right: -30px;
+	right: -20px;
 	padding-right: 20px;
+	padding-top: 15px;
 	border-radius: 60px 0 0 60px;
 }
 .listing-carousel-button.listing-carousel-button-prev{
 	left: -30px;
 	padding-left: 20px;
+	padding-top: 15px;
 	border-radius: 0 60px 60px 0;
 }
 .listing-carousel-button.listing-carousel-button-next:hover{
 	right: -15px;
-	background: rgba(6,27,65,0.4);
+	background: rgba(181, 181, 182, 0.4);
 }
 .listing-carousel-button.listing-carousel-button-prev:hover{
 	left: -15px;
@@ -253,7 +255,8 @@ section{
 	opacity: 0.9;
 }
 .testimonials-text {
-	padding: 75px 50px 75px;
+	margin-top: 65px;
+	padding: 90px 50px 90px;
 	overflow:hidden;
 	background: #f5f6fa;
 	border:1ps solid #f1f1f1;

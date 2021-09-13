@@ -46,7 +46,7 @@ $(document).on("click", "#btnComentario", function(){
                 }else{
                     location.reload();
 
-                    /*
+                    
                     $("#txtComentario").val(" ");
                     for (let i = 0; i < respuesta.length; i++) {
                         
@@ -66,7 +66,7 @@ $(document).on("click", "#btnComentario", function(){
                         
                     }
                     $(".mostComentario").append(codigoHtml);
-                    */
+                    
  
                     console.log("respuesta",respuesta);
                 }
