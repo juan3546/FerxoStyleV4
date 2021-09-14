@@ -40,7 +40,7 @@ $servidor =  Ruta::ctrRutaServidor();
            </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark mx-2 position-relative" href="<?php echo $url; ?>carrito" ><i class="fas fa-cart-arrow-down "></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">4</span></a>
+          <a class="nav-link text-dark mx-2 position-relative mt-2 pb-3" href="<?php echo $url; ?>carrito" ><i class="fas fa-cart-arrow-down "></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">4</span></a>
         </li>
       </ul>
     </div>
