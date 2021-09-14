@@ -108,7 +108,7 @@
                  echo '</span>
                                       </div>
                                       <div class="d-flex justify-content-between align-items-center mt-2">
-                                          <!-- div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div -->
+                                          <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div>
                                           <div class="size">';
                                   
                                           $item = "idProducto";
@@ -187,7 +187,7 @@
                             </div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
-                                < div class="listing-rating">
+                                <div class="listing-rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
