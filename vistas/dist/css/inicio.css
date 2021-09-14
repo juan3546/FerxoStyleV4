@@ -489,3 +489,16 @@ label.radio input:checked+span {
 	border-color: #4EA5D4;
     background-color: #4EA5D4 !important;
 }
+.ir-arriba {
+	display:none;
+	padding:20px;
+	background:#86B324;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+	z-index: 999;
+	border-radius: 70px;
+}

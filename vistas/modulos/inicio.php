@@ -6,6 +6,7 @@
   $sloganPrimero = substr($configInicio[0]["slogan"], 0, 66);
   $sloganSegundo = substr($configInicio[0]["slogan"], 67);
 ?>  
+<span class="ir-arriba icon-arrow-up2"><i class="fas fa-arrow-circle-up"></i></span>
  <!-- seccion de la imagen del banner  -->
 <section id="=ImagenYTextoBanner" >
   <div class="card parallax" >
@@ -155,9 +156,9 @@
 <section id="comentarios" class="mt-5">
  <div class="container-fluid">
         <div class="section-title">
-            <h2>Testimonios Clientes</h2>
+            <h2 class="mt-5">Testimonios Clientes</h2>
             <span class="section-separator"></span>
-            <p>Con tu opinion nos haces crecer y mejorar dia con dia.</p>
+            <p class="mt-2">Con tu opinion nos haces crecer y mejorar dia con dia.</p>
         </div>
     </div>
     <div class="testimonials-carousel-wrap">
@@ -186,13 +187,13 @@
                             </div>
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
-                                <!-- div class="listing-rating">
+                                < div class="listing-rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
-                                </div -->
+                              </div>
                                 <p><?php echo $comen;  ?></p>
                                 <a href="#" class="text-link"></a>
                                 <div class="testimonials-avatar">
