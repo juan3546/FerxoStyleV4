@@ -85,8 +85,8 @@ if(localStorage.getItem("listaProductos") != null){
 }
 
 /* agregar al carrito desde la card */
-
-$(".botonCarrito").click(function(){
+$(document).on("click", ".botonCarrito", function(){
+//$(".botonCarrito").click(function(){
     var rutaOculta = $("#rutaOculta").val();
     var idProducto = $(this).attr("producto");
     var producto = $(this).attr("modelo");

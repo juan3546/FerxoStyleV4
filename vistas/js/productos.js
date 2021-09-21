@@ -5,6 +5,7 @@ $(document).on("keyup", "#txtArticulosHombre", function(ev){
     var rutaOculta = $("#rutaOculta").val();
     var rutaOcultaServidor = $("#rutaOcultaServidor").val();
     var teclaPulsada = ev.keyCode;
+    var session = $("#iniciar").val();
 
 
     //if(producto == '' && teclaPulsada != 20 || teclaPulsada != 16 || teclaPulsada != 17 || teclaPulsada != 18 || teclaPulsada != 40 || teclaPulsada != 39 || teclaPulsada != 38 || teclaPulsada != 39){
@@ -66,7 +67,12 @@ $(document).on("keyup", "#txtArticulosHombre", function(ev){
 
                         codigoHtml += '</div>';
                         codigoHtml += '</div>';
-                        codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'+respuesta[i]["idUsuario"]+'" producto="'+respuesta[i]["id"]+'" modelo="'+respuesta[i]["nombre"]+'" precio="'+respuesta[i]["precio"]+'" oferta="'+respuesta[i][" precioOferta"]+'" imagen="'+respuesta[i]["foto"]+'">Agregar a carrito</button></div>';
+                        if(respuesta[i][" precioOferta"] == undefined || respuesta[i][" precioOferta"] == ""){
+                            codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'+session+'" producto="'+respuesta[i]["id"]+'" modelo="'+respuesta[i]["nombre"]+'" precio="'+respuesta[i]["precio"]+'" oferta="" imagen="'+rutaOcultaServidor+respuesta[i]["foto"]+'">Agregar a carrito</button></div>';
+                        }else{
+                            codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'+session+'" producto="'+respuesta[i]["id"]+'" modelo="'+respuesta[i]["nombre"]+'" precio="'+respuesta[i]["precio"]+'" oferta="'+respuesta[i][" precioOferta"]+'" imagen="'+rutaOcultaServidor+respuesta[i]["foto"]+'">Agregar a carrito</button></div>';
+                        }
+                       
                         codigoHtml += '</div>';
                         codigoHtml += '</div>';
                         codigoHtml += '</div>'; 
@@ -89,6 +95,7 @@ $(document).on("keyup", "#txtArticulosMujeres", function(){
     var producto = $(this).val();
     var rutaOculta = $("#rutaOculta").val();
     var rutaOcultaServidor = $("#rutaOcultaServidor").val();
+    var session = $("#iniciar").val();
  
     if(producto == ''){
         window.location = rutaOculta+"articulos-para-mujeres/1";
@@ -150,7 +157,11 @@ $(document).on("keyup", "#txtArticulosMujeres", function(){
 
                         codigoHtml += '</div>';
                         codigoHtml += '</div>';
-                        codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" >Agregar a carrito</button> </div>';
+                        if(respuesta[i][" precioOferta"] == undefined || respuesta[i][" precioOferta"] == ""){
+                            codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'+session+'" producto="'+respuesta[i]["id"]+'" modelo="'+respuesta[i]["nombre"]+'" precio="'+respuesta[i]["precio"]+'" oferta="" imagen="'+rutaOcultaServidor+respuesta[i]["foto"]+'">Agregar a carrito</button></div>';
+                        }else{
+                            codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'+session+'" producto="'+respuesta[i]["id"]+'" modelo="'+respuesta[i]["nombre"]+'" precio="'+respuesta[i]["precio"]+'" oferta="'+respuesta[i][" precioOferta"]+'" imagen="'+rutaOcultaServidor+respuesta[i]["foto"]+'">Agregar a carrito</button></div>';
+                        }
                         codigoHtml += '</div>';
                         codigoHtml += '</div>';
                         codigoHtml += '</div>'; 
@@ -173,6 +184,7 @@ $(document).on("keyup", "#txtArticulosInfante", function(){
     var producto = $(this).val();
     var rutaOculta = $("#rutaOculta").val();
     var rutaOcultaServidor = $("#rutaOcultaServidor").val();
+    var session = $("#iniciar").val();
 
     if(producto == ''){
         window.location = rutaOculta+"articulos-para-ninios/1";
@@ -231,7 +243,11 @@ $(document).on("keyup", "#txtArticulosInfante", function(){
 
                         codigoHtml += '</div>';
                         codigoHtml += '</div>';
-                        codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" >Agregar a carrito</button> </div>';
+                        if(respuesta[i][" precioOferta"] == undefined || respuesta[i][" precioOferta"] == ""){
+                            codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'+session+'" producto="'+respuesta[i]["id"]+'" modelo="'+respuesta[i]["nombre"]+'" precio="'+respuesta[i]["precio"]+'" oferta="" imagen="'+rutaOcultaServidor+respuesta[i]["foto"]+'">Agregar a carrito</button></div>';
+                        }else{
+                            codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'+session+'" producto="'+respuesta[i]["id"]+'" modelo="'+respuesta[i]["nombre"]+'" precio="'+respuesta[i]["precio"]+'" oferta="'+respuesta[i][" precioOferta"]+'" imagen="'+rutaOcultaServidor+respuesta[i]["foto"]+'">Agregar a carrito</button></div>';
+                        }
                         codigoHtml += '</div>';
                         codigoHtml += '</div>';
                         codigoHtml += '</div>'; 
@@ -267,7 +283,7 @@ function tallas(articulo, div){
             for (let i = 0; i < respuestaTalla.length; i++) {
                 $("."+div).html("");
                 codigoHtmlTalla += '<label class="radio">';
-                codigoHtmlTalla += '<input type="radio" name="size1" value="small"> ';
+                codigoHtmlTalla += '<input class="talla" type="radio" name="size1" value="'+respuestaTalla[i]["talla"]+'"> ';
                 codigoHtmlTalla += '<span>'+respuestaTalla[i]["talla"]+'</span>';
                 codigoHtmlTalla += '</label> ';
                 

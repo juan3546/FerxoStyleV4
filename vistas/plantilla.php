@@ -142,6 +142,7 @@ $servidor =  Ruta::ctrRutaServidor();
  ?>
     <input type="hidden" value="<?php echo $url; ?>" id="rutaOculta">
     <input type="hidden" value="<?php echo $servidor; ?>" id="rutaOcultaServidor">
+    <input type="hidden" value="<?php echo $_SESSION["iniciarSesion"]; ?>" id="iniciar">
   
     <script src="<?php echo $url; ?>vistas/js/inicio.js"></script>
     <script src="<?php echo $url; ?>vistas/js/script.js"></script>
