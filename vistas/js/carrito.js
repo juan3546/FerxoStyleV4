@@ -98,9 +98,9 @@ $(document).on("click", ".botonCarrito", function(){
 
 
     
-    if(talla == undefined){
+    if((talla == undefined) || (talla =='')){
         Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'error',
             title: 'Debes seleccionar una talla',
             showConfirmButton: false,
@@ -172,12 +172,8 @@ $(document).on("click", ".botonCarrito", function(){
     
            }
        });
-
-        
-    }  
-
-    /* mostrar alerta de que el producto ya fue agregado */
-    Swal.fire({
+ /* mostrar alerta de que el producto ya fue agregado */
+       Swal.fire({
         title: '',
         text: "¡Se ha agregado un nuevo producto al carrito de compras!",
         icon: 'success',
@@ -190,7 +186,11 @@ $(document).on("click", ".botonCarrito", function(){
         if (result.isConfirmed) {
           window.location = rutaOculta + "carrito";
         }
-      });
+      }); 
+    }  
+
+   
+  
         
 
  
