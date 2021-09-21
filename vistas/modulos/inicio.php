@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
-    <div class="card categoriass tarjetass text-white"  id="cnMujer">
+    <div class="card categoriass tarjetass text-white"  id="cnNinio">
         <img src="<?php echo $servidor.$configInicio[0]["imgMujer"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
          <h3 class="card-title">Niños</h3>
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
-    <div class="card categoriass tarjetass text-white"  id="cnNinio">
+    <div class="card categoriass tarjetass text-white"  id="cnMujer">
         <img src="<?php echo $servidor.$configInicio[0]["imgInfante"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
          <h3 class="card-title">Mujeres</h3>
@@ -102,7 +102,7 @@
                     if ($value["precioOferta"] != null):
                     echo '<del>$'.$value["precio"].' </del> &nbsp;&nbsp; $'.$value["precioOferta"];
                          else: 
-                           echo $value["precio"];
+                           echo '$'. $value["precio"];
                           endif;
                   
                  echo '</span>

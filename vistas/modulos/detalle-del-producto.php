@@ -144,9 +144,6 @@ $num = count($numComentarios);
                 </div>
             </div>
             <?php endforeach; ?>
-
-
-
         </div>
     </div>
 </div>
@@ -169,9 +166,10 @@ $num = count($numComentarios);
                     <div class="img-container">
                        <div class="d-flex justify-content-between align-items-center p-2 first"> 
                   <span class="percent">Nuevo</span> 
-                  <span class="wishlist">
+                  <!-- <span class="wishlist">
                   <i class="fa fa-heart"></i>
-                  </span> </div> 
+                  </span>  -->
+                </div> 
                   <img src="<?php echo $servidor.$value["foto"]?>" class="img-fluid">
                    </div>
                      <div class="product-detail-container">
@@ -185,14 +183,14 @@ $num = count($numComentarios);
                            echo $value["precio"];
                           endif;
                           ?>
-                  
+                   
                  </span>
                                       </div>
                                       <div class="d-flex justify-content-between align-items-center mt-2">
                                           <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div>
                                           <div class="size"> <label class="radio"> <input type="radio" name="size1" value="small"> <span>S</span> </label> <label class="radio"> <input type="radio" name="size1" value="Medium" checked> <span>M</span> </label> <label class="radio"> <input type="radio" name="size1" value="Large"> <span>L</span> </label> </div>
                                       </div>
-                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. '">Agregar a carrito</button> </div>
+                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="<?php echo $usuario; ?>" producto="<?php echo $value["id"]; ?>" modelo="<?php echo $value["nombre"]; ?>" precio="<?php echo $value["precio"]; ?>" oferta="<?php echo $value["precioOferta"]; ?>" imagen="<?php echo $servidor.$value["foto"]; ?>">Agregar a carrito</button> </div>
                                   </div>
                               </div>
      </div>

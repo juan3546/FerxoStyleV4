@@ -167,14 +167,14 @@ $ruta = $rutas[0];
                     if ($value["precioOferta"] != null):
                     echo '<del>$'.$value["precio"].' </del> &nbsp;&nbsp; $'.$value["precioOferta"];
                          else: 
-                           echo $value["precio"];
+                           echo '$'.$value["precio"];
                           endif;
                           ?>
                   
                  </span>
                                       </div>
                                       <div class="d-flex justify-content-between align-items-center mt-2">
-                                          <!-- div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div -->
+                                          <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span></div>
                                           <div class="size"> 
                                             <?php
                                               $item = "idProducto";

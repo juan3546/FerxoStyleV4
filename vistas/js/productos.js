@@ -24,6 +24,7 @@ $(document).on("keyup", "#txtArticulosHombre", function(ev){
             dataType: "json",
             success:function(respuesta){
                 var codigoHtml = '';
+                
                 if(respuesta){
                     for (let i = 0; i < respuesta.length; i++) {
                         $(".mostrarProductoHombre").html("");
@@ -50,11 +51,12 @@ $(document).on("keyup", "#txtArticulosHombre", function(ev){
                         }else{
                             codigoHtml += '$'+respuesta[i]["precio"];
                         }
-                        codigoHtml += '</span>';
+                       
+                        codigoHtml += '</span>'; 
                         codigoHtml += '</div>';
                         codigoHtml += '<div class="d-flex justify-content-between align-items-center mt-2">';
+                        codigoHtml += '<div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span></div>';
                         codigoHtml += '<div class="size"> ';
-
                         codigoHtml += '<div class="tallas'+i+'"></div>';
                         
                         //MOSTRAR LAS TALLAS DEL ARTICULO
@@ -64,7 +66,7 @@ $(document).on("keyup", "#txtArticulosHombre", function(ev){
 
                         codigoHtml += '</div>';
                         codigoHtml += '</div>';
-                        codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" >Agregar a carrito</button> </div>';
+                        codigoHtml += '<div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'+respuesta[i]["idUsuario"]+'" producto="'+respuesta[i]["id"]+'" modelo="'+respuesta[i]["nombre"]+'" precio="'+respuesta[i]["precio"]+'" oferta="'+respuesta[i][" precioOferta"]+'" imagen="'+respuesta[i]["foto"]+'">Agregar a carrito</button></div>';
                         codigoHtml += '</div>';
                         codigoHtml += '</div>';
                         codigoHtml += '</div>'; 
@@ -79,7 +81,6 @@ $(document).on("keyup", "#txtArticulosHombre", function(ev){
     
         });
     }
-
 });
 
 /* Filtrado por nombre de Mujeres*/
@@ -137,6 +138,7 @@ $(document).on("keyup", "#txtArticulosMujeres", function(){
                         codigoHtml += '</span>';
                         codigoHtml += '</div>';
                         codigoHtml += '<div class="d-flex justify-content-between align-items-center mt-2">';
+                        codigoHtml += '<div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span></div>';
                         codigoHtml += '<div class="size"> ';
 
                         codigoHtml += '<div class="tallas'+i+'"></div>';
@@ -217,6 +219,7 @@ $(document).on("keyup", "#txtArticulosInfante", function(){
                         codigoHtml += '</span>';
                         codigoHtml += '</div>';
                         codigoHtml += '<div class="d-flex justify-content-between align-items-center mt-2">';
+                        codigoHtml += '<div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span></div>';
                         codigoHtml += '<div class="size"> ';
 
                         codigoHtml += '<div class="tallas'+i+'"></div>';
