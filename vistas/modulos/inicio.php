@@ -24,28 +24,31 @@
 <!--fin seccion de la imagen del banner  -->
 <!-- seccion que muestra las categorias de los productos hombre, mujer y niños -->
 <section id="categorias" class="container mt-5 mb-5">
+  <!-- card hombre -->
   <div class="row ">
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
       <div class="card categoriass tarjetass text-white" id="cnHombre">
         <img src="<?php echo $servidor.$configInicio[0]["imgHombre"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
-         <h3 class="card-title">Hombres</h3>
+         <h3 class="card-title text-start">Hombres</h3>
         </div>
       </div>
     </div>
+    <!-- card niño -->
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
     <div class="card categoriass tarjetass text-white"  id="cnNinio">
-        <img src="<?php echo $servidor.$configInicio[0]["imgMujer"]; ?>" class="card-img categoriass" alt="...">
+        <img src="<?php echo $servidor.$configInicio[0]["imgInfante"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
-         <h3 class="card-title">Niños</h3>
+         <h3 class="card-title text-start">Niños</h3>
         </div>
       </div>
     </div>
+    <!-- card mujer -->
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
     <div class="card categoriass tarjetass text-white"  id="cnMujer">
-        <img src="<?php echo $servidor.$configInicio[0]["imgInfante"]; ?>" class="card-img categoriass" alt="...">
+        <img src="<?php echo $servidor.$configInicio[0]["imgMujer"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
-         <h3 class="card-title">Mujeres</h3>
+         <h3 class="card-title text-start">Mujeres</h3>
         </div>
       </div>
     </div>
