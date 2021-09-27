@@ -47,11 +47,11 @@ $num = count($numComentarios);
    <label class="my-3">Tallas:</label><br>
    <?php
         $item = "idProducto";
-        $valor = $valor2;
+        $valor = $valor2; 
         $respuestaTallas = ControladorProductos::ctrMostrarTallas($item, $valor);
         foreach ($respuestaTallas as $key => $value):
       ?>
-       <label class="radio">
+       <label class="radio" id="rb">
          <input type="radio" name="size1" value="small"> 
             <span><?php echo $value["talla"] ?></span> 
        </label>
