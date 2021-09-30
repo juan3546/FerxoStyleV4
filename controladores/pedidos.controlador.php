@@ -21,4 +21,10 @@ class ControladorPedidos{
 	
 		return $respuesta;
 	}
+
+
+	static public function ctrInsertarPedido($datos){
+
+		
+	}
 }

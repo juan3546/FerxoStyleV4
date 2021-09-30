@@ -428,3 +428,28 @@ function sumaTotal(){
     $(".totalPedido").html('$'+sumatotal+'.00');
     
 }
+
+
+$(document).on("click", ".generarPedido", function(){
+
+    var productos = localStorage.getItem("listaProductos");
+
+    const jsonProduntos = productos; // JSON.stringify(productos);
+
+    var datos = new FormData();
+    datos.append("jsonProductos", jsonProduntos);
+
+    console.log(jsonProduntos);
+    $.ajax({
+        url: rutaOculta+"ajax/carrito.ajax.php",
+        method:"POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success:function(respuesta){
+            console.log(respuesta);
+        }
+    });
+});

@@ -12,7 +12,7 @@
                     
                 </div>
                 <div class="ibox-content">
-                    <button class="btn btn-warning pull-right text-white generarPedido"><i class="fa fa fa-shopping-cart"></i> Generar Pedido</button>
+                    <button type="button" class="btn btn-warning pull-right text-white generarPedido"><i class="fa fa fa-shopping-cart"></i> Generar Pedido</button>
                     <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continuar Comprando</button>
 
                 </div>
@@ -36,8 +36,8 @@
 
                     <div class="m-t-sm">
                         <div class="btn-group">
-                        <a href="#" class="btn btn-primary "><i class="fa fa-shopping-cart"></i> Generar Pedido</a>
-                        <a href="#" class="btn btn-white "> Cancelar</a>
+                            <button type="button" class="btn btn-primary generarPedido"><i class="fa fa-shopping-cart"></i> Generar Pedido</button>
+                            <a href="#" class="btn btn-white "> Cancelar</a>
                         </div>
                     </div>
                 </div>
