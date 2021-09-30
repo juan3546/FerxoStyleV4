@@ -25,6 +25,9 @@ class ControladorPedidos{
 
 	static public function ctrInsertarPedido($datos){
 
+		$respuesta =  ModeloPedidos::mdlinsert($datos);
+	
+		return $respuesta;
 		
 	}
 }
