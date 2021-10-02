@@ -102,9 +102,11 @@ class generarReporte extends FPDF{
         $this->Cell(50,10, utf8_decode($value["nombre"]), 'B', 0, 'C', 1);
         $this->Cell(70,10, utf8_decode($value["tallas"]), 'B', 0, 'C', 1);
         $this->Cell(30,10, $value["cantidad"], 'B', 0, 'C', 1);
-        $this->Cell(30,10, $value["precio"], 'B', 0, 'C', 1);
+        $this->Cell(30,10, (intval($value["precio"]) * intval($value["cantidad"])), 'B', 0, 'C', 1);
         
         $total += intval($value["precio"]);
+
+        $total = $total * intval($value["cantidad"]);
         
         $this->Ln();
         $this->SetX(20);

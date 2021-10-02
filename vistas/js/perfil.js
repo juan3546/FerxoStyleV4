@@ -9,7 +9,7 @@ $(".foto").change(function(){
   	VALIDAMOS EL FORMATO DE LA IMAGEN SEA JPG O PNG
   	=============================================*/
 	
-  	if( /* imagen["type"] != "image/jpeg" && */  imagen["type"] != "image/png"){
+  	if(  imagen["type"] != "image/jpeg" &&   imagen["type"] != "image/png"){
   		$(".foto").val("");
 
   		 Swal.fire({
@@ -53,4 +53,8 @@ $(document).on("click", ".btnViewPedidoPdf", function(){
 
   
     $("#mostrarPerfilpdf").attr("data", rutaOculta+"ajax/pedidos.pdf.php?pedido="+pedido+"&pdf="+pdf);
+  });
+
+  $(document).on("click", ".cerrarPerfilPdf", function(){
+	  location.reload();
   });

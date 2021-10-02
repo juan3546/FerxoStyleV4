@@ -5,7 +5,7 @@
         <div class="col-md-9">
             <div class="ibox">
                 <div class="ibox-title">
-                    <span class="pull-right">(<strong>1</strong>) Articulos</span>
+                    <span class="pull-right"> <!-- (<strong>1</strong> ) --> Articulos</span>
                     <h5>Articulos en carrito</h5>
                 </div>
                 <div class="mostrarCarrito">
@@ -37,7 +37,7 @@
                     <div class="m-t-sm">
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary generarPedido"><i class="fa fa-shopping-cart"></i> Generar Pedido</button>
-                            <a href="#" class="btn btn-white "> Cancelar</a>
+                            <!-- a href="#" class="btn btn-white "> Cancelar</a -->
                         </div>
                     </div>
                 </div>
@@ -59,4 +59,24 @@
         </div>
     </div>
 </div>
+</div>
+
+
+<!-- Modal para mostrar pdf-->
+<div class="modal fade" id="btnCarritoPdf" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ticket</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <object class="PDFdoc" id="mostrarPedidopdf"  name="mostrarPedidopdf"  width="100%" height="500px" type="application/pdf" data="#"></object>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <!-- button type="button" class="btn btn-primary">Save changes</button -->
+      </div>
+    </div>
+  </div>
 </div>

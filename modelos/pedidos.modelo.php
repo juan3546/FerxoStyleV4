@@ -57,25 +57,45 @@ class ModeloPedidos{
 
 	}
 
-	static public function mdlinsert($datos){
+	static public function mdlinsert($datos, $usuario){
         $cn =  Conexion::conectar();
 
         try {
+			$total = 0;
+			for ($i=0; $i < count($datos) ; $i++) { 
+
+				
+				if($datos[$i]["oferta"] != ""){
+					$total = $total + intval($datos[$i]["oferta"]);
+
+					$total = $total * intval($datos[$i]["cantidad"]);
+					
+				}else{	
+					$total = $total + intval($datos[$i]["precio"]);
+					$total = $total * intval($datos[$i]["cantidad"]);
+				
+				}	
+			}
+
             $cn->beginTransaction();
             $stmt = $cn->prepare("INSERT INTO pedidos(id, codigo, idCliente, idUsuario, fechaPedido, total, metodopago, estado)VALUES
-				(NULL,  NULL,  NULL)");
+				(NULL,  NULL,  :idUsuario, NULL, NOW(), :total, NULL, 'pendiente')");
 
-            $stmt -> bindParam(":nombre", $combinacion, PDO::PARAM_STR);
+            $stmt -> bindParam(":idUsuario", $usuario, PDO::PARAM_STR);
+			$stmt -> bindParam(":total", $total, PDO::PARAM_STR);
+
             
 			$stmt->execute();
 			$idPedido = $cn->lastInsertId();
+
+
             for ($i=0; $i < count($datos) ; $i++) { 
                 $stmtColor =  $cn->prepare("INSERT INTO pedidosDesglose(id, idPedido, idProducto, nombre, foto, colores, tallas, precio, cantidad)VALUES
-                (NULL, :idPedido, :idProducto, :producto, :foto, NULL, :talla, :precio )");
+                (NULL, :idPedido, :idProducto, :producto, :foto, NULL, :talla, :precio, :cantidad )");
     
                 $stmtColor -> bindParam(":idPedido", $idPedido, PDO::PARAM_STR);
 				$stmtColor -> bindParam(":idProducto",$datos[$i]["idProducto"], PDO::PARAM_STR);
-                $stmtColor -> bindParam(":nombre", $datos[$i]["producto"], PDO::PARAM_STR);
+                $stmtColor -> bindParam(":producto", $datos[$i]["producto"], PDO::PARAM_STR);
 				$stmtColor -> bindParam(":foto", $datos[$i]["imagen"], PDO::PARAM_STR);
 				$stmtColor -> bindParam(":talla", $datos[$i]["talla"], PDO::PARAM_STR);
 				if($datos[$i]["oferta"] != ""){
@@ -91,7 +111,7 @@ class ModeloPedidos{
 
 
             if($cn->commit()){
-				return "ok";
+				return $idPedido;
 			}
 
         } catch (\Exception $ex) {

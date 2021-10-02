@@ -116,7 +116,7 @@ $(document).on("click", ".botonCarrito", function(){
     
     
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'center',
                         icon: 'error',
                         title: 'El producto ya está agregado al carrito de compras',
                         showConfirmButton: false,
@@ -228,7 +228,7 @@ $(document).on("click", "#btnCarrito", function(){
     
     
                     Swal.fire({
-                        position: 'top-end',
+                        position: 'center',
                         icon: 'error',
                         title: 'El producto ya está agregado al carrito de compras',
                         showConfirmButton: false,
@@ -433,23 +433,45 @@ function sumaTotal(){
 $(document).on("click", ".generarPedido", function(){
 
     var productos = localStorage.getItem("listaProductos");
+    var usu = $("#usuariocr").val();
+    var ses = $("#iniciar").val();
 
-    const jsonProduntos = productos; // JSON.stringify(productos);
+    console.log(ses);
 
-    var datos = new FormData();
-    datos.append("jsonProductos", jsonProduntos);
+    if(ses != "ok"){
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Debes Iniciar sesión para solicitar pedido',
+            showConfirmButton: false,
+            timer: 1700
+          });
+    }else{
+        const jsonProduntos = productos; // JSON.stringify(productos);
 
-    console.log(jsonProduntos);
-    $.ajax({
-        url: rutaOculta+"ajax/carrito.ajax.php",
-        method:"POST",
-        data: datos,
-        cache: false,
-        contentType: false,
-        processData: false,
-        dataType: "json",
-        success:function(respuesta){
-            console.log(respuesta);
-        }
-    });
+        var datos = new FormData();
+        datos.append("jsonProductos", jsonProduntos);
+        datos.append("usuario", usu);
+    
+    
+        $.ajax({
+            url: rutaOculta+"ajax/carrito.ajax.php",
+            method:"POST",
+            data: datos,
+            cache: false,
+            contentType: false,
+            processData: false,
+            dataType: "json",
+            success:function(respuesta){
+                $('#btnCarritoPdf').modal('show');
+                $("#mostrarPedidopdf").attr("data", rutaOculta+"ajax/pedidos.pdf.php?pedido="+respuesta+"&pdf="+usu);
+                localStorage.removeItem("listaProductos");
+                $(".mostrarCarrito").html('');
+                $(".mostrarCarrito").html('<div class="alert alert-warning" role="alert">Aún no hay productos en el carrito de compras.</div>');
+                $(".totalPedido").html('$0.00');
+            }
+        });
+    }
+
 });
+

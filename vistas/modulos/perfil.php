@@ -193,15 +193,15 @@ foreach ($pedidos as $key => $value){
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel">Reimpresión de ticket</h5>
+        <button type="button" class="btn-close cerrarPerfilPdf" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <object class="PDFdoc" id="mostrarPerfilpdf"  name="mostrarPerfilpdf"  width="100%" height="500px" type="application/pdf" data="#"></object>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary cerrarPerfilPdf" data-bs-dismiss="modal">Cerrar</button>
+        <!-- button type="button" class="btn btn-primary">Save changes</button -->
       </div>
     </div>
   </div>
