@@ -1,7 +1,7 @@
 <?php
 $url =  Ruta::ctrRuta();
 $servidor =  Ruta::ctrRutaServidor();
-$ruta = $rutas[0];
+$ruta = $rutas[0]; 
 ?>
  <!-- Menu Productos para hombre -->
  <section class="container-fluid" id="menufiltrado">

@@ -6,3 +6,8 @@ a {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    #menufiltrado{
+        margin-top: 20%;
+    }
+  }

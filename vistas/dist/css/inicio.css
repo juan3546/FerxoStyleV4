@@ -502,3 +502,6 @@ label.radio input:checked+span {
 	z-index: 999;
 	border-radius: 70px;
 }
+.com{
+	width: 50px;
+}

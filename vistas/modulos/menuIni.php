@@ -35,12 +35,12 @@ $servidor =  Ruta::ctrRutaServidor();
           </button>
             <ul class="dropdown-menu text-center">
               <li><a href="<?php echo $url; ?>perfil">Perfil</a></li>
-              <li><a href="<?php echo $url; ?>salir" class="text-center">Cerrar Cesion</a></li>
+              <li><a href="<?php echo $url; ?>salir" class="text-center">Salir</a></li>
             </ul>
            </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark mx-2 position-relative mt-2 pb-3" href="<?php echo $url; ?>carrito" ><i class="fas fa-cart-arrow-down "></i><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span></a>
+          <a class="nav-link text-dark mx-2 position-relative mt-2 pb-3" href="<?php echo $url; ?>carrito" ><i class="fas fa-cart-arrow-down "></i></a>
         </li>
       </ul>
     </div>

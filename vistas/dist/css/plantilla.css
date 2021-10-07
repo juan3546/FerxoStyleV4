@@ -23,7 +23,7 @@ body{
 @media (min-width: 768px) {
     .titulo{
         font-weight: bold;
-        font-size: 1.8rem;
+        font-size: 1.8rem; 
         text-align: right !important;
     }
   }

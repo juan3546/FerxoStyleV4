@@ -191,12 +191,11 @@
                             <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
                             <div class="testimonials-text">
                                 <div class="listing-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                              </div>
+                                <i class="fas fa-comment-dots text-success com"></i>
+                                <i class="fas fa-comment-dots text-success com"></i>
+                                <i class="fas fa-comment-dots text-success com"></i>
+                                
+                                </div>
                                 <p><?php echo $comen;  ?></p>
                                 <a href="#" class="text-link"></a>
                                 <div class="testimonials-avatar">

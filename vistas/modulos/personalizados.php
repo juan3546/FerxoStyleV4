@@ -1,3 +1,10 @@
+<section>
+ <div class="col-12 bg-ligth margintop">
+     <div class="row">
+       <h3 class="text-center">Datos de contacto</h3>
+     </div>
+ </div>
+</section>
 <section class="bg-ligth margintop">
     <div class="row g-0 d-flex margintop">
         <div class="col-lg-7  margintop"> <!-- d-none d-lg-block -->
