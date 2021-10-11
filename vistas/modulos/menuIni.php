@@ -23,7 +23,7 @@ $servidor =  Ruta::ctrRutaServidor();
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark mx-2" href="<?php echo $url; ?>personalizados">Diseños Personalizados</a>
+          <a class="nav-link text-dark mx-2" href="<?php echo $url; ?>personalizados">Pedidos Personalizados</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark mx-2" href="<?php echo $url; ?>cotizacion" >Cotizaciones</a>
