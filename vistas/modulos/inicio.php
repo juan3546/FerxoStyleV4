@@ -120,14 +120,14 @@
                                           foreach ($tallas as $key => $values):
                                         
                                         echo '<label class="radio">
-                                         <input type="radio" name="size1" value="small"> 
+                                         <input type="radio" class="talla" name="size1" id="size1" value="'.$values["talla"] .'"> 
                                          <span>'. $values["talla"].'</span> 
                                         </label>';
                                         
                                          endforeach; 
                                         echo  '</div>
                                       </div>
-                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.$usuario. '">Agregar a carrito</button> </div>
+                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.  $usuario .'" producto="'.  $value["id"] .'" modelo="'.  $value["nombre"] .'" precio="'.  $value["precio"] .'" oferta="'.  $value["precioOferta"] .'" imagen="'. $servidor.$value["foto"] .'">Agregar a carrito</button> </div>
                                   </div>
                               </div>
                   

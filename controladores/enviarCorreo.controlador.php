@@ -31,7 +31,7 @@ class ControladorCorreo{
                      $mail->Password   = $configRedes["passwordEmail"];                               //SMTP password
                      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
                      $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-                 
+
                      //Recipients
                      $mail->setFrom($_POST["correoPersonalizados"], $_POST["nombrePersonalizados"]);
                      $mail->addAddress( $configRedes["email"],'Ferxo Style' );     //Add a recipient
@@ -115,7 +115,7 @@ class ControladorCorreo{
                      
                      
                  } catch (Exception $e) {
-                     echo "Error Al enviar el correo: {$mail->ErrorInfo}";
+                     echo '<br><br><div class="alert alert-danger">Error Al enviar el correo: {$mail->ErrorInfo}</div>';
                  }
             }else{
                 echo '<br><br><div class="alert alert-danger">Debe de capturar los datos que tienen signo ‘*’ y sin caracteres especiales</div>';
