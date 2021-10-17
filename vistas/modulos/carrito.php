@@ -48,7 +48,14 @@
                     <h5>Soporte</h5>
                 </div>
                 <div class="ibox-content text-center">
-                    <h3><i class="fa fa-phone"></i> +52 445 119 6663</h3>
+                    <?php
+                        $item = "id";
+                        $valor = "1";
+                        
+                        $respuesta = ControladorConfiguracion::ctrMostrarConfigRedes($item, $valor);
+                       
+                    ?>
+                    <h3><i class="fa fa-phone"></i> <?php echo "+52 ".$respuesta["whatsapp"]; ?></h3>
                     <span class="small">
                         Póngase en contacto con nosotros si tiene alguna pregunta. Estamos disponibles las 24h.
                     </span>
