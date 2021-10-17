@@ -13,7 +13,7 @@
                 </div>
                 <div class="ibox-content">
                     <button type="button" class="btn btn-warning pull-right text-white generarPedido"><i class="fa fa fa-shopping-cart"></i> Generar Pedido</button>
-                    <button class="btn btn-white"><i class="fa fa-arrow-left"></i> Continuar Comprando</button>
+                    <button class="btn btn-white retroceder"><i class="fa fa-arrow-left"></i> Continuar Comprando</button>
 
                 </div>
             </div>

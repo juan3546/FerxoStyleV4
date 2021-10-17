@@ -475,3 +475,7 @@ $(document).on("click", ".generarPedido", function(){
 
 });
 
+$(document).on("click", ".retroceder", function(){
+    window.history.back();
+});
+
