@@ -183,7 +183,7 @@ $ruta = $rutas[0];
                                               foreach ($tallas as $key => $values):
                                             ?>
                                             <label class="radio">
-                                             <input type="radio" name="size1" id="size1" value="small"> 
+                                             <input type="radio" class="talla" name="size1" id="size1" value="<?php echo $values["talla"]; ?>"> 
                                              <span><?php echo $values["talla"]; ?></span> </label> 
                                             <label class="radio"> 
                                             <?php endforeach; ?>

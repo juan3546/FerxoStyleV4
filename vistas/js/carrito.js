@@ -205,7 +205,7 @@ $(document).on("click", "#btnCarrito", function(){
     var precio = $(this).attr("precio");
     var oferta = $(this).attr("oferta");
     var imagen = $(this).attr("imagen");
-    var talla = $('#tallas').val();
+    var talla = $('input[name="size1"]:checked').val();
     var agregarAlCarrito = false;
 
 
