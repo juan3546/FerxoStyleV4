@@ -1,7 +1,7 @@
 <section>
  <div class="col-12 bg-ligth margintop">
      <div class="row">
-       <h3 class="text-center">Datos de contacto</h3>
+       <h3 class="text-center">Datos Cotizacion</h3>
      </div>
      <form method="post" enctype="multipart/form-data">
      <div class="row">
