@@ -89,6 +89,11 @@ $(document).on("click", "#cnHombre", function(){
 $(document).on("click", "#cnMujer", function(){
     window.location = "articulos-para-mujeres";
 });
+
+$(document).on("click", ".botonH", function(){
+    var rutaOculta = $("#rutaOculta").val();
+    window.location = rutaOculta+"articulos-para-hombre/1/Personalizados";
+});
 //   all ------------------
 function initParadoxWay() {
     "use strict";
