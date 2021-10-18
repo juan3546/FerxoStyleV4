@@ -96,10 +96,10 @@
                   <!-- span class="wishlist">
                   <i class="fa fa-heart"></i>
                   </span --> </div> 
-                  <img src="'. $servidor.$value["foto"].'" class="img-fluid">
+                  <img src="'. $servidor.$value["foto"].'" class="img-fluid detalle" producto="'.$value["id"].'">
                    </div>
                      <div class="product-detail-container">
-                       <div class="d-flex justify-content-between align-items-center">
+                       <div class="d-flex justify-content-between align-items-center detalle" producto="'.$value["id"].'">
                          <h6 class="mb-0">'.$value["nombre"].'</h6> 
                   <span class="text-danger font-weight-bold">';
                     if ($value["precioOferta"] != null):
