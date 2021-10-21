@@ -181,7 +181,7 @@ figure figcaption:hover {
     background: rgba(255, 255, 255, 0.17);
 }
 
-#add-photo-container input {
+.add-photo-container input {
     display: none;
 }
 

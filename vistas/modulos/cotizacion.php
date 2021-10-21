@@ -44,7 +44,7 @@
        <h5>Adjuntar Imagen(es)</h5>
      </div>
      <div class="row">
-     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-12" id="add-photo-container">
+     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-12 add-photo-container">
         <div class="add-new-photo first" id="add-photo">
             <span><i class="icon-camera"></i></span>
         </div>
@@ -102,7 +102,7 @@
        <h5>Adjuntar Imagen(es)</h5>
      </div>
      <div class="row">
-     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-12" id="add-photo-container">
+     <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-12 add-photo-container">
         <div class="add-new-photo first" id="add-photo">
             <span><i class="icon-camera"></i></span>
         </div>
