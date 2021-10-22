@@ -1,9 +1,11 @@
 $(document).on("click", "#btnComentario", function(){
     var comentario = $("#txtComentario").val();
-    var producto = $("#btnPedido").attr("producto");
+    //var producto = $("#btnPedido").attr("producto");
     var rutaOculta = $("#rutaOculta").val();
     var servidorOculta = $("#rutaOcultaServidor").val();
     var cliente = $(this).attr("cl");
+    var producto = $(this).attr("producto");
+    
     if(cliente == ""){
         Swal.fire({
             icon: 'error',
@@ -68,7 +70,7 @@ $(document).on("click", "#btnComentario", function(){
                     $(".mostComentario").append(codigoHtml);
                     
  
-                    console.log("respuesta",respuesta);
+                  //  console.log("respuesta",respuesta);
                 }
                 
             }

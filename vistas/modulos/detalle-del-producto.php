@@ -106,7 +106,7 @@ $num = count($numComentarios);
                 <textarea  cols="99" placeholder="Agrega tu comentario" name="txtComentario" id="txtComentario" class="form-control"></textarea> 
                 </div>
                 <div class="col-2 justify-content-end align-content-end">
-                <button class="btn btn-primary" id="btnComentario" cl="<?php if(isset($_SESSION["id"])): echo $_SESSION["id"]; endif; ?>" ><i class="fas fa-plus"></i></button>
+                <button class="btn btn-primary" id="btnComentario" cl="<?php if(isset($_SESSION["id"])): echo $_SESSION["id"]; endif; ?>" producto="<?php echo $rutas[1]; ?>"><i class="fas fa-plus"></i></button>
                 </div>
               </div>
             </div>
