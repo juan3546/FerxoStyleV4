@@ -31,7 +31,7 @@
       </div>
      </div>
      <div class="row">
-       <h5>Adjuntar Imagen(es)</h5>
+       <h5>Adjuntar Imagen(es)</h5> 
      </div>
      <div class="row">
      <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-12" id="add-photo-container">

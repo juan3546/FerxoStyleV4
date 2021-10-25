@@ -95,8 +95,9 @@ $num = count($numComentarios);
   </li>
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-  <div class="container mt-3 d-flex justify-content-center">
+  <div class="tab-pane fade show active col-12" id="home" role="tabpanel" aria-labelledby="home-tab">
+  <!-- <div id="Layer1" class="col-12" style="height:220px; overflow: scroll;"> -->
+  <div class="container d-flex justify-content-center">
     <div class="row d-flex justify-content-center">
         <div class="col-md-12 ">
           <div class="container-fluid">
@@ -112,14 +113,11 @@ $num = count($numComentarios);
             </div>
           </div>
           <div class="mostComentario"></div>
+          <div id="Layer1" class="" style="height:450px; overflow: scroll; width: 100%;">
           <?php
             $item = "idProducto";
             $valor = $valor2;
-
-
             $comentarios = ControladorComentario::ctrMostrarComentarios($item, $valor);
-            
-          
             $foto = "";
             foreach ($comentarios as $key => $value):
               if($value["foto"] == ""){
@@ -130,6 +128,7 @@ $num = count($numComentarios);
 
               $comen = htmlspecialchars( $value["comentario"]);
           ?>
+          
             <div class="card p-3 mb-2 mt-3">
                 <div class="d-flex flex-row"> <img src="<?php echo $servidor.$value["foto"]; ?>" height="40" width="40" class="rounded-circle">
                     <div class="d-flex flex-column ms-2">
@@ -143,10 +142,12 @@ $num = count($numComentarios);
                     <div class="d-flex flex-row"> <span class="text-muted fw-normal fs-10"><?php echo $value["fecha"]; ?></span> </div>
                 </div>
             </div>
+          <!-- </div> -->
             <?php endforeach; ?>
         </div>
     </div>
 </div>
+  </div>
   </div>
   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
    <!-- cards para mostrar articulos relacionados -->
