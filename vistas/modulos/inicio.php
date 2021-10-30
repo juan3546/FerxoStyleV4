@@ -156,7 +156,7 @@
  </div>
 </section>
 <!-- Seccion de carrusel de comentarios -->
-<section id="comentarios" class="mt-5">
+<!-- <section id="comentarios" class="mt-5">
  <div class="container-fluid">
         <div class="section-title">
             <h2 class="mt-5">Testimonios Clientes</h2>
@@ -206,7 +206,7 @@
                             <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
                         </div>
                     </div>
-                    <?php endforeach; ?>
+                    <?php endforeach; ?> -->
 
                     <!--second--->
                     <!-- div class="swiper-slide">
@@ -280,13 +280,43 @@
                         </div>
                     </div -->
                     <!--testi end-->
-
+<!-- 
                 </div>
             </div>
         </div>
 
         <div class="tc-pagination"></div>
     </div>
+</section> -->
+<section class="mt-5">
+  <div class="col-12 ">
+    <div class="row">
+      <div class="col-4 d-flex">
+        <div class="card border-0 m-auto" style="width: 55%">
+           <img src="vistas/img/plantilla/categoria3.jpg" class="card-img-top" alt="...">
+           <div class="card-body">
+           <p class="card-text">Bufs</p>
+           </div>
+        </div>
+      </div>
+      <div class="col-4 d-flex">
+      <div class="card border-0 m-auto" style="width: 55%">
+           <img src="vistas/img/plantilla/categoria2.jpg" class="card-img-top" alt="...">
+           <div class="card-body">
+           <p class="card-text">Sudaderas</p>
+           </div>
+        </div>
+      </div>
+      <div class="col-4 d-flex">
+      <div class="card border-0 m-auto" style="width: 55%">
+           <img src="vistas/img/plantilla/categoria1.jpg" class="card-img-top" alt="...">
+           <div class="card-body">
+           <p class="card-text">Jerseys</p>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <br>
 <br>
