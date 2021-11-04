@@ -97,9 +97,9 @@ $num = count($numComentarios);
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active col-12" id="home" role="tabpanel" aria-labelledby="home-tab">
   <!-- <div id="Layer1" class="col-12" style="height:220px; overflow: scroll;"> -->
-  <div class="container d-flex justify-content-center">
+  <div class="container-fluid d-flex justify-content-center col-12" style="width: 100% !important;">
     <div class="row d-flex justify-content-center">
-        <div class="col-md-12 ">
+        <div class="col-12 ">
           <div class="container-fluid">
             <div class="row col-12">
               <div class="row">
@@ -112,8 +112,8 @@ $num = count($numComentarios);
               </div>
             </div>
           </div>
-          <div class="mostComentario"></div>
-          <div id="Layer1" class="" style="height:450px; overflow: scroll; width: 100%;">
+          <div class="mostComentario col-12"></div>
+          <div id="Layer1" class="col-12" style="height: 540px; overflow: scroll;">
           <?php
             $item = "idProducto";
             $valor = $valor2;

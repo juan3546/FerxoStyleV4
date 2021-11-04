@@ -292,7 +292,7 @@
   <div class="col-12 ">
     <div class="row">
       <div class="col-4 d-flex">
-        <div class="card border-0 m-auto" style="width: 55%">
+        <div class="card border-0 m-auto" style="width: 50%">
            <img src="vistas/img/plantilla/categoria3.jpg" class="card-img-top" alt="...">
            <div class="card-body">
            <p class="card-text">Bufs</p>
@@ -300,7 +300,7 @@
         </div>
       </div>
       <div class="col-4 d-flex">
-      <div class="card border-0 m-auto" style="width: 55%">
+      <div class="card border-0 m-auto" style="width: 50%">
            <img src="vistas/img/plantilla/categoria2.jpg" class="card-img-top" alt="...">
            <div class="card-body">
            <p class="card-text">Sudaderas</p>
@@ -308,7 +308,7 @@
         </div>
       </div>
       <div class="col-4 d-flex">
-      <div class="card border-0 m-auto" style="width: 55%">
+      <div class="card border-0 m-auto" style="width: 50%">
            <img src="vistas/img/plantilla/categoria1.jpg" class="card-img-top" alt="...">
            <div class="card-body">
            <p class="card-text">Jerseys</p>
