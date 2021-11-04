@@ -78,3 +78,4 @@ $('.carousel').carousel({
 });
 
 var rutaOculta = $("#rutaOculta").val();
+

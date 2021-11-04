@@ -113,3 +113,9 @@ items.forEach((el) => {
         next = next.nextElementSibling
     }
 })
+
+
+window.onload = function(){
+    $('#onload').fadeOut();
+    $('body').removeClass('hidden');
+}

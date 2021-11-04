@@ -76,8 +76,11 @@ $servidor =  Ruta::ctrRutaServidor();
     <script src="<?php echo $url; ?>vistas/libs/OwlCarousel/js/owl.carousel.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0-alpha.37/swiper-bundle.min.js"></script>
 </head>
-<body>
-<div class="lds-facebook"><div></div><div></div><div></div></div>
+<body class="hidden">
+    <div class="centrado" id="onload">
+    <div class="lds-facebook"><div></div><div></div><div></div></div>
+    </div>
+
     <?php
     /*=============================================
         CONTENIDO DINÁMICO

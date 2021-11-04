@@ -136,7 +136,16 @@ body{
             box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
         }
     }
-
+   .centrado{
+       height: 100vh;
+       display: flex;
+       background-color: #669C38;
+       justify-content: center;
+       align-items: center;
+   }
+   .hidden{
+       overflow: hidden;
+   }
     .lds-facebook {
         display: inline-block;
         position: relative;
