@@ -94,60 +94,12 @@ $(document).on("click", ".botonH", function(){
     var rutaOculta = $("#rutaOculta").val();
     window.location = rutaOculta+"articulos-para-hombre/1/Personalizados";
 });
-//   all ------------------
-function initParadoxWay() {
-    "use strict";
-   
-    if ($(".testimonials-carousel").length > 0) {
-        var j2 = new Swiper(".testimonials-carousel .swiper-container", {
-            preloadImages: false,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-            grabCursor: true,
-            mousewheel: false,
-            centeredSlides: true,
-            pagination: {
-                el: '.tc-pagination',
-                clickable: true,
-                dynamicBullets: true,
-            },
-            navigation: {
-                nextEl: '.listing-carousel-button-next',
-                prevEl: '.listing-carousel-button-prev',
-            },
-            breakpoints: {
-                1024: {
-                    slidesPerView: 3,
-                },
-                
-            }
-        });
-    }
-    
-// bubbles -----------------
-    
-    
-    setInterval(function () {
-        // var size = randomValue(sArray);
-        $('.bubbles').append('<div class="individual-bubble" style="left: ' + 20 + 'px; width: ' + 20 + 'px; height:' + 20 + 'px;"></div>');
-        $('.individual-bubble').animate({
-            'bottom': '100%',
-            'opacity': '-=0.7'
-        }, 4000, function () {
-            $(this).remove()
-        });
-    }, 350);
-    
-}
 
-//   Init All ------------------
-$(document).ready(function () {
-    initParadoxWay();
-});
+
+
 
 let items = document.querySelectorAll('.carousel .carousel-item')
-
+ console.log(items)
 items.forEach((el) => {
     const minPerSlide = 4
     let next = el.nextElementSibling

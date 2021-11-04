@@ -77,7 +77,7 @@ $servidor =  Ruta::ctrRutaServidor();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.0-alpha.37/swiper-bundle.min.js"></script>
 </head>
 <body>
-
+<div class="lds-facebook"><div></div><div></div><div></div></div>
     <?php
     /*=============================================
         CONTENIDO DINÁMICO
