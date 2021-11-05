@@ -288,7 +288,7 @@
         <div class="tc-pagination"></div>
     </div>
 </section> -->
-<section class="mt-5">
+<!-- <section class="mt-5">
   <div class="col-12 ">
     <div class="row">
       <div class="col-4 d-flex">
@@ -317,10 +317,10 @@
       </div>
     </div>
   </div>
-</section>
-<section>
-<div class="container text-center my-3">
-    <h2 class="font-weight-light">Bootstrap Multi Slide Carousel</h2>
+</section> -->
+<section class="mt-5">
+<div class="container text-center my-3 mt-5">
+  
     <div class="row mx-auto my-auto justify-content-center">
         <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" role="listbox">
@@ -364,7 +364,7 @@
             </a>
         </div>
     </div>
-    <h5 class="mt-2 fw-light">advances one slide at a time</h5>
+    <h5 class="mt-2 fw-light">Categorias disponibles</h5>
 </div>
 </section>
 <br>
