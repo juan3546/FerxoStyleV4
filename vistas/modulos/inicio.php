@@ -325,65 +325,36 @@
         <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="//via.placeholder.com/500x400/31f?text=1" class="img-fluid">
-                            </div>
-                            <div class="card-img-overlay">Slide 1</div>
-                        </div>
+                    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex">
+                      <div class=" border-0 m-auto" style="width: 50%">
+                       <img src="vistas/img/plantilla/categoria3.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                       <p class="card-text">Bufs</p>
+                      </div>
+                     </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="//via.placeholder.com/500x400/e66?text=2" class="img-fluid">
-                            </div>
-                            <div class="card-img-overlay">Slide 2</div>
-                        </div>
+                    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex">
+                    <div class=" border-0 m-auto" style="width: 50%">
+           <img src="vistas/img/plantilla/categoria2.jpg" class="card-img-top" alt="...">
+           <div class="card-body">
+           <p class="card-text">Sudaderas</p>
+           </div>
+        </div>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="//via.placeholder.com/500x400/7d2?text=3" class="img-fluid">
-                            </div>
-                            <div class="card-img-overlay">Slide 3</div>
-                        </div>
+                    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex">
+                    <div class=" border-0 m-auto" style="width: 50%">
+           <img src="vistas/img/plantilla/categoria1.jpg" class="card-img-top" alt="...">
+           <div class="card-body">
+           <p class="card-text">Jerseys</p>
+           </div>
+        </div>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="//via.placeholder.com/500x400?text=4" class="img-fluid">
-                            </div>
-                            <div class="card-img-overlay">Slide 4</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="//via.placeholder.com/500x400/aba?text=5" class="img-fluid">
-                            </div>
-                            <div class="card-img-overlay">Slide 5</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-img">
-                                <img src="//via.placeholder.com/500x400/fc0?text=6" class="img-fluid">
-                            </div>
-                            <div class="card-img-overlay">Slide 6</div>
-                        </div>
-                    </div>
-                </div>
+              
             </div>
             <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
