@@ -436,7 +436,7 @@ $(document).on("click", ".generarPedido", function(){
     var usu = $("#usuariocr").val();
     var ses = $("#iniciar").val();
 
-    console.log(ses);
+
 
     if(ses != "ok"){
         Swal.fire({
@@ -469,6 +469,8 @@ $(document).on("click", ".generarPedido", function(){
                 $(".mostrarCarrito").html('');
                 $(".mostrarCarrito").html('<div class="alert alert-warning" role="alert">Aún no hay productos en el carrito de compras.</div>');
                 $(".totalPedido").html('$0.00');
+                $(".totalCarrito").hide();
+                $(".generarPedido").hide();
             }
         });
     }
