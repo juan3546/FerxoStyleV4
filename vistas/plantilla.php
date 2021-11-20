@@ -68,6 +68,7 @@ $servidor =  Ruta::ctrRutaServidor();
     <!-- PLUGINS DE JS -->
     <script src="<?php echo $url; ?>vistas/libs/jquery/jquery.min.js"></script>
     <script src="<?php echo $url; ?>vistas/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <script src="<?php echo $url; ?>vistas/libs/bootstrap/js/bootstrap.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" ></script>
     <script src="<?php echo $url; ?>vistas/libs/fontawesome/js/fontawesome.js"></script>
     <script src="<?php echo $url; ?>vistas/libs/fontawesome/js/brands.js"></script>

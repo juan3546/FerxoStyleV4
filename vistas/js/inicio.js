@@ -62,10 +62,12 @@ $(document).on("click", ".botonH", function(){
 
 
 let items = document.querySelectorAll('.carousel .carousel-item')
- console.log(items)
+
 items.forEach((el) => {
+    console.log(el);
     const minPerSlide = 4
     let next = el.nextElementSibling
+    console.log(next);
     for (var i=1; i<minPerSlide; i++) {
         if (!next) {
             // wrap carousel by using first child
@@ -75,7 +77,8 @@ items.forEach((el) => {
         el.appendChild(cloneChild.children[0])
         next = next.nextElementSibling
     }
-})
+});
+
 
 
 window.onload = function(){

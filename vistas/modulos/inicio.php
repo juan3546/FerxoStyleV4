@@ -1,25 +1,25 @@
 <?php
-  $servidor =  Ruta::ctrRutaServidor();
-  $configInicio = ControladorConfiguracion::ctrMostrarConfigInicio($item = null, $valor = null);
-  $tituloPrimero = substr($configInicio[0]["tituloSlogan"], 0, 22);
-  $tituloSegundo = substr($configInicio[0]["tituloSlogan"], 23);
-  $sloganPrimero = substr($configInicio[0]["slogan"], 0, 66);
-  $sloganSegundo = substr($configInicio[0]["slogan"], 67);
-?>  
+$servidor =  Ruta::ctrRutaServidor();
+$configInicio = ControladorConfiguracion::ctrMostrarConfigInicio($item = null, $valor = null);
+$tituloPrimero = substr($configInicio[0]["tituloSlogan"], 0, 22);
+$tituloSegundo = substr($configInicio[0]["tituloSlogan"], 23);
+$sloganPrimero = substr($configInicio[0]["slogan"], 0, 66);
+$sloganSegundo = substr($configInicio[0]["slogan"], 67);
+?>
 <span class="ir-arriba icon-arrow-up2"><i class="fas fa-arrow-circle-up"></i></span>
- <!-- seccion de la imagen del banner  -->
-<section id="=ImagenYTextoBanner" >
-  <div class="card parallax" >
-  <div class="card-img-overlay mt-5 d-flex">
+<!-- seccion de la imagen del banner  -->
+<section id="=ImagenYTextoBanner">
+  <div class="card parallax">
+    <div class="card-img-overlay mt-5 d-flex">
       <div class="container-fuid mx-5 mt-5  ms-auto">
-      <h2 class="card-title titulo"><?php echo $tituloPrimero;  ?> <br> <?php echo $tituloSegundo; ?></h2>
-    <p class=" titulo2"><?php echo $sloganPrimero; ?></p>
-    <p class=" titulo2"><?php echo $sloganSegundo; ?></p>
+        <h2 class="card-title titulo"><?php echo $tituloPrimero;  ?> <br> <?php echo $tituloSegundo; ?></h2>
+        <p class=" titulo2"><?php echo $sloganPrimero; ?></p>
+        <p class=" titulo2"><?php echo $sloganSegundo; ?></p>
 
-    <p><button class="btn btn-warning text-white botonH" ><a href="<?php echo $url; ?>articulos-para-hombre/1" style="text-decoration: none;" class="text-white">Explorar Ahora</a> <i class="fas fa-arrow-right text-white mx-2"></i></button></p>
+        <p><button class="btn btn-warning text-white botonH"><a href="<?php echo $url; ?>articulos-para-hombre/1" style="text-decoration: none;" class="text-white">Explorar Ahora</a> <i class="fas fa-arrow-right text-white mx-2"></i></button></p>
       </div>
+    </div>
   </div>
-</div>
 </section>
 <!--fin seccion de la imagen del banner  -->
 <!-- seccion que muestra las categorias de los productos hombre, mujer y niños -->
@@ -28,27 +28,27 @@
   <div class="row ">
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
       <div class="card categoriass tarjetass text-white" id="cnHombre">
-        <img src="<?php echo $servidor.$configInicio[0]["imgHombre"]; ?>" class="card-img categoriass" alt="...">
+        <img src="<?php echo $servidor . $configInicio[0]["imgHombre"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
-         <h3 class="card-title text-start">Hombres</h3>
+          <h3 class="card-title text-start">Hombres</h3>
         </div>
       </div>
     </div>
     <!-- card niño -->
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
-    <div class="card categoriass tarjetass text-white"  id="cnNinio">
-        <img src="<?php echo $servidor.$configInicio[0]["imgInfante"]; ?>" class="card-img categoriass" alt="...">
+      <div class="card categoriass tarjetass text-white" id="cnNinio">
+        <img src="<?php echo $servidor . $configInicio[0]["imgInfante"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
-         <h3 class="card-title text-start">Niños</h3>
+          <h3 class="card-title text-start">Niños</h3>
         </div>
       </div>
     </div>
     <!-- card mujer -->
     <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-5">
-    <div class="card categoriass tarjetass text-white"  id="cnMujer">
-        <img src="<?php echo $servidor.$configInicio[0]["imgMujer"]; ?>" class="card-img categoriass" alt="...">
+      <div class="card categoriass tarjetass text-white" id="cnMujer">
+        <img src="<?php echo $servidor . $configInicio[0]["imgMujer"]; ?>" class="card-img categoriass" alt="...">
         <div class="card-img-overlay">
-         <h3 class="card-title text-start">Mujeres</h3>
+          <h3 class="card-title text-start">Mujeres</h3>
         </div>
       </div>
     </div>
@@ -56,316 +56,183 @@
 </section>
 <!-- inicio seccion se nuevos productos  -->
 <section id="NuevosProductos" class="container-fluid mt-5">
- <div class="row d-flex">
-  <h2 class="text-center nuevos">Nuevos Productos</h2>
-  <div class="linea text-center align-content-center justify-content-center m-auto mt-2"></div>
- </div>
- <?php
+  <div class="row d-flex">
+    <h2 class="text-center nuevos">Nuevos Productos</h2>
+    <div class="linea text-center align-content-center justify-content-center m-auto mt-2"></div>
+  </div>
+  <?php
   $item = "estado";
   $valor = "Nuevo";
 
   $iniciar = 0;
   $articulo_por_pagina = 4;
-      
 
-  $respuesta = ControladorInicio::ctrMostrarProductosLim($item, $valor, $iniciar,$articulo_por_pagina);
-  if(isset($_SESSION["iniciarSesion"]))
-  {
+
+  $respuesta = ControladorInicio::ctrMostrarProductosLim($item, $valor, $iniciar, $articulo_por_pagina);
+  if (isset($_SESSION["iniciarSesion"])) {
     $usuario = $_SESSION["iniciarSesion"];
-  }else {
+  } else {
     $usuario = '';
   }
- ?>
- <div class="row container-fluid">
- <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">
-   <div class="owl-carousel owl-theme mb-4">
-     <?php 
-      foreach ($respuesta as $key => $value) {
+  ?>
+  <div class="row container-fluid">
+    <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">
+      <div class="owl-carousel owl-theme mb-4">
+        <?php
+        foreach ($respuesta as $key => $value) {
           echo '<div class="item">
                     <div class="col">
                     <div class="card card2">
                     <div class="img-container">
                        <div class="d-flex justify-content-between align-items-center p-2 first">';
-                       if($value["estado"] == "Nuevo"): 
-                         echo '<span class="percent">Nuevo</span>';
-                         elseif($value["estado"] == "Oferta"):
-                           echo '<span class="ofert">Oferta</span>';
-                         endif;
-                      
-                echo '
+          if ($value["estado"] == "Nuevo") :
+            echo '<span class="percent">Nuevo</span>';
+          elseif ($value["estado"] == "Oferta") :
+            echo '<span class="ofert">Oferta</span>';
+          endif;
+
+          echo '
                   <!-- span class="wishlist">
                   <i class="fa fa-heart"></i>
                   </span --> </div> 
-                  <img src="'. $servidor.$value["foto"].'" class="img-fluid detalle" producto="'.$value["id"].'">
+                  <img src="' . $servidor . $value["foto"] . '" class="img-fluid detalle" producto="' . $value["id"] . '">
                    </div>
                      <div class="product-detail-container">
-                       <div class="d-flex justify-content-between align-items-center detalle" producto="'.$value["id"].'">
-                         <h6 class="mb-0">'.$value["nombre"].'</h6> 
+                       <div class="d-flex justify-content-between align-items-center detalle" producto="' . $value["id"] . '">
+                         <h6 class="mb-0">' . $value["nombre"] . '</h6> 
                   <span class="text-danger font-weight-bold">';
-                    if ($value["precioOferta"] != null):
-                    echo '<del>$'.$value["precio"].' </del> &nbsp;&nbsp; $'.$value["precioOferta"];
-                         else: 
-                           echo '$'. $value["precio"];
-                          endif;
-                  
-                 echo '</span>
+          if ($value["precioOferta"] != null) :
+            echo '<del>$' . $value["precio"] . ' </del> &nbsp;&nbsp; $' . $value["precioOferta"];
+          else :
+            echo '$' . $value["precio"];
+          endif;
+
+          echo '</span>
                                       </div>
                                       <div class="d-flex justify-content-between align-items-center mt-2">
                                           <div class="ratings"> <i class="fa fa-star"></i> <span>4.5</span> </div>
                                           <div class="size">';
-                                  
-                                          $item = "idProducto";
-                                          $valor = $value["id"];
-                                          $tallas = ControladorTallas::ctrMostrarTallas($item, $valor);
-                                          foreach ($tallas as $key => $values):
-                                        
-                                        echo '<label class="radio">
-                                         <input type="radio" class="talla" name="size1" id="size1" value="'.$values["talla"] .'"> 
-                                         <span>'. $values["talla"].'</span> 
+
+          $item = "idProducto";
+          $valor = $value["id"];
+          $tallas = ControladorTallas::ctrMostrarTallas($item, $valor);
+          foreach ($tallas as $key => $values) :
+
+            echo '<label class="radio">
+                                         <input type="radio" class="talla" name="size1" id="size1" value="' . $values["talla"] . '"> 
+                                         <span>' . $values["talla"] . '</span> 
                                         </label>';
-                                        
-                                         endforeach; 
-                                        echo  '</div>
+
+          endforeach;
+          echo  '</div>
                                       </div>
-                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="'.  $usuario .'" producto="'.  $value["id"] .'" modelo="'.  $value["nombre"] .'" precio="'.  $value["precio"] .'" oferta="'.  $value["precioOferta"] .'" imagen="'. $servidor.$value["foto"] .'">Agregar a carrito</button> </div>
+                                      <div class="mt-3"> <button class="btn btn-block form-control botonCarrito text-white" id="' .  $usuario . '" producto="' .  $value["id"] . '" modelo="' .  $value["nombre"] . '" precio="' .  $value["precio"] . '" oferta="' .  $value["precioOferta"] . '" imagen="' . $servidor . $value["foto"] . '">Agregar a carrito</button> </div>
                                   </div>
                               </div>
                   
               </div>
             </div>';
-      }
-     ?>
-   </div>
-   
- </div>
- </div>
+        }
+        ?>
+      </div>
+
+    </div>
+  </div>
 </section>
 <section id="verde" class="mt-5 px-4 ">
- <div class="row container-fluid mb-2 ">
-   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex " id="imagen-verde">
-      <img class="mx-auto my-auto" src="<?php echo $servidor.$configInicio[0]["imgPers"]; ?>" alt="" id="imagen-verde" width="50%" height="70%"> 
-   </div>
-   <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-5">
-    <p class="text-center mt-4"><?php echo $configInicio[0]["tituloPers"]; ?></p>
-     <h4 class="text-left mt-3" id="ModeloPersonalizado"><?php echo $configInicio[0]["subTituloPers"]; ?></h4> 
-    <p class="pl-5 p-4 mt-3">
-      <?php echo $configInicio[0]["textoPers"]; ?>
-    </p>
-    <button class="btn btn-warning botonH px-3 mb-5">Explorar <i class="fas fa-arrow-circle-right mx-2"></i></button>
-   </div>
- </div>
+  <div class="row container-fluid mb-2 ">
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex " id="imagen-verde">
+      <img class="mx-auto my-auto" src="<?php echo $servidor . $configInicio[0]["imgPers"]; ?>" alt="" id="imagen-verde" width="50%" height="70%">
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 mb-5">
+      <p class="text-center mt-4"><?php echo $configInicio[0]["tituloPers"]; ?></p>
+      <h4 class="text-left mt-3" id="ModeloPersonalizado"><?php echo $configInicio[0]["subTituloPers"]; ?></h4>
+      <p class="pl-5 p-4 mt-3">
+        <?php echo $configInicio[0]["textoPers"]; ?>
+      </p>
+      <button class="btn btn-warning botonH px-3 mb-5">Explorar <i class="fas fa-arrow-circle-right mx-2"></i></button>
+    </div>
+  </div>
 </section>
-<!-- Seccion de carrusel de comentarios -->
-<!-- <section id="comentarios" class="mt-5">
- <div class="container-fluid">
-        <div class="section-title">
-            <h2 class="mt-5">Testimonios Clientes</h2>
-            <span class="section-separator"></span>
-            <p class="mt-2">Con tu opinion nos haces crecer y mejorar dia con dia.</p>
-        </div>
-    </div>
-    <div class="testimonials-carousel-wrap">
-        <div class="listing-carousel-button listing-carousel-button-next"><i class="fa fa-caret-right" style="color: #fff"></i></div>
-        <div class="listing-carousel-button listing-carousel-button-prev"><i class="fa fa-caret-left" style="color: #fff"></i></div>
-        <div class="testimonials-carousel">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                  <?php
-                     $comentarios = ControladorComentario::ctrMostrarComentarioInicio();
-                     
-                     foreach ($comentarios as $key => $value):
-                      $comen = htmlspecialchars( $value["comentario"]);
-                  ?>
-                    <div class="swiper-slide">
-                        <div class="testi-item">
-                            <div class="testi-avatar">
-                              <?php 
-                                if($value["foto"] == ""){
-                                  echo '<img src="vistas/img/plantilla/user-1.png">';
-                                }else{
-                                  echo '<img src="'.$servidor.$value["foto"].'">';
-                                }
-                              ?>
-                              
-                            </div>
-                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
-                            <div class="testimonials-text">
-                                <div class="listing-rating">
-                                <i class="fas fa-comment-dots text-success com"></i>
-                                <i class="fas fa-comment-dots text-success com"></i>
-                                <i class="fas fa-comment-dots text-success com"></i>
-                                
-                                </div>
-                                <p><?php echo $comen;  ?></p>
-                                <a href="#" class="text-link"></a>
-                                <div class="testimonials-avatar">
-                                    <h3><?php echo $value["usuario"];  ?></h3>
-                                    <h4>Cliente</h4>
-                                </div>
-                            </div>
-                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
-                        </div>
-                    </div>
-                    <?php endforeach; ?> -->
-
-                    <!--second--->
-                    <!-- div class="swiper-slide">
-                        <div class="testi-item">
-                            <div class="testi-avatar"><img src="vistas/img/plantilla/user-2.png"></div>
-                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
-                            <div class="testimonials-text">
-                                <div class="listing-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <p>Muy bonitos diseños y excelente servicio.</p>
-                                <a href="#" class="text-link"></a>
-                                <div class="testimonials-avatar">
-                                    <h3>Cristhina Guzman</h3>
-                                    <h4>Cliente</h4>
-                                </div>
-                            </div>
-                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
-                        </div>
-                    </div -->
-                    <!--third-->
-
-                    <!-- div class="swiper-slide">
-                        <div class="testi-item">
-                            <div class="testi-avatar"><img src="vistas/img/plantilla/user-3.png"></div>
-                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
-                            <div class="testimonials-text">
-                                <div class="listing-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <p>Excelente servicio a domicilio y muy rapido hacer un pedido con ellos. Recomendados ampliamente</p>
-                                <a href="#" class="text-link"></a>
-                                <div class="testimonials-avatar">
-                                    <h3>Tannia Angelica</h3>
-                                    <h4>Cliente</h4>
-                                </div>
-                            </div>
-                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
-                        </div>
-                    </div -->
-
-                    <!--fourth-->
-                    <!-- div class="swiper-slide">
-                        <div class="testi-item">
-                            <div class="testi-avatar"><img src="vistas/img/plantilla/user-1.png"></div>
-                            <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
-                            <div class="testimonials-text">
-                                <div class="listing-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <p>Les amnde hacer varios diseños personalizos y muy bien logrados la verdad, cuidaron todos los detalles por muy pequeños que eran, volveria a hacerles un pedido.</p>
-                                <a href="#" class="text-link"></a>
-                                <div class="testimonials-avatar">
-                                    <h3>Salvador Emmanuel</h3>
-                                    <h4>Cliente</h4>
-                                </div>
-                            </div>
-                            <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div> 
-                        </div>
-                    </div -->
-                    <!--testi end-->
-<!-- 
-                </div>
-            </div>
-        </div>
-
-        <div class="tc-pagination"></div>
-    </div>
-</section> -->
-<!-- <section class="mt-5">
-  <div class="col-12 ">
+<section class="mt-5">
+  <div class="col-12">
     <div class="row">
-      <div class="col-4 d-flex">
-        <div class=" border-0 m-auto" style="width: 50%">
-           <img src="vistas/img/plantilla/categoria3.jpg" class="card-img-top" alt="...">
-           <div class="card-body">
-           <p class="card-text">Bufs</p>
-           </div>
+      <ul class="nav nav-tabs align-content-center justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Sudaderas</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Buffs</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Personalizados</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active col-12" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="row container-fluid">
+            <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">
+              <div class="owl-carousel owl-theme mb-4">
+                <div class="item">
+                  <div class="col">
+                    <div class="row">
+                      <div class="col-md-3 col-sm-6">
+                        <div class="product-grid6">
+                          <div class="product-image6">
+                            <a href="#">
+                              <img class="pic-1" src="vistas/img/plantilla/categoria1.jpg">
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
+                            <div class="price">$11.00
+                              <span>$14.00</span>
+                            </div>
+                          </div>
+                          <ul class="social">
+                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="product-grid6">
+                          <div class="product-image6">
+                            <a href="#">
+                              <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo10/images/img-2.jpg">
+                            </a>
+                          </div>
+                          <div class="product-content">
+                            <h3 class="title"><a href="#">Women's Red Top</a></h3>
+                            <div class="price">$8.00
+                              <span>$12.00</span>
+                            </div>
+                          </div>
+                          <ul class="social">
+                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-4 d-flex">
-      <div class=" border-0 m-auto" style="width: 50%">
-           <img src="vistas/img/plantilla/categoria2.jpg" class="card-img-top" alt="...">
-           <div class="card-body">
-           <p class="card-text">Sudaderas</p>
-           </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <h2>Buffs</h2>
         </div>
-      </div>
-      <div class="col-4 d-flex">
-      <div class=" border-0 m-auto" style="width: 50%">
-           <img src="vistas/img/plantilla/categoria1.jpg" class="card-img-top" alt="...">
-           <div class="card-body">
-           <p class="card-text">Jerseys</p>
-           </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          <h2>Jerseys</h2>
         </div>
       </div>
     </div>
   </div>
-</section> -->
-<section class="mt-5">
-<div class="container text-center my-3 mt-5">
-  
-    <div class="row mx-auto my-auto justify-content-center">
-        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex">
-                      <div class=" border-0 m-auto" style="width: 50%">
-                       <img src="vistas/img/plantilla/categoria3.jpg" class="card-img-top" alt="...">
-                      <div class="card-body">
-                       <p class="card-text">Bufs</p>
-                      </div>
-                     </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex">
-                    <div class=" border-0 m-auto" style="width: 50%">
-           <img src="vistas/img/plantilla/categoria2.jpg" class="card-img-top" alt="...">
-           <div class="card-body">
-           <p class="card-text">Sudaderas</p>
-           </div>
-        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 d-flex">
-                    <div class=" border-0 m-auto" style="width: 50%">
-           <img src="vistas/img/plantilla/categoria1.jpg" class="card-img-top" alt="...">
-           <div class="card-body">
-           <p class="card-text">Jerseys</p>
-           </div>
-        </div>
-                    </div>
-                </div>
-              
-            </div>
-            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
-        </div>
-    </div>
-    <h5 class="mt-2 fw-light">Categorias disponibles</h5>
-</div>
 </section>
 <br>
 <br>

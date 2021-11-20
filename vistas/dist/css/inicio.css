@@ -92,17 +92,7 @@ body{
     font-size: 40px;
     line-height: 60px;
 }
-.comillas{
-    font-size: 34px;
-    color: #f4e801;
-}
-.imagenComentarios{
-    border-radius: 50%;
-    width: 60px !important;
-}
-.likes{
-    font-size: 1.5rem;
-}
+
 .tarjetass{
     border: none;
     outline: none;
@@ -284,44 +274,4 @@ label.radio input:checked+span {
 }
 .com{
 	width: 50px;
-}
-
-
-@media (max-width: 767px) {
-    .carousel-inner .carousel-item > div {
-        display: none;
-    }
-    .carousel-inner .carousel-item > div:first-child {
-        display: block;
-    }
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-    display: flex;
-	
-}
-
-/* medium and up screens */
-@media (min-width: 768px) {
-    
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-      transform: translateX(25%);
-    }
-    
-    .carousel-inner .carousel-item-start.active, 
-    .carousel-inner .carousel-item-prev {
-      transform: translateX(-25%);
-    }
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start { 
-  transform: translateX(0);
-}
-
-.carousel-control-prev-icon .carousel-control-next-icon{
-	background-color: #86B324;
-}
+} 
