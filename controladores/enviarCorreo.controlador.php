@@ -132,7 +132,7 @@ class ControladorCorreo{
 	=============================================*/
 
 	static public function ctrEnviarCotización(){
-        if(isset($_POST["nombrePersonalizados"]) && isset($_POST["correoPersonalizados"])){
+        if(isset($_POST["nombrePersonalizados"]) && isset($_POST["correoPersonalizados"]) && isset($_POST["slectAsunto"])){
             if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nombrePersonalizados"]) &&
             preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ.@ ]+$/', $_POST["correoPersonalizados"]) &&
             preg_match('/^[0-9]+$/', $_POST["cantidadPersonalizados"]) &&
@@ -177,7 +177,7 @@ class ControladorCorreo{
                        // HTML email starts here
                        $full_name  = strip_tags($_POST['nombrePersonalizados']);
                        $email      = strip_tags($_POST['correoPersonalizados']);
-                       $text_message    = "Necesito una cotización de ".$_POST["cantidadPersonalizados"]." producto con las siguientes características..";    
+                       $text_message    = "Necesito un@ ".$_POST["slectAsunto"]."  de ".$_POST["cantidadPersonalizados"]." producto con las siguientes características..";    
                        $mail->AddEmbeddedImage('vistas/img/plantilla/logo.png', 'logo', 'attachment', 'base64', 'image/png');  
                        if($_POST['telefonoPersonalizados'] != ""){
                             $telefono = ' Y mi numero Telefónico es '.$_POST['telefonoPersonalizados'];
@@ -227,7 +227,7 @@ class ControladorCorreo{
     
                      //Content
                      $mail->isHTML(true);                                  //Set email format to HTML
-                     $mail->Subject = utf8_decode('Cotización');
+                     $mail->Subject = utf8_decode($_POST["slectAsunto"]);
                      $mail->Body    =  $message;
          
                      if($mail->send()){

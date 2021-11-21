@@ -3,10 +3,10 @@
   <section class="container-fluid margintop">
     <div class="row coment">
       <div class="col-12 mt-2">
-        <select name="select" class="form-control">
+        <select name="slectAsunto" id="slectAsunto" class="form-control" require>
           <option value="value1" selected>Asunto </option>
-          <option value="value2" >Cotizacion</option>
-          <option value="value3">Diseño Personalizado</option>
+          <option value="value2" >Cotización</option>
+          <option value="value3">Diseño personalizado</option>
         </select>
       </div>
       <div class="col-12 bg-ligth mt-4">
@@ -113,8 +113,10 @@
      <div class="row mt-3 align-content-center justify-content-center">
      <button type="submit" class="btn btn-warning text-white col-3">Enviar</button>
                    <?php
+                   /*
                     $enviarCorreo = new ControladorCorreo();
                     $enviarCorreo->ctrEnviarCotización();
+                    */
                     ?>
      </div>
      </form>
@@ -171,8 +173,10 @@
 
                     <button type="submit" class="btn btn-warning text-white w-100 mt-auto">Enviar</button>
                     <?php
+                    /*
                     $enviarCorreo = new ControladorCorreo();
                     $enviarCorreo->ctrEnviarCotización();
+                    */
                     ?>
                 </form>
 
