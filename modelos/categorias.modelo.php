@@ -78,4 +78,26 @@ class ModeloCategorias{
 
 
 	}
+
+
+	/*=============================================
+	MOSTRAR CATEGORIAS ALEATORIAS
+	=============================================*/
+
+	static public function mdlMostrarCategoriasAleatorio($tabla, $limite){
+	
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla ORDER BY rand() LIMIT $limite");
+
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
 }

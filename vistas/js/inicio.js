@@ -99,6 +99,11 @@ $(document).on("click", ".botonH", function(){
     window.location = rutaOculta+"articulos-para-hombre/1/Personalizados";
 });
 
+$(document).on("click", "#inicioCategoria", function(){
+    var rutaOculta = $("#rutaOculta").val();
+    var categoria = $(this).attr("categoria");
+    window.location = rutaOculta+"articulos-para-hombre/1/"+categoria;
+});
 
 
 

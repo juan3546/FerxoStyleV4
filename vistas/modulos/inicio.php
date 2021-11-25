@@ -160,39 +160,25 @@ $sloganSegundo = substr($configInicio[0]["slogan"], 67);
       <div class="container-fluid">
         <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductosdos">
           <div class="owl-carousel owl-theme mb-4 carruselCategorias ">
+            <?php
+              $limite = 3;
+              $servidor =  Ruta::ctrRutaServidor();
+              $categorias = Controladorcategorias::ctrMostrarCategoriaAleatorio($limite);
+              foreach ($categorias as $key => $value):
+            ?>
             <div class="item ">
               <div class="col d-flex">
                 <div class="border-0 m-auto" style="width: 18rem;">
-                  <img src="vistas/img/plantilla/categoria1.jpg" class="card-img-top" alt="...">
+                  <img src="<?php echo $servidor.$value["foto"]; ?>" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <p class="card-text textoCard">Jersey</p>
-                    <button class="btn btn-success btn-lg">Ver mas</button>
+                    <p class="card-text textoCard"><?php echo $value["nombre"]; ?></p>
+                    <button class="btn btn-success btn-lg" id="inicioCategoria" categoria="<?php echo $value["nombre"]; ?>">Ver mas</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="item">
-              <div class="col d-flex">
-                <div class=" border-0 m-auto" style="width: 18rem;">
-                  <img src="vistas/img/plantilla/categoria2.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text textoCard">Sudaderas</p>
-                    <button class="btn btn-success">Ver mas</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col d-flex">
-                <div class=" border-0 m-auto" style="width: 18rem;">
-                  <img src="vistas/img/plantilla/categoria3.jpg" class="card-img-top" alt="...">
-                  <div class="card-body cuerpoTextoCard">
-                    <p class="card-text textoCard">Buffs</p>
-                    <button class="btn btn-success">Ver mas</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <?php endforeach; ?>
+
           </div>
         </div>
       </div>

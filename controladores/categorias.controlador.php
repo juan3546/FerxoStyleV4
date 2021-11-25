@@ -46,4 +46,13 @@ class Controladorcategorias{
 	
 		return $respuesta;
 	}
+
+    static public function ctrMostrarCategoriaAleatorio($limite){
+
+		$tabla = "categorias";
+
+		$respuesta = ModeloCategorias::mdlMostrarCategoriasAleatorio($tabla, $limite);
+	
+		return $respuesta;
+	}
 }

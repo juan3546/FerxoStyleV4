@@ -3,14 +3,20 @@
   <section class="container-fluid margintop">
     <div class="row coment">
       <div class="col-12 mt-2">
-        <select name="slectAsunto" id="slectAsunto" class="form-control" require>
-          <option value="value1" selected>Asunto </option>
-          <option value="value2" >Cotización</option>
-          <option value="value3">Diseño personalizado</option>
-        </select>
+
       </div>
       <div class="col-12 bg-ligth mt-4">
         <form method="post" enctype="multipart/form-data">
+          <div class="row">
+           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-12">
+            <select name="slectAsunto" id="slectAsunto" class="form-control" require>
+              <option value="#" selected>Asunto </option>
+              <option value="Cotización" >Cotización</option>
+              <option value="Diseño personalizado">Diseño personalizado</option>
+              </select>
+            </div>
+
+          </div>
           <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-2">
               <!-- <label for="nombrePersonalizados" class="form-label font-weight-blod align-content-around">Nombre*</label> -->
