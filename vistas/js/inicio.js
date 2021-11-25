@@ -1,10 +1,10 @@
 $(document).ready(function(){
     
-    $(".owl-carousel").owlCarousel({
+    $(".carruselNuevos").owlCarousel({
         autoplay: true,
         autoplayhoverpause: true,
         autoplaytimeout: 50,
-        items: 3,
+        items: 5,
         nav: true,
         loop: true,
         lazyLoad: true,
@@ -31,6 +31,47 @@ $(document).ready(function(){
             },
             1200: {
                 items: 5,
+                docts: true
+            }
+        }
+
+    });
+    
+});
+
+$(document).ready(function(){
+    
+    $(".carruselCategorias").owlCarousel({
+        autoplay: true,
+        autoplayhoverpause: true,
+        autoplaytimeout: 50,
+        items: 3 ,
+        nav: true,
+        loop: true,
+        lazyLoad: true,
+        margin: 9,
+        padding: 9,
+        stagePadding: 5,
+        responsive: {
+            0 : {
+                items: 1,
+                docts: false
+            },
+
+            485: {
+                items: 1,
+                docts: false
+            },
+            728: {
+                items: 3,
+                docts: false
+            },
+            960: {
+                items: 3,
+                docts: false
+            },
+            1200: {
+                items: 3,
                 docts: true
             }
         }

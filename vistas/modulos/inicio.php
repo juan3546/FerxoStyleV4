@@ -77,7 +77,7 @@ $sloganSegundo = substr($configInicio[0]["slogan"], 67);
   ?>
   <div class="row container-fluid">
     <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">
-      <div class="owl-carousel owl-theme mb-4">
+      <div class="owl-carousel owl-theme mb-4 carruselNuevos">
         <?php
         foreach ($respuesta as $key => $value) {
           echo '<div class="item">
@@ -157,83 +157,51 @@ $sloganSegundo = substr($configInicio[0]["slogan"], 67);
 <section class="mt-5">
   <div class="col-12">
     <div class="row">
-      <ul class="nav nav-tabs align-content-center justify-content-center" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Sudaderas</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Buffs</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Personalizados</button>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active col-12" id="home" role="tabpanel" aria-labelledby="home-tab">
-          <div class="row container-fluid">
-            <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductos">
-              <div class="owl-carousel owl-theme mb-4">
-                <div class="item">
-                  <div class="col">
-                    <div class="row">
-                      <div class="col-md-3 col-sm-6">
-                        <div class="product-grid6">
-                          <div class="product-image6">
-                            <a href="#">
-                              <img class="pic-1" src="vistas/img/plantilla/categoria1.jpg">
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <h3 class="title"><a href="#">Men's Shirt</a></h3>
-                            <div class="price">$11.00
-                              <span>$14.00</span>
-                            </div>
-                          </div>
-                          <ul class="social">
-                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div class="col-md-3 col-sm-6">
-                        <div class="product-grid6">
-                          <div class="product-image6">
-                            <a href="#">
-                              <img class="pic-1" src="http://bestjquery.com/tutorial/product-grid/demo10/images/img-2.jpg">
-                            </a>
-                          </div>
-                          <div class="product-content">
-                            <h3 class="title"><a href="#">Women's Red Top</a></h3>
-                            <div class="price">$8.00
-                              <span>$12.00</span>
-                            </div>
-                          </div>
-                          <ul class="social">
-                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
-                            <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
+      <div class="container-fluid">
+        <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductosdos">
+          <div class="owl-carousel owl-theme mb-4 carruselCategorias ">
+            <div class="item ">
+              <div class="col d-flex">
+                <div class="border-0 m-auto" style="width: 18rem;">
+                  <img src="vistas/img/plantilla/categoria1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text textoCard">Jersey</p>
+                    <button class="btn btn-success btn-lg">Ver mas</button>
                   </div>
                 </div>
               </div>
-
+            </div>
+            <div class="item">
+              <div class="col d-flex">
+                <div class=" border-0 m-auto" style="width: 18rem;">
+                  <img src="vistas/img/plantilla/categoria2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <p class="card-text textoCard">Sudaderas</p>
+                    <button class="btn btn-success">Ver mas</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col d-flex">
+                <div class=" border-0 m-auto" style="width: 18rem;">
+                  <img src="vistas/img/plantilla/categoria3.jpg" class="card-img-top" alt="...">
+                  <div class="card-body cuerpoTextoCard">
+                    <p class="card-text textoCard">Buffs</p>
+                    <button class="btn btn-success">Ver mas</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <h2>Buffs</h2>
-        </div>
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-          <h2>Jerseys</h2>
         </div>
       </div>
     </div>
   </div>
+  </div>
+  </div>
 </section>
-<br>
-<br>
-<br>
+<section>
+  <br>
+  <br>
+  <br>
