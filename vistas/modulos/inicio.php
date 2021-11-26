@@ -161,22 +161,22 @@ $sloganSegundo = substr($configInicio[0]["slogan"], 67);
         <div class="mt-5 pb-4 align-content-center justify-content-center" id="carruselProductosdos">
           <div class="owl-carousel owl-theme mb-4 carruselCategorias ">
             <?php
-              $limite = 3;
-              $servidor =  Ruta::ctrRutaServidor();
-              $categorias = Controladorcategorias::ctrMostrarCategoriaAleatorio($limite);
-              foreach ($categorias as $key => $value):
+            $limite = 3;
+            $servidor =  Ruta::ctrRutaServidor();
+            $categorias = Controladorcategorias::ctrMostrarCategoriaAleatorio($limite);
+            foreach ($categorias as $key => $value) :
             ?>
-            <div class="item ">
-              <div class="col d-flex">
-                <div class="border-0 m-auto" style="width: 18rem;">
-                  <img src="<?php echo $servidor.$value["foto"]; ?>" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text textoCard"><?php echo $value["nombre"]; ?></p>
-                    <button class="btn btn-success btn-lg" id="inicioCategoria" categoria="<?php echo $value["nombre"]; ?>">Ver mas</button>
+              <div class="item ">
+                <div class="col d-flex">
+                  <div class="card border-0 m-auto" style="width: 18rem;">
+                    <div class="d-flex" style="background: #4EA5D4; height: 45px;">
+                      <p class=" text-white text-uppercase m-auto" style="background: #4EA5D4; font-size: 20px;"><?php echo $value["nombre"]; ?></p>
+                    </div>
+                    <img src="<?php echo $servidor . $value["foto"]; ?>" class="card-img-top" alt="...">
+                    <button class="btn text-white" style="background: #4EA5D4;" id="inicioCategoria" categoria="<?php echo $value["nombre"]; ?>">Ver mas</button>
                   </div>
                 </div>
               </div>
-            </div>
             <?php endforeach; ?>
 
           </div>
@@ -187,7 +187,6 @@ $sloganSegundo = substr($configInicio[0]["slogan"], 67);
   </div>
   </div>
 </section>
-<section>
-  <br>
-  <br>
-  <br>
+<br>
+<br>
+<br>
