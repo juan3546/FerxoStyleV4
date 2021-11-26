@@ -26,6 +26,7 @@
                     <input type="text" placeholder="Nombre" name="nombreCliente">
                     <input type="text" placeholder="Usuario" name="usuarioCliente">
                     <input type="text" placeholder="Correo" name="correoCliente">
+                    <input type="text" placeholder="Telefono" name="telefonoCliente">
                     <input type="password" placeholder="Crear Contraseña" autocomplete="on" name="passwordCliente" id="passwordCliente">
                     <input type="password" placeholder="Confirmar contraseña" autocomplete="on" name="confirmarPasswor" id="confirmarPasswor" >
                     <input type="submit" id="btnEntrar" value="Crear" disabled>

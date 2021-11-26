@@ -18,7 +18,7 @@ $(document).ready(function(){
             },
 
             485: {
-                items: 2,
+                items: 1,
                 docts: false
             },
             728: {
@@ -45,12 +45,12 @@ $(document).ready(function(){
         autoplay: true,
         autoplayhoverpause: true,
         autoplaytimeout: 50,
-        items: 3 ,
+        items: 5,
         nav: true,
         loop: true,
         lazyLoad: true,
-        margin: 9,
-        padding: 9,
+        margin: 4,
+        padding: 4,
         stagePadding: 5,
         responsive: {
             0 : {
@@ -59,7 +59,7 @@ $(document).ready(function(){
             },
 
             485: {
-                items: 1,
+                items: 2,
                 docts: false
             },
             728: {
