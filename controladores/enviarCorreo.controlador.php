@@ -132,7 +132,7 @@ class ControladorCorreo{
 	=============================================*/
 
 	static public function ctrEnviarCotización(){
-        if(isset($_POST["nombrePersonalizados"]) && isset($_POST["correoPersonalizados"]) && isset($_POST["slectAsunto"])){
+        if(isset($_POST["nombrePersonalizados"]) && isset($_POST["correoPersonalizados"]) && isset($_POST["slectAsunto"]) && isset($_POST['telefonoPersonalizados'])){
             if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ ]+$/', $_POST["nombrePersonalizados"]) &&
             preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ.@ ]+$/', $_POST["correoPersonalizados"]) &&
             preg_match('/^[0-9]+$/', $_POST["cantidadPersonalizados"]) &&
@@ -241,7 +241,7 @@ class ControladorCorreo{
                      echo "Error Al enviar el correo: {$mail->ErrorInfo}";
                  }
             }else{
-                echo '<br><br><div class="alert alert-danger">Debe de capturar los datos que tienen signo ‘*’ y sin caracteres especiales</div>';
+                echo '<br><br><div class="alert alert-danger">Debe de capturar los datos sin caracteres especiales</div><br><div class="alert alert-danger">El teléfono es para facilitar el trámite de apartado o compra</div>';
             }
     
         }

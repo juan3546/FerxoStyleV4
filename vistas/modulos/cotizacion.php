@@ -40,11 +40,11 @@
           <div class="row">
             <div class="col-12 mb-2">
               <!-- <label for="detallePersonalizados" class="form-label font-weight-blod">Descripcion jersey*</label> -->
-              <textarea cols="10" rows="5" class="form-control bg-ligth-x  " id="detallePersonalizados" name="detallePersonalizados" placeholder="Detalla jersey"></textarea>
+              <textarea cols="10" rows="5" class="form-control bg-ligth-x  " id="detallePersonalizados" name="detallePersonalizados" placeholder="Detalle de cotización/diseño personalizado"></textarea>
             </div>
           </div>
           <div class="row">
-            <h5>Adjuntar Imagen(es)</h5>
+            <h5>Adjuntar Imagen(es) (Opcional)</h5>
           </div>
           <div class="row">
             <div class="col-xl-1 col-lg-1 col-md-1 col-sm-2 col-xs-12 add-photo-container">

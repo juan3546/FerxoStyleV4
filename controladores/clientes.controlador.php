@@ -77,17 +77,18 @@ class ControladorClientes{
 			if(preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ. ]+$/', $_POST["nombreCliente"]) &&
 			   preg_match('/^[a-zA-Z0-9ñÑáéíóúÁÉÍÓÚ*.]+$/', $_POST["usuarioCliente"]) &&
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["passwordCliente"]) && 
-               preg_match('/^[A-z0-9\\._-]+@[A-z0-9][A-z0-9-]*(\\.[A-z0-9_-]+)*\\.([A-z]{2,6})+$/', $_POST["correoCliente"])){
+               preg_match('/^[A-z0-9\\._-]+@[A-z0-9][A-z0-9-]*(\\.[A-z0-9_-]+)*\\.([A-z]{2,6})+$/', $_POST["correoCliente"]) &&
+			   preg_match('/^[0-9]+$/', $_POST["telefonoCliente"])){
 
 			   	/*=============================================
 				VALIDAR IMAGEN
 				=============================================*/
                 $telefono = "";
                 $direccion = "";
-                if(isset($_POST["TelefonoCliente"]) && isset($_POST["DireccionCliente"])){
-                    $telefono = $_POST["TelefonoCliente"];
-                    $direccion = $_POST["DireccionCliente"];
+                if(isset($_POST["telefonoCliente"])){
+                    $telefono = $_POST["telefonoCliente"];
                 }
+				
 
 				$ruta = "";
 
@@ -200,7 +201,19 @@ class ControladorClientes{
                 echo '<script>
                 $(".contenedor ").addClass("activar");
                 </script>';
-                echo '<br><div class="alert alert-danger">Los datos solicitados no pueden ir vacíos o llevar caracteres especiales.</div>';
+				
+
+				echo ' <script>
+
+				Swal.fire({
+					position: "center",
+					icon: "error",
+					title: "Los datos solicitados no pueden ir vacíos o llevar caracteres especiales.",
+					showConfirmButton: false,
+					timer: 3500
+				  });
+
+				  </script>';
 
 			}
 
